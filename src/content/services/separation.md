@@ -6,12 +6,12 @@ short-description: We guide you through separation with practical and emotional
   confidence during a challenging transition.
 long-description: A longer description goes here.
 extra-info-column-1: Optional extra info here in column 1.
-accreditation-images:
-  - /uploads/minds-count.png
-extra-information: Extra info here
 extra-info-column-2: Optional extra info here in column 2.
 list-statements:
   - statement: A pull quote or key statement goes here
   - statement: A pull quote or key statement goes here
-image: src/assets/uploads/hero-placeholder.webp
+accreditation-images:
+  - /uploads/minds-count.png
+extra-information: Extra info here
+image: /uploads/HFL01_Service_14.webp
 ---
