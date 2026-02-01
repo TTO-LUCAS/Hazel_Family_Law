@@ -11,9 +11,7 @@ list-statements:
   - statement: A pull quote or key statement goes here
   - statement: A pull quote or key statement goes here
   - statement: A pull quote or key statement goes here
-image: /uploads/hero-placeholder.webp
+image: /uploads/HFL01_Service_2.webp
 accreditation-images:
-  - /uploads/hero-placeholder.webp
-  - /uploads/minds-count.png
   - /uploads/minds-count.png
 ---
