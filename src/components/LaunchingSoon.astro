@@ -1,0 +1,46 @@
+---
+import HazelLogo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_Wordmark_Oat.svg";
+---
+
+<section class="launching-soon">
+  <img src={HazelLogo.src} alt="Launching Soon" />
+  <h2>Launching soon...</h2>
+</section>
+<style lang="scss">
+  .launching-soon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000000000;
+    padding-left: 6.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background-color: var(--hazelwood);
+    img {
+      width: 25vw;
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--oat-husk);
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    .launching-soon {
+      padding-left: 2.5rem;
+      img {
+        width: 40vw;
+      }
+      h2 {
+        font-size: 1.1rem;
+      }
+    }
+  }
+</style>
