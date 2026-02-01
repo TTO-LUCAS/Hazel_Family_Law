@@ -6,6 +6,7 @@ import QuickExit from "../../components/QuickExit.astro";
 import BlogPost from "../../components/BlogPost.astro";
 import Contact from "../../components/Contact.astro";
 import Main from "../../layouts/Main.astro";
+import ComingSoon from "../../components/ComingSoon.astro";
 
 export async function getStaticPaths() {
   const blogs = await getCollection('blog');
@@ -20,6 +21,7 @@ const { Content } = await blog.render();
 ---
 
 <Main>
+  <ComingSoon />
   <Header />
   <QuickExit />
   <BlogPost blog={blog} Content={Content} />
