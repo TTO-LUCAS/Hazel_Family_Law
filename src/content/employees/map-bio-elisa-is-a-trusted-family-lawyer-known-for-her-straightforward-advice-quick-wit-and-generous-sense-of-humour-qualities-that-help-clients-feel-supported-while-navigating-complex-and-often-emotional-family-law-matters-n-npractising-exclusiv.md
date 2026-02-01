@@ -6,10 +6,10 @@ email: elisa@hazelfamilylaw.com.au
 phone: 03 7020 6529
 photo: /uploads/elisa.webp
 accreditation-images:
-  - /uploads/law-council-of-aus.png
-  - /uploads/pacifica-congress.png
   - /uploads/liv-accreditation-specialisation.png
+  - /uploads/law-council-of-aus.png
   - /uploads/resolution-institute.png
+  - /uploads/pacifica-congress.png
   - /uploads/phoenix-aus.png
   - /uploads/reframing-autism.png
 ---

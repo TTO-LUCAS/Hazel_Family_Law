@@ -4,107 +4,144 @@ import Placeholder from "../../assets/more-shadows.webp";
 
 <section class="hero-section">
   <div class="hero-content">
-    <h1>
-      About Us
+    <div class="text">
+      <h1>About Us</h1>
       <p>
         If you haven’t worked with a family lawyer before, not knowing what to
         expect can make things feel even harder.
       </p>
-    </h1>
+      <div class="hero-image mobile">
+        <img src={Placeholder.src} alt="About Hazel" />
+      </div>
+      <p id="follow-up">
+        At Hazel Family Law & Mediation, our team brings extensive family law
+        experience and a compassionate approach. We provide inclusive,
+        trauma-informed guidance and practical solutions for parenting,
+        property, safety and wellbeing. We help families navigate challenging
+        times with understanding and confidence.
+      </p>
+    </div>
     <div class="hero-image">
       <img src={Placeholder.src} alt="About Hazel" />
     </div>
   </div>
-  <p id="follow-up">
-    At Hazel Family Law & Mediation, our team brings extensive family law
-    experience and a compassionate approach. We provide inclusive,
-    trauma-informed guidance and practical solutions for parenting, property,
-    safety and wellbeing. We help families navigate challenging times with
-    understanding and confidence.
-  </p>
 </section>
 
 <style lang="scss">
   .hero-section {
     width: 100%;
-    padding: 6.25rem 2rem 2rem 2rem;
+    height: 90vh;
+    padding: 6.25rem 2rem 6.25rem 2rem;
     .hero-content {
       width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
-      align-items: flex-start;
-      h1 {
-        font-size: 3rem;
-        font-weight: 300;
+      align-items: stretch;
+      .text {
         width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        h1 {
+          font-size: 3rem;
+          font-weight: 300;
+        }
         p {
-          margin: 2rem 0 0 0;
+          margin: 0 0 0 0;
           font-size: 1.5rem;
           font-weight: 300;
           color: var(--hazelwood);
         }
+        div.hero-image.mobile {
+          display: none;
+        }
+        p#follow-up {
+          font-weight: 300;
+          margin-top: auto;
+          font-size: 1rem;
+          color: var(--burnt-umber);
+        }
       }
       .hero-image {
-        width: 50vw;
         margin-left: auto;
+        width: 40%;
         img {
-          aspect-ratio: 4/3;
+          aspect-ratio: 1 / 1;
           border-radius: 0.5rem;
+          height: 100%;
           width: 100%;
-          height: auto;
           object-fit: cover;
         }
       }
-    }
-    #follow-up {
-      width: 40%;
-      font-weight: 300;
-      margin: 8rem 0 0 0;
     }
   }
 
   @media screen and (max-width: 920px) {
     .hero-section {
-    width: 100%;
-    padding: 6.25rem 2rem 0 2rem;
-    .hero-content {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      h1 {
-        font-size: 2.25rem;
-        font-weight: 300;
+      height: fit-content;
+      padding: 6.25rem 2rem 0 2rem;
+      .hero-content {
+        border-bottom: 1px solid var(--hazelwood);
         width: 100%;
-        margin: 0;
-        p {
-          margin: 2.5rem 0 2.5rem 0;
-          font-size: 1rem;
-          font-weight: 300;
-          color: var(--hazelwood);
-        }
-      }
-      .hero-image {
-        width: 100%;
-        margin-left: 0;
-        img {
-          aspect-ratio: 4/3;
-          border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        .text {
           width: 100%;
-          height: auto;
-          object-fit: cover;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          h1 {
+            font-size: 2.25rem;
+            font-weight: 300;
+            width: 100%;
+            margin: 0;
+          }
+          p {
+            margin: 2.5rem 0 2.5rem 0;
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--hazelwood);
+          }
+          div.hero-image.mobile {
+            display: block;
+            width: 100%;
+            margin-bottom: 5rem;
+            img {
+              aspect-ratio: 4/3;
+              border-radius: 0.5rem;
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+            }
+          }
+          p#follow-up {
+            width: 100%;
+            font-weight: 300;
+            margin: 2.5rem 0 0 0;
+            padding-bottom: 2.5rem;
+            font-size: 1rem;
+            color: var(--burnt-umber);
+          }
+        }
+        .hero-image {
+          display: none;
+          width: 100%;
+          margin-left: 0;
+          img {
+            aspect-ratio: 4/3;
+            border-radius: 0.5rem;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
         }
       }
     }
-    #follow-up {
-      width: 100%;
-      font-weight: 300;
-      margin: 8rem 0 0 0;
-      padding-bottom: 2.5rem;
-      border-bottom: 1px solid var(--hazelwood);
-    }
-  }
   }
 </style>

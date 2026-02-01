@@ -6,7 +6,7 @@ const TestimonialsContent = await getCollection("testimonials");
 <!-- <pre>{JSON.stringify(TestimonialsContent, null, 2)}</pre> -->
 
 <section class="testimonials">
-  <div class="scroller" data-speed="fast">
+  <div class="scroller" data-speed="slow">
     <ul class="tag-list scroller__inner">
       <!-- for each object in testimonialsContent create a li element
       first p has the client name and second p has the testimonial -->
@@ -31,12 +31,10 @@ const TestimonialsContent = await getCollection("testimonials");
   }
 
   .scroller {
-    // max-width: 600px;
     width: 100%;
   }
 
   .scroller__inner {
-    // padding-block: 1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -51,6 +49,10 @@ const TestimonialsContent = await getCollection("testimonials");
     flex-wrap: nowrap;
     animation: scroll var(--_animation-duration, 40s)
       var(--_animation-direction, forwards) linear infinite;
+  }
+
+  .scroller[data-animated="true"]:hover .scroller__inner {
+    animation-play-state: paused;
   }
 
   .scroller[data-direction="right"] {
