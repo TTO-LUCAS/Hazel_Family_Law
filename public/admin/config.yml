@@ -1,12 +1,12 @@
 # Use DecapBridge PKCE auth (required)
 backend:
   name: git-gateway
-  repo: priitey/Hazel-Frontend
-  branch: master
+  repo: TTO-LUCAS/Hazel_Family_Law
+  branch: main
   auth_type: pkce
   base_url: https://auth.decapbridge.com
-  auth_endpoint: /sites/027da4f6-6e23-4102-af13-9577b86d13bc/pkce
-  auth_token_endpoint: /sites/027da4f6-6e23-4102-af13-9577b86d13bc/token
+  auth_endpoint: /sites/446a773f-2775-4295-87de-2e66e363b9d1/pkce
+  auth_token_endpoint: /sites/446a773f-2775-4295-87de-2e66e363b9d1/token
   gateway_url: https://gateway.decapbridge.com
 
   # See who did what (optional)
@@ -29,7 +29,7 @@ auth:
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 
 # Add site links in Decap CMS (optional)
-site_url: https://hazel-family-law.netlify.app
+site_url: https://hazelfamilylaw.com.au
 
 media_folder: "public/uploads" # Location where files will be stored in the repo
 public_folder: "/uploads" # The src attribute for uploaded media
