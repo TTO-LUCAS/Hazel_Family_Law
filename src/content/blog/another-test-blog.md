@@ -2,8 +2,8 @@
 title: "When safety must come first: lessons from Rhodes v Bass (2025)"
 date: 2026-02-01T17:18:00.000+11:00
 author: Elisa Turco
-hero-image: /uploads/grass.webp
-thumbnail: /uploads/grass.webp
+hero-image: /uploads/hfl01_corner_photo.webp
+thumbnail: /uploads/hfl01_corner_photo.webp
 useful-links: []
 accreditation-images: []
 ---
