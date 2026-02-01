@@ -2,8 +2,8 @@
 title: How the court decides property settlements
 date: 2026-01-30T14:26:00.000+11:00
 author: Hazel
-hero-image: /uploads/grass.webp
-thumbnail: /uploads/grass.webp
+hero-image: /uploads/HFL01_Curtains_Photo.webp
+thumbnail: /uploads/HFL01_Curtains_Photo.webp
 ---
 When a relationship ends, dividing property can be one of the most stressful and confusing parts of separation. Many people are surprised to learn that the *Family Law Act 1975* (Cth) (**FLA**) does not set out a single simple formula for who gets what. Instead, the Court applies a structured decision-making process developed over time through both legislation and case law.
 
