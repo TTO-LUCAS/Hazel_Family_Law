@@ -8,7 +8,7 @@ const featuredBlog = await getCollection("featured-blog");
 const featuredSlug = featuredBlog[0]?.data?.["featured-post"];
 const featuredPost = blogs.find((b: any) => b.slug === featuredSlug);
 
-const featuredDate = featuredPost ? formatDate(featuredPost.data.date) : "";
+const featuredDate = featuredPost ? formatDate(featuredPost.data.date.toString()) : "";
 const featuredExcerpt = featuredPost ? getExcerpt(featuredPost.body, 30) : "";
 
 function formatDate(dateString: string) {
