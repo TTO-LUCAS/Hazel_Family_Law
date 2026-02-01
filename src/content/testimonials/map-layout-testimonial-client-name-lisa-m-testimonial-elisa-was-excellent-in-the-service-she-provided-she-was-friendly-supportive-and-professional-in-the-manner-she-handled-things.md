@@ -1,5 +1,6 @@
 ---
 client-name: Lisa M
-testimonial: Elisa was excellent in the service she provided, she was friendly,
-  supportive and professional in the manner she handled things.
+testimonial: Elisa’s down to earth approach, good humour and practical solutions
+  made a daunting family law process far less stressful. She always kept my
+  children’s wellbeing at the centre of negotiations. I highly recommend her.
 ---
