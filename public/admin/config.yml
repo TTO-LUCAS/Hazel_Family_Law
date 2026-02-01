@@ -96,4 +96,4 @@ collections:
     create: true
     fields:
       - { label: "Client Name", name: "client-name", widget: "string" }
-        - { label: "Testimonial", name: "testimonial", widget: "text", maxlength: 50 }
+      - { label: "Testimonial", name: "testimonial", widget: "text", maxlength: 50 }
