@@ -1,55 +1,90 @@
 ---
-title: How the court decides property settlements
-date: 2026-02-01T16:46:00.000+11:00
+title: "When safety must come first: lessons from Rhodes v Bass (2025)"
+date: 2026-02-01T17:18:00.000+11:00
 author: Elisa Turco
-hero-image: /uploads/grass.webp
-thumbnail: /uploads/grass.webp
+hero-image: /uploads/hfl01_corner_photo.webp
+thumbnail: /uploads/hfl01_corner_photo.webp
 useful-links: []
 accreditation-images: []
 ---
-When a relationship ends, dividing property can be one of the most stressful and confusing parts of separation. Many people are surprised to learn that the *Family Law Act 1975* (Cth) (**FLA**) does not set out a single simple formula for who gets what. Instead, the Court applies a structured decision-making process developed over time through both legislation and case law.
+Family law in Australia continues to evolve, particularly where parenting orders intersect with family violence and child protection concerns. The recent decision in *Rhodes v Bass (2025)* offers important guidance on how courts balance parental rights with the paramount need to protect children and carers from harm.
 
-The aim is always to reach an outcome that is “just and equitable”, that is, fair to both parties, considering the full story of their financial and non-financial contributions and their current and future circumstances.
+## **Background**
 
-### **Identifying the property pool**
+In *Rhodes v Bass*, the Federal Circuit and Family Court of Australia considered parenting orders made by consent, which allowed the father unsupervised time with the children on alternate weekends and during school holidays.
 
-The first step is to identify all property, assets and liabilities held by either or both parties. That includes everything from real estate and savings to superannuation, debts and possibly even informal family loans. This forms the property pool that the Court will consider. In recent reforms, the Act makes it clear that liabilities are now formally part of this process, ensuring that debts are recognised alongside assets.
+Following allegations of family violence and findings from child protection authorities, the Court was asked to determine whether the mother’s decision to withhold the children breached those orders, and if the orders themselves needed to be changed.
 
-### **Considering Contributions**
+The case highlights a critical principle: even final consent orders can be revisited when credible evidence of risk or family violence emerges.
 
-The Court looks at each person’s contributions to the relationship. These include:
+## **What the Court Found**
 
-* **Financial contributions**, such as income, savings or property brought into the relationship.
-* **Non-financial contributions**, such as home improvements or unpaid work in a business.
-* **Contributions as homemaker and parent**, which are valued as equally as financial contributions under the law
+**1. Contravention of orders acknowledged**
+ The mother admitted she had not complied with the orders by withholding the children from the father.
 
-Importantly, the Court can also consider how family violence may have affected a person’s ability to contribute. For example, if one party’s contributions were made significantly more difficult because of violence or coercion, this may be taken into account in achieving a fair division.
+**2. Reasonable excuse established**
+ Under the *Family Law Act 1975* (Cth), a parent may be excused from breaching an order if they genuinely believe it is necessary to protect the health or safety of a child or another person.
 
-### **Looking at current and future circumstances**
+The Court accepted that the mother’s concerns were well-founded, and supported by:
 
-The Court considers what each person needs moving forward. Factors include:
+* Criminal convictions for family violence and sexual offences
 
-* Income and earning capacity.
-* Health and age.
-* Care of children and housing needs.
-* Financial responsibilities and liabilities.
+* Repeated breaches of Intervention Orders
 
-Again, the Court can also consider how the effects of family violence may impact a person’s current or future circumstances. For example, if one party requires ongoing therapeutic support or is unable to work.
+* Reports from the Department of Communities and Justice (DCJ)
 
-The reality is that separation can affect people differently. One party may have reduced earning capacity due to time out of the workforce caring for children, while the other may have greater financial security. The goal is to balance those circumstances fairly.
+* Disclosures from the eldest child indicating fear and distress
 
-### **Deciding what is just and equitable**
+**3. Orders modified for safety**
+ Given the evidence, the Court found that unsupervised time was no longer appropriate and ordered that the father’s time be supervised.
 
-The Court looks at the overall fairness of the proposed division. Even if the calculations appear balanced, the Court must be satisfied that the practical outcome of the proposed division is just and equitable in the specific circumstances of each case.
+**4. Child protection reports were key**
+ The Court placed significant weight on the findings of DCJ and other agencies, reinforcing how child-protection input can shape final decisions.
 
-That does not mean a 50/50 split; it means an outcome that reflects the genuine contributions and future needs of each party in their particular circumstances.
+## **Key takeaways from *Rhodes v Bass***
 
-### **What this means for you**
+#### **Safety always comes first**
 
-Every family’s situation is different. The Court’s framework is designed to create structure around decision making, while tailoring solutions around your personal circumstances.
+Even when parents have reached agreement, consent orders are not immune from change. Where credible evidence of harm exists, the Court will prioritise safety above any prior arrangements.
 
-Even when your matter is being resolved through negotiation, mediation or family dispute resolution, lawyers and mediators will often refer back to what a court would likely do in the same situation. That is because the FLA and the case law provides the framework that guides all property settlements, whether inside or outside the courtroom. Even if you reach agreement privately, any consent orders you ask the Court to make must still meet the “just and equitable” test. The Court will not simply “rubber stamp” an agreement; it must be satisfied that the outcome is fair and consistent with the law.
+#### **Evidence matters**
 
-Working within that framework from the start is not just about getting an agreement approved, it is about reaching an arrangement that feels fair, balanced and sustainable for everyone involved, and one that gives you confidence and stability moving forward.
+Criminal findings, Intervention Orders and child protection assessments all carry significant weight. The more substantiated the evidence, the stronger the Court’s capacity to act decisively.
 
-At **Hazel Family Law & Mediation**, we help you navigate this process with clarity and care, whether you are negotiating privately, through mediation or before the Court. Our goal is to help you reach a resolution that reflects your contributions, your future needs and above all your wellbeing.
+#### **The “Reasonable Excuse” standard is real**
+
+This case clarifies that parents who genuinely act to protect a child or themselves, supported by credible evidence, may have a lawful defence for withholding contact.
+
+#### **Supervised time protects relationships**
+
+When risk is identified, supervised contact can balance two objectives: protecting children while maintaining a relationship with both parents, if it can occur safely.
+
+#### **Bring concerns forward early**
+
+If you have fears for your safety or your children’s wellbeing, raise them as soon as possible. Courts expect transparency and evidence, not assumptions or delay.
+
+## **For parents navigating similar situations**
+
+If you are separating, or have existing parenting orders and are worried about safety, consider these steps:
+
+* **Document everything:** Keep records of incidents, police involvement, Intervention Orders or reports from child protection authorities.
+
+* **Seek advice early:** Do not wait until after orders are made to raise safety issues.
+
+* **Understand your options:** “Reasonable excuse” is not a loophole, it is a safeguard when risk is real and supported by evidence.
+
+* **Explore supervision:** In some cases, supervised contact provides a safe interim solution.
+
+* **Know your obligations:** Breaching court orders can have serious consequences, but justified protection measures are recognised under the law.
+
+## **What that means for families**
+
+*Rhodes v Bass* reinforces that the safety of children and carers is the foundation of all parenting decisions. Courts will not hesitate to vary or limit contact arrangements where violence or abuse is substantiated.
+
+For families navigating these issues, the message is clear: the law is increasingly responsive to genuine risk, and support is available to help protect your family’s wellbeing.
+
+## **Clear and compassionate support when you need it most**
+
+At **Hazel Family Law & Mediation**, we understand that safety concerns can make family law matters especially complex and distressing. Our role is to provide calm, clear guidance so you can make informed decisions that prioritise your and your children’s wellbeing.
+
+If you are concerned about existing parenting orders or need advice about family violence or child protection issues, we offer a **free 30-minute initial appointment** to help you understand your options and the next steps forward.

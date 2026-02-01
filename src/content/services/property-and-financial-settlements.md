@@ -2,7 +2,6 @@
 title: Property and financial settlements
 image: /uploads/hero-placeholder.webp
 accreditation-images:
-  - /uploads/hero-placeholder.webp
   - /uploads/minds-count.png
   - /uploads/minds-count.png
 ---
