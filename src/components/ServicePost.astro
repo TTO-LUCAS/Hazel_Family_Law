@@ -30,6 +30,13 @@ const { Content } = await currentService!.render();
             : Placeholder.src}
         />
       </div>
+      <p class="short-description">
+        {
+          serviceData && serviceData["short-description"]
+            ? serviceData["short-description"]
+            : "No description available."
+        }
+      </p>
        <Content />
     </div>
     <div class="image">
@@ -78,10 +85,11 @@ const { Content } = await currentService!.render();
           font-size: 1.5rem;
           color: var(--hazelwood);
         }
-        p {
-          margin: auto 0 0 0;
-          font-size: 1rem;
+        p.short-description {
+          margin: 2.5rem 0 0 0;
+          font-size: 1.5rem;
           font-weight: 300;
+          color: var(--hazelwood);
         }
         div.image {
           width: 100%;

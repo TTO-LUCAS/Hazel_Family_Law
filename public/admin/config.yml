@@ -87,8 +87,9 @@ collections:
       max_file_size: 2621440 # 2.5 MB limit
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Short Description", name: "short-description", widget: "text", maxlength: 50 }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image" }
       - { label: "Accreditation", name: "accreditation-images", widget: "list", allow_add: true, required: false, field: { label: "Accreditation Image", name: "accreditation-image", widget: "image" } }
   - name: "testimonials"
     label: "Testimonials"
