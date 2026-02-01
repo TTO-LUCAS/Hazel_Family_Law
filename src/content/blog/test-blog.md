@@ -2,8 +2,8 @@
 title: Supporting children through supervised time
 date: 2026-02-01T17:23:00.000+11:00
 author: Elisa Turco
-hero-image: /uploads/grass.webp
-thumbnail: /uploads/grass.webp
+hero-image: /uploads/hfl01_service_1.webp
+thumbnail: /uploads/hfl01_service_1.webp
 useful-links: []
 accreditation-images: []
 ---
