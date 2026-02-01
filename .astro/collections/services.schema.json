@@ -7,33 +7,6 @@
         "title": {
           "type": "string"
         },
-        "short-description": {
-          "type": "string"
-        },
-        "long-description": {
-          "type": "string"
-        },
-        "extra-info-column-1": {
-          "type": "string"
-        },
-        "extra-info-column-2": {
-          "type": "string"
-        },
-        "list-statements": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "statement": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "statement"
-            ],
-            "additionalProperties": false
-          }
-        },
         "image": {
           "type": "string"
         },
@@ -49,8 +22,6 @@
       },
       "required": [
         "title",
-        "short-description",
-        "long-description",
         "image"
       ],
       "additionalProperties": false

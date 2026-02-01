@@ -249,11 +249,10 @@ import Logo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_W
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(5px);
     transition:
-        transform 0.3s ease-in-out,
-        background-color 0.3s ease-in-out;
+      transform 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
     &.can-animate {
-      transition:
-        transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
     }
     &.is-fixed {
       position: fixed;
@@ -502,6 +501,22 @@ import Logo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_W
       color: var(--morning-fog);
       backdrop-filter: blur(0.625rem);
       -webkit-backdrop-filter: blur(5px);
+      transition:
+        transform 0.3s ease-in-out,
+        background-color 0.3s ease-in-out;
+      &.can-animate {
+        transition: transform 0.3s ease-in-out;
+      }
+      &.is-fixed {
+        position: fixed;
+        transform: translate3d(0, -100%, 0);
+      }
+      &.is-fixed.scroll-up {
+        transform: translate3d(0, 0, 0);
+      }
+      &.scroll-up {
+        transform: translate3d(0, 0, 0);
+      }
     }
     #mobile-header-links {
       display: grid;
@@ -853,9 +868,9 @@ import Logo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_W
     const navLinks = document.querySelectorAll(
       "header.site-header.desktop h3 a, header.mobile-header h3 a",
     );
-    
+
     let lastClickedLink = sessionStorage.getItem("lastClickedLink");
-    
+
     const getActiveHref = () => {
       let activeHref = null;
 
@@ -882,7 +897,7 @@ import Logo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_W
         link.style.textDecoration = activeHref === href ? "underline" : "none";
       });
     };
-    
+
     // Add click event listeners to each link
     navLinks.forEach((link) => {
       link.addEventListener("click", () => {
@@ -892,7 +907,7 @@ import Logo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_W
         updateUnderline();
       });
     });
-    
+
     // Initial underline update on page load
     updateUnderline();
 
@@ -901,7 +916,9 @@ import Logo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_W
   });
 
   function changeHeaderBackground() {
-    const header = document.querySelector("header.site-header.desktop, header.mobile-header");
+    const header = document.querySelector(
+      "header.site-header.desktop, header.mobile-header",
+    );
     if (!header) return;
 
     const headerRect = header.getBoundingClientRect();
@@ -910,12 +927,12 @@ import Logo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_W
     const headerLeft = headerRect.left;
     const headerRight = headerRect.right;
 
-    const images = document.querySelectorAll("img");
+    const images = document.querySelectorAll("img, video");
     let hasOverlap = false;
 
     images.forEach((img) => {
       const imgRect = img.getBoundingClientRect();
-      
+
       if (
         imgRect.bottom > headerTop &&
         imgRect.top < headerBottom &&
@@ -930,7 +947,7 @@ import Logo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_W
       header.style.backgroundColor = "rgba(0, 0, 0, 0.35)";
       header.style.backdropFilter = "blur(10px)";
     } else {
-      header.style.backgroundColor = "var(--deep-coal)";
+      header.style.backgroundColor = "var(--burnt-umber)";
       header.style.backdropFilter = "none";
     }
   }

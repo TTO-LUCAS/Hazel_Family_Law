@@ -10,6 +10,7 @@ const { service } = Astro.props as Props;
 const services = await getCollection("services");
 const currentService = services.find((s) => s.slug === service);
 const serviceData = currentService?.data;
+const { Content } = await currentService!.render();
 ---
 
 <section class="service-post">
@@ -22,13 +23,6 @@ const serviceData = currentService?.data;
             : "Service not found"
         }
       </h2>
-      <h3>
-        {
-          serviceData && serviceData["short-description"]
-            ? serviceData["short-description"]
-            : "Service not found"
-        }
-      </h3>
       <div class="image">
         <img
           src={serviceData && serviceData.image
@@ -36,45 +30,12 @@ const serviceData = currentService?.data;
             : Placeholder.src}
         />
       </div>
-      <p class="paragraph-1">
-        {
-          serviceData && serviceData["long-description"]
-            ? serviceData["long-description"]
-            : "Service not found"
-        }
-      </p>
+       <Content />
     </div>
     <div class="image">
       <img src=`${Placeholder.src}` />
     </div>
   </div>
-  <div class="row">
-    <p class="paragraph-2">
-      {
-        serviceData && serviceData["extra-info-column-1"]
-          ? serviceData["extra-info-column-1"]
-          : "Service not found"
-      }
-    </p>
-    <p class="paragraph-3">
-      {
-        serviceData && serviceData["extra-info-column-2"]
-          ? serviceData["extra-info-column-2"]
-          : "Service not found"
-      }
-    </p>
-  </div>
-  {
-    serviceData && serviceData["list-statements"] && (
-      <div class="row">
-        <ul style="list-style-type: decimal; margin: 0 0 0 0;">
-          {serviceData["list-statements"].map((statement: any) => (
-            <li>{statement.statement}</li>
-          ))}
-        </ul>
-      </div>
-    )
-  }
   {
     serviceData && serviceData["accreditation-images"] && serviceData["accreditation-images"].length > 0 && (
       <div class="logos">
@@ -99,7 +60,7 @@ const serviceData = currentService?.data;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      border-bottom: 1px solid var(--hazelwood);
+      border-bottom: 1px none var(--hazelwood);
       margin: 4rem 0 4rem 0;
       padding: 0 0 4rem 0;
       .text {

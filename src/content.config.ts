@@ -46,11 +46,6 @@ const services = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    "short-description": z.string(),
-    "long-description": z.string(),
-    "extra-info-column-1": z.string().optional(),
-    "extra-info-column-2": z.string().optional(),
-    "list-statements": z.array(z.object({ statement: z.string() })).optional(),
     image: z.string(),
     "accreditation-images": z.array(z.string()).optional(),
   }),

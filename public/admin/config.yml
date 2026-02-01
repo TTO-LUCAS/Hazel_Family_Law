@@ -87,12 +87,8 @@ collections:
       max_file_size: 2621440 # 2.5 MB limit
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Short Description", name: "short-description", widget: "string" }
-      - { label: "Long Description", name: "long-description", widget: "string" }
-      - { label: "Extra Info Column 1", name: "extra-info-column-1", widget: "string", required: false }
-      - { label: "Extra Info Column 2", name: "extra-info-column-2", widget: "string", required: false }
-      - { label: "List Statements", name: "list-statements", widget: "list", allow_add: true, required: false, field: { label: "Statement", name: "statement", widget: "string" } }
       - { label: "Image", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Accreditation", name: "accreditation-images", widget: "list", allow_add: true, required: false, field: { label: "Accreditation Image", name: "accreditation-image", widget: "image" } }
   - name: "testimonials"
     label: "Testimonials"
