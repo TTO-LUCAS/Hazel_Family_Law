@@ -1,0 +1,136 @@
+---
+import { getCollection } from "astro:content";
+const TestimonialsContent = await getCollection("testimonials");
+---
+
+<!-- <pre>{JSON.stringify(TestimonialsContent, null, 2)}</pre> -->
+
+<section class="testimonials">
+  <div class="scroller" data-speed="fast">
+    <ul class="tag-list scroller__inner">
+      <!-- for each object in testimonialsContent create a li element
+      first p has the client name and second p has the testimonial -->
+      {TestimonialsContent.map((TestimonialsContent: any) => (
+        ) => (
+        <li>
+          <p>{TestimonialsContent.data['client-name']}</p>
+          <br />
+          <p>{TestimonialsContent.data.testimonial}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  section.testimonials {
+    width: 100%;
+    height: fit-content;
+    background: var(--autumn-blush);
+    padding: 2.5rem 0rem;
+  }
+
+  .scroller {
+    // max-width: 600px;
+    width: 100%;
+  }
+
+  .scroller__inner {
+    // padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .scroller[data-animated="true"] {
+    overflow: hidden;
+  }
+
+  .scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s)
+      var(--_animation-direction, forwards) linear infinite;
+  }
+
+  .scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+
+  .scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+
+  .scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+  }
+
+  .scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+
+  /* general styles */
+
+  .tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+  }
+
+  .tag-list li {
+    border-right: 1px solid var(--hazelwood);
+    padding: 1rem;
+    background: transparent;
+    // aspect-ratio: 18/32;
+    width: 400px;
+    height: auto;
+    font-size: 1rem;
+    font-weight: 300;
+    p:first-of-type {
+      margin: 0;
+      font-weight: 400;
+    }
+  }
+
+  /* for testing purposed to ensure the animation lined up correctly */
+  .test {
+    background: red !important;
+  }
+</style>
+
+<script lang="js" is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollers = document.querySelectorAll(".scroller");
+
+    // If a user hasn't opted in for recuded motion, then we add the animation
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      addAnimation();
+    }
+
+    function addAnimation() {
+      scrollers.forEach((scroller) => {
+        // add data-animated="true" to every `.scroller` on the page
+        scroller.setAttribute("data-animated", true);
+
+        // Make an array from the elements within `.scroller-inner`
+        const scrollerInner = scroller.querySelector(".scroller__inner");
+        const scrollerContent = Array.from(scrollerInner.children);
+
+        // For each item in the array, clone it
+        // add aria-hidden to it
+        // add it into the `.scroller-inner`
+        scrollerContent.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true);
+          duplicatedItem.setAttribute("aria-hidden", true);
+          scrollerInner.appendChild(duplicatedItem);
+        });
+      });
+    }
+  });
+</script>

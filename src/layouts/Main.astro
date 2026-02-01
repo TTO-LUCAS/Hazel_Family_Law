@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:image" content="/wordmark-hazel-full.png" />
+    <title>HAZEL Family Law & Mediation</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+  :root {
+    --deep-coal: #000000; /* To be used as a replacement for burnt umber (printed materials) */
+    --burnt-umber: #2A1708; /* Primary body text color on lighter backgrounds */
+    --hazelwood: #A15834; /* Primary highlight color */
+    --autumn-blush: #BF8C69; /* Secondary highlight color */
+    --oat-husk: #E3DFCC; /* Primary body text color on darker backgrounds */
+    --morning-fog: #ffffff; /* To be used as a replacement for oat husk (printed materials)*/
+
+    --be-vietnam-pro: "Be Vietnam Pro", sans-serif;
+
+    --root-size: 1rem;
+
+    interpolate-size: allow-keywords;
+  }
+  * {
+    box-sizing: border-box;
+    font-family: var(--be-vietnam-pro);
+    text-overflow: ellipsis;
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: var(--root-size);
+    background: var(--oat-husk);
+    color: var(--burnt-umber);
+    overscroll-behavior: none;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    line-height: 1.25;
+    -webkit-font-smoothing: antialiased;
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  a,
+  a:any-link {
+    color: inherit;
+    text-decoration: none;
+  }
+  button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  h2 {
+    margin: 2rem 0 2rem 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-family: var(--be-vietnam-pro);
+    font-size: 16px; /* original design has it at 1.125rem but this may be too big */
+    font-weight: 400;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  @media screen and (max-width: 920px) {
+    /* :root {
+      --root-size: 14px;
+    }
+    html, body {
+      font-size: var(--root-size);
+    } */
+  }
+
+  .hidden {
+    display: none !important;
+    visibility: hidden !important;
+  }
+</style>

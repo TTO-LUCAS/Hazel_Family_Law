@@ -1,0 +1,401 @@
+---
+import ImgPlaceholder from "../assets/more-shadows.webp";
+---
+
+<section class="contact-section">
+  <div class="contact-content">
+    <h2 style="font-weight: 400;">Contact</h2>
+    <p class="lead-in">
+      We welcome the opportunity to discuss your situation confidentially—by
+      phone, in person or via the form below.
+    </p>
+    <form name="contact" method="POST" netlify>
+      <input
+        type="hidden"
+        name="subject"
+        value="Contact Form Inquiry from Hazel Website"
+      />
+      <div class="contact-form" id="name-field">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          name="name-full"
+          id="name"
+          required
+          placeholder="Full Name"
+          autocomplete="on"
+        />
+      </div>
+      <div class="contact-form" id="email-field">
+        <label for="email">Email Address</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          required
+          placeholder="Email Address"
+          autocomplete="on"
+        />
+      </div>
+      <div class="contact-form" id="phone-field">
+        <label for="phone">Phone Number</label>
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="Phone Number"
+          autocomplete="on"
+        />
+      </div>
+      <div class="contact-form" id="preference-field">
+        <label for="time">Contact Preference (Time)</label>
+        <input
+          type="text"
+          name="time"
+          id="time"
+          placeholder="Contact Preference (Time)"
+          autocomplete="on"
+        />
+      </div>
+      <div class="contact-form" id="message-field">
+        <label for="message">Message</label>
+        <textarea
+          name="message"
+          id="message"
+          required
+          rows="4"
+          placeholder="Message"></textarea>
+      </div>
+      <div class="contact-form" id="submit-field">
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+  </div>
+  <div class="picture-placeholder">
+    <img src={ImgPlaceholder.src} alt="contact Plans Illustration" />
+  </div>
+</section>
+
+<style lang="scss">
+  .contact-section {
+    // height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    background: var(--oat-husk);
+    color: var(--burnt-umber);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    .contact-content {
+      padding: 5rem 12rem 5rem 2rem;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      h2 {
+        padding: 0;
+        margin: 0 0 5rem 0;
+      }
+      p.lead-in {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin: 0 0 5rem 0;
+      }
+      p {
+        font-size: 1.125rem;
+        font-weight: 300;
+      }
+      form {
+        margin: 0 0 0 0;
+        display: grid;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(8, 1fr);
+        gap: 0.5rem;
+        height: 60%;
+        border: 2px none var(--burnt-umber);
+        font-weight: 300;
+        *:focus {
+          outline: none;
+          // box-shadow: 0 0 0 1px var(--burnt-umber);
+        }
+        *:focus-visible {
+          // outline: 1px solid var(--burnt-umber);
+        }
+        .contact-form {
+          position: relative;
+          border: 1px none var(--burnt-umber);
+          border-radius: 8px;
+          margin: 0rem 0rem 0rem 0rem;
+          font-weight: 300;
+          &:has(input[required], textarea[required])::after {
+            content: "*";
+            position: absolute;
+            top: 0.5rem;
+            right: 0.75rem;
+            color: var(--hazelwood);
+            font-size: 1.25rem;
+            line-height: 1rem;
+            z-index: 1;
+            pointer-events: none;
+          }
+          label {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.75rem;
+            display: none;
+          }
+          input {
+            background: transparent;
+            border: 1px solid var(--burnt-umber);
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            padding: 0rem 1rem 0rem 1rem;
+            &::placeholder {
+              color: var(--burnt-umber);
+              opacity: 1;
+              font-weight: 300;
+            }
+          }
+          textarea {
+            padding: 1rem;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--burnt-umber);
+            border-radius: 8px;
+            background: transparent;
+            resize: none;
+            &::placeholder {
+              color: var(--burnt-umber);
+              opacity: 1;
+              font-weight: 300;
+            }
+          }
+        }
+        #name-field {
+          grid-column: 1 / span 4;
+          grid-row: 1 / span 1;
+        }
+        #email-field {
+          grid-column: 5 / -1;
+          grid-row: 1 / span 1;
+        }
+        #phone-field {
+          grid-column: 1 / span 4;
+          grid-row: 2 / span 1;
+        }
+        #preference-field {
+          grid-column: 5 / -1;
+          grid-row: 2 / span 1;
+        }
+        #message-field {
+          grid-column: 1 / -1;
+          grid-row: 3 / span 5;
+        }
+        #submit-field {
+          grid-column: 1 / span 2;
+          grid-row: 8 / span 1;
+          padding: 2.5rem 0 0 0;
+          input[type="submit"] {
+            grid-column: 1 / span 1;
+            height: 2rem;
+            background: var(--hazelwood);
+            padding: 0 1.25rem;
+            color: var(--morning-fog);
+            border-radius: 2.125rem;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            line-height: 2rem;
+            transition:
+              background 0.2s ease-in-out,
+              border 0.2s ease-in-out,
+              color 0.2s ease-in-out;
+          }
+          input[type="submit"]:hover {
+            background: var(--burnt-umber);
+          }
+          input[type="submit"]:active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .picture-placeholder {
+      border: none;
+      margin: 0;
+      padding: 0;
+      width: 40%;
+      height: auto;
+      overflow: hidden;
+      img {
+        margin: 0;
+        padding: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    .contact-section {
+      height: auto;
+      width: 100%;
+      background: var(--oat-husk);
+      color: var(--burnt-umber);
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      .contact-content {
+        padding: 2.5rem 2rem 2.5rem 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        h2 {
+          margin: 0 0 2.5rem 0;
+          font-size: 1.45rem;
+          font-weight: 400;
+        }
+        p.lead-in {
+          font-size: 1rem;
+          font-weight: 300;
+          margin: 0 0 2.5rem 0;
+        }
+        p {
+          font-size: 1.15rem;
+          font-weight: 300;
+        }
+        form {
+          margin: 0 0 0 0;
+          display: grid;
+          grid-template-rows: repeat(8, 1fr);
+          grid-template-columns: repeat(8, 1fr);
+          height: 60%;
+          border: 2px none var(--burnt-umber);
+          font-weight: 300;
+          *:focus {
+            outline: none;
+            // box-shadow: 0 0 0 1px var(--burnt-umber);
+          }
+          *:focus-visible {
+            // outline: 1px solid var(--burnt-umber);
+          }
+          .contact-form {
+            position: relative;
+            border: 1px none var(--burnt-umber);
+            border-radius: 8px;
+            margin: 0rem 0rem 0rem 0rem;
+            &:has(input[required], textarea[required])::after {
+              content: "*";
+              position: absolute;
+              top: 0.5rem;
+              right: 0.75rem;
+              color: var(--hazelwood);
+              font-size: 1.25rem;
+              line-height: 1rem;
+              z-index: 1;
+              pointer-events: none;
+            }
+            label {
+              position: absolute;
+              top: 0.5rem;
+              left: 0.75rem;
+              display: none;
+            }
+            input {
+              background: transparent;
+              border: 1px solid var(--burnt-umber);
+              border-radius: 8px;
+              width: 100%;
+              height: 100%;
+              padding: 0rem 1rem 0rem 1rem;
+              &::placeholder {
+                color: var(--burnt-umber);
+                opacity: 1;
+                font-size: 1rem;
+                font-weight: 300;
+              }
+            }
+            textarea {
+              padding: 1rem;
+              width: 100%;
+              height: 100%;
+              border: 1px solid var(--burnt-umber);
+              border-radius: 8px;
+              background: transparent;
+              resize: none;
+              &::placeholder {
+                color: var(--burnt-umber);
+                opacity: 1;
+                font-size: 1rem;
+                font-weight: 300;
+              }
+            }
+          }
+          #name-field {
+            grid-column: 1 / -1;
+            grid-row: 1 / span 1;
+          }
+          #email-field {
+            grid-column: 1 / -1;
+            grid-row: 2 / span 1;
+          }
+          #phone-field {
+            grid-column: 1 / -1;
+            grid-row: 3 / span 1;
+          }
+          #preference-field {
+            grid-column: 1 / -1;
+            grid-row: 4 / span 1;
+          }
+          #message-field {
+            grid-column: 1 / -1;
+            grid-row: 5 / span 3;
+          }
+          #submit-field {
+            grid-column: 1 / -1;
+            grid-row: 8 / span 1;
+            padding: 2.3rem 0 0 0;
+            input[type="submit"] {
+              grid-column: 1 / span 1;
+              height: 2rem;
+              background: var(--hazelwood);
+              padding: 0 1.25rem;
+              color: var(--oat-husk);
+              border-radius: 34px;
+              font-size: 1.125rem;
+              border: none;
+              cursor: pointer;
+              text-align: center;
+              line-height: 2rem;
+              transition:
+                background 0.8s ease-in-out,
+                border 0.8s ease-in-out,
+                color 0.8s ease-in-out;
+            }
+            input[type="submit"]:hover {
+              background: var(--burnt-umber);
+            }
+            input[type="submit"]:active {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .picture-placeholder {
+        width: 100%;
+        height: 100%;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+</style>

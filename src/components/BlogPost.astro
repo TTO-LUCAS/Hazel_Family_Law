@@ -1,0 +1,225 @@
+---
+// import { Image } from "astro:assets";
+
+interface Props {
+  blog: any;
+  Content: any;
+}
+
+const { blog, Content } = Astro.props;
+const dateObj = blog.data.date;
+const formattedDate = `${dateObj.getDate().toString().padStart(2, "0")}.${(dateObj.getMonth() + 1).toString().padStart(2, "0")}.${dateObj.getFullYear()}`;
+console.log("Hero image path:", blog.data["hero-image"]);
+---
+
+<section class="blog-post">
+  <div class="title-date">
+    <h2>{blog.data.title}</h2>
+    <p>{formattedDate}</p>
+  </div>
+  <div class="image">
+    <img src={blog.data["hero-image"]} alt={blog.data.title} />
+  </div>
+  <div class="post-content">
+    <Content />
+    <!-- useful links here if there are any -->
+    {Array.isArray(blog.data["useful-links"]) && blog.data["useful-links"].length > 0 && (
+      <ul class="links">
+        <span style="font-weight: 300;">Useful Links</span>
+        {blog.data["useful-links"].map((item: { link: { "link-text": string; url: string } }) => (
+          <li>
+            <a href={item.link.url} target="_blank" rel="noopener noreferrer">
+              {item.link["link-text"]}
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+    <!-- accreditation logos here if there are any -->
+    {blog.data["accreditation-images"] && blog.data["accreditation-images"].length > 0 && (
+      <div class="logos">
+        {blog.data["accreditation-images"].map((image: string) => (
+          <img src={image} alt="Accreditation Logo" />
+        ))}
+      </div>
+    )}
+  </div>
+</section>
+
+<style lang="scss">
+  .blog-post {
+    margin: 0;
+    padding: 6.25rem 2rem 6.25rem 2rem;
+    background: transparent;
+    color: var(--burnt-umber);
+    .title-date {
+      width: 100%;
+      height: auto;
+      margin: 0 0 0rem 0;
+      padding: 0 0 2.5rem 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      h2 {
+        font-weight: 400;
+        font-size: 3rem;
+        margin: 0;
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+    .image {
+      margin: 0 0 4rem 0;
+      width: 100%;
+      height: auto;
+      img {
+        width: 100%;
+        height: 40vw;
+        object-fit: cover;
+        padding: 0;
+        border-radius: 8px;
+      }
+    }
+    .post-content {
+      width: 60%;
+      margin: 0 0 0 0;
+      p {
+        font-size: 1rem;
+        font-weight: 300;
+        margin: 0 0 2rem 0;
+      }
+      ul:not(.links) {
+        margin: 2rem 0 2rem 0;
+        list-style: decimal;
+        li {
+          font-size: 1.5rem;
+          font-weight: 300;
+        }
+      }
+      ul.links {
+        list-style: none;
+        margin: 0;
+        padding: 2rem 0 2rem 0;
+        font-weight: 300;
+        li {
+          a {
+            font-weight: 300;
+            color: var(--hazelwood);
+            text-decoration: underline;
+          }
+        }
+      }
+      .logos {
+        width: 160%;
+        margin: 2.5em 0 0rem 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        img {
+          aspect-ratio: 4 / 3;
+          width: 20%;
+          height: auto;
+          margin: 0 2rem 0 0;
+          object-fit: scale-down;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    .blog-post {
+      margin: 0;
+      padding: 6.25rem 2rem 2.5rem 2rem;
+      background: transparent;
+      color: var(--burnt-umber);
+      .title-date {
+        width: 100%;
+        height: auto;
+        margin: 0 0 0rem 0;
+        padding: 0 0 2.5rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: baseline;
+        h2 {
+          font-weight: 400;
+          font-size: 2.25rem;
+          margin: 0;
+        }
+        p {
+          font-size: 1rem;
+          font-weight: 300;
+        }
+      }
+      .image {
+        margin: 0 0 4rem 0;
+        width: 100%;
+        height: auto;
+        img {
+          aspect-ratio: 6 / 9;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          padding: 0;
+          border-radius: 8px;
+        }
+      }
+      .post-content {
+        width: 100%;
+        margin: 0 0 0 0;
+        p {
+          font-size: 1rem;
+          font-weight: 300;
+          margin: 0 0 1rem 0;
+        }
+        ul:not(.links) {
+          margin: 1rem 0 1rem 0;
+          padding: 0 0 0 2rem;
+          list-style: decimal;
+          li {
+            font-size: 1.15rem;
+            font-weight: 400;
+            list-style-position: outside;
+            padding: 0;
+          }
+        }
+        ul.links {
+          list-style: none;
+          margin: 0;
+          padding: 1rem 0 1rem 0;
+          li {
+            margin: 1rem 0 0 0;
+            a {
+              font-weight: 300;
+              color: var(--hazelwood);
+              text-decoration: underline;
+            }
+          }
+        }
+        .logos {
+          width: 100%;
+          margin: 0rem 0 0rem 0;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          align-items: center;
+          img:first-of-type {
+            margin: 2.5rem 0 0 0;
+          }
+          img:last-of-type {
+            margin: 0;
+          }
+          img {
+            width: 100%;
+            max-width: fit-content;
+            height: auto;
+            margin: 0 0rem 0rem 0;
+          }
+        }
+      }
+    }
+  }
+</style>

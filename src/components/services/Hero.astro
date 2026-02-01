@@ -1,0 +1,63 @@
+<section class="services-hero">
+  <div class="container">
+    <h1 class="header">How Can We Help</h1>
+    <h1 class="header-m">Services</h1>
+    <p class="subheader">
+      We provide welcoming, supportive family law guidance for all individuals
+      and families. Our trauma-informed and flexible approach respects diverse
+      experiences, perspectives and needs. We offer clear advice, practical
+      solutions and compassionate support to navigate parenting, property,
+      safety and complex family matters with confidence and understanding.
+    </p>
+  </div>
+</section>
+
+<style lang="scss">
+  .services-hero {
+    background-color: var(--oat-husk);
+    .container {
+      width: 100%;
+      padding: 6.25rem 0rem 4rem 2rem;
+      .header {
+        font-size: 3rem;
+        font-weight: 300;
+        margin-bottom: 8rem;
+        color: var(--burnt-umber);
+      }
+      .header-m {
+        display: none;
+        font-size: 3rem;
+        font-weight: 300;
+        margin-bottom: 8rem;
+        color: var(--burnt-umber);
+      }
+      .subheader {
+        font-size: 2rem;
+        color: var(--hazelwood);
+        width: 70%;
+        font-weight: 300;
+      }
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    .services-hero {
+      .container {
+        padding: 5rem 2rem 2.5rem 2rem;
+        .header {
+          display: none;
+          margin-bottom: 0;
+        }
+        .header-m {
+          display: block;
+          margin-bottom: 2.5rem;
+          font-size: 2.25rem;
+        }
+        .subheader {
+          font-size: 1rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,190 @@
+---
+
+---
+
+<section class="intro-card">
+  <div id="intro-about">
+    <h2 style="font-weight: 400;">About Us</h2>
+    <h2>
+      At Hazel Family Law & Mediation, we understand that family change can be
+      one of life’s most challenging experiences. Our mission is to guide
+      individuals and families with <span
+        style="color: var(--deep-coal); font-weight: 400;"
+        >genuine care, practical advice and a steady, thoughtful approach</span
+      > that supports<span style="color: var(--deep-coal); font-weight: 400;">
+        clarity, confidence and informed decision-making.</span
+      >
+    </h2>
+  </div>
+  <div id="get-started">
+    <div id="starting-steps">
+      <h2 style="margin: 0;">Steps to Get Started</h2>
+      <p>
+        If you haven’t worked with a family lawyer before, not knowing what to
+        expect can make things feel even harder. <span
+          style="color: var(--deep-coal); font-weight: 400;">We take the time to guide you</span
+        >
+        through the process, so you know what comes next and <span
+          style="color: var(--deep-coal); font-weight: 400;"
+          >feel supported every step of the way.</span
+        >
+      </p>
+    </div>
+    <div id="accordian-wrapper">
+      <details>
+        <summary>Connect with us</summary>
+        Your first step is simple: call us on 03 7020 6529, email us on <a
+          href="mailto:info@hazelfamilylaw.com.au">info@hazelfamilylaw.com.au</a
+        >
+        or complete the contact form below. We will arrange a brief, no-obligation
+        call to understand your situation, discuss what’s important to you, and explain
+        how we can help. We will also send a short form for you to provide some background
+        information, ensuring your first meeting is productive and tailored to your
+        needs.
+      </details>
+      <details>
+        <summary>Your first appointment</summary>
+        Your first meeting can be in person, over the phone, or via Microsoft Teams,
+        whichever is most practical and feels most comfortable. Using the information
+        from our initial call and your completed form, we’ll discuss your circumstances,
+        answer your questions and explore the options available to you. We encourage
+        you to bring us any questions or concerns; we want you to leave with clear
+        guidance and a sense of direction. If you choose to continue with our services,
+        we will provide a transparent cost agreement to ensure there are no surprises.
+      </details>
+      <details>
+        <summary>Moving forward</summary>
+        Once you’ve engaged us, we will work with you to develop a practical, strategic
+        plan that reflects your priorities and helps you move forward with confidence.
+        From start to finish, we provide clarity, compassion and support, helping
+        you achieve resolutions that work for you and your family.
+      </details>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  section.intro-card {
+    margin: 0;
+    padding: 2rem 2rem 2rem 2rem;
+    background: transparent;
+    div#intro-about {
+      // margin-bottom: 12rem;
+      margin-bottom: 6.25rem;
+      :last-child {
+        color: var(--hazelwood);
+        margin: 6rem 0 0 0;
+      }
+    }
+    div#get-started {
+      div#starting-steps {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        p {
+          width: 40%;
+          color: var(--hazelwood);
+          font-size: 24px;
+          font-weight: 300;
+        }
+      }
+      div#accordian-wrapper {
+        font-weight: 300;
+        margin-top: 6rem;
+        details {
+          font-size: 1rem;
+          border-bottom: 1px solid var(--hazelwood);
+          padding: 0 0 1rem 0;
+          margin: 0 0 2rem 0;
+          summary {
+            list-style: none;
+            font-size: 2rem;
+            margin: 2rem 0 2rem 0;
+            cursor: pointer;
+          }
+          summary::marker,
+          summary::-webkit-details-marker {
+            content: "";
+            display: none;
+          }
+          summary::after {
+            content: url("../assets/svgs/accordion-arrow.svg");
+            color: var(--hazelwood);
+            float: right;
+            transform: rotate(0deg);
+            transition: transform 0.6s ease-in-out;
+          }
+        }
+        details[open] summary::after {
+          transform: rotate(-180deg);
+        }
+        details::details-content {
+          width: 40%;
+          block-size: 0;
+          transition:
+            block-size 0.6s ease-in-out,
+            content-visibility 0.6s ease-in-out;
+
+          transition-behavior: allow-discrete;
+          overflow: hidden;
+        }
+        details[open]::details-content {
+          block-size: auto;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    section.intro-card {
+      padding: 2.5rem 2rem 0rem 2rem;
+      div#intro-about {
+        margin-bottom: 2.5rem;
+        h2:first-of-type {
+          font-size: 1.25rem;
+          font-weight: 400;
+          margin: 0;
+          padding: 0;
+        }
+        h2 {
+          font-size: 1.5rem;
+          margin: 0;
+          padding: 0;
+        }
+        :last-child {
+          margin: 2.5rem 0 0 0;
+        }
+      }
+      div#get-started {
+        margin: 0;
+        padding: 0;
+        div#starting-steps {
+          flex-direction: column;
+          h2 {
+            font-size: 1.25rem;
+            font-weight: 400;
+          }
+          p {
+            width: 100%;
+            font-size: 1rem;
+            margin: 2.5rem 0 0rem 0;
+          }
+        }
+        div#accordian-wrapper {
+          details {
+            font-size: 1rem;
+            padding: 0rem 0 0 0;
+            summary {
+              font-size: 1.25rem;
+              margin: 0 0 0rem 0;
+            }
+          }
+          details::details-content {
+            width: 100%;
+            margin: 1rem 0 1rem 0;
+          }
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,65 @@
+<section class="content">
+  <h2><slot name="title" /></h2>
+  <div class="legal-content">
+    <slot name="legal-content-txt" />
+  </div>
+</section>
+
+<style lang="scss">
+  .content {
+    width: 100%;
+    padding: 6.25rem 33vw 6.25rem 2rem;
+    margin: 0;
+    background: transparent;
+    color: var(--burnt-umber);
+    height: max-content;
+    h2 {
+      font-size: 3rem;
+      font-weight: 300;
+      margin: 0 0 2rem 0;
+    }
+  }
+
+  .legal-content {
+    width: 100%;
+    height: max-content;
+    :global(h3) {
+      font-size: 2rem;
+      font-weight: 300;
+      margin: 0 0 2rem 0;
+    }
+    :global(p) {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 0 0 2rem 0;
+    }
+    :global(ul) {
+      margin: 0 0 2rem 0;
+    }
+    :global(li) {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    .content {
+      padding: 6.25rem 1rem 0rem 1rem;
+      h2 {
+        font-size: 2.25rem;
+      }
+    }
+    .legal-content {
+      :global(h3) {
+        font-size: 1.25rem;
+      }
+      :global(p) {
+        font-size: .875rem;
+      }
+      :global(li) {
+        font-size: .875rem;
+      }
+    }
+    
+  }
+</style>

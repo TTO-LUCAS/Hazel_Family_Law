@@ -1,0 +1,21 @@
+{
+  "$ref": "#/definitions/featured-blog",
+  "definitions": {
+    "featured-blog": {
+      "type": "object",
+      "properties": {
+        "featured-post": {
+          "type": "string"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "featured-post"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,236 @@
+---
+import Elisa from "../../assets/headshots/Elisa.webp";
+import Daria from "../../assets/headshots/Daria.webp";
+import Gia from "../../assets/headshots/Gia.webp";
+import Hazel from "../../assets/headshots/Hazel.webp";
+import LawCouncil from "../../assets/accreditations/law-council-of-aus.png";
+import LIV from "../../assets/accreditations/LIV-accreditation-specialisation.png";
+import Pacifica from "../../assets/accreditations/pacifica-congress.png";
+import Reframing from "../../assets/accreditations/reframing-autism.png";
+import Resolution from "../../assets/accreditations/resolution-institute.png";
+import Phoenix from "../../assets/accreditations/phoenix-aus.png";
+
+import { getCollection } from "astro:content";
+
+interface Props {
+  employee: string;
+}
+
+const { employee } = Astro.props as Props;
+const employees = await getCollection("employees");
+---
+<section class="employee-profiles">
+  {employees.map((emp) => (
+    <div class="profile-card">
+      <div class="info-section">
+        <h2>{emp.data.name}</h2>
+        <p class="position">{emp.data.position}</p>
+        {emp.data.pronouns && <p class="pronouns">{emp.data.pronouns}</p>}
+        {emp.data.email && (
+          <p class="email">
+            <a href={`mailto:${emp.data.email}`}>{emp.data.email}</a>
+          </p>
+        )}
+        {emp.data.phone && (
+          <p class="phone">
+            <a href={`tel:${emp.data.phone}`}>{emp.data.phone}</a>
+          </p>
+        )}
+        <div class="bio">
+          {emp.body && <p>{emp.body}</p>}
+        </div>
+        {emp.data["accreditation-images"] && emp.data["accreditation-images"].length > 0 && (
+          <div class="accreditations">
+            {emp.data["accreditation-images"].map((img: string) => (
+              <img src={img} alt="Accreditation" />
+            ))}
+          </div>
+        )}
+      </div>
+      <div class="headshot-wrapper">
+        <img class="headshot" src={emp.data.photo} alt={emp.data.name} />
+      </div>
+    </div>
+  ))}
+</section>
+
+<style lang="scss">
+  .employee-profiles {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 6.25rem 2rem 6.25rem 2rem;
+    .profile-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      .info-section {
+        width: 40%;
+        h2 {
+          margin: 0 0 1.25rem 0;
+        }
+        p {
+          font-weight: 300;
+        }
+        .position,
+        .pronouns,
+        .email,
+        .phone {
+          color: var(--hazelwood);
+        }
+        .email,
+        .phone {
+          text-decoration: underline;
+        }
+        .email {
+          margin-top: 2.5rem;
+        }
+        .bio {
+          margin-top: 5rem;
+          font-size: 1rem;
+          font-weight: 300;
+        }
+        ul {
+          font-weight: 300;
+        }
+      }
+      .accreditations {
+        width: max-content;
+        max-width: 250%;
+        height: auto;
+        margin: 2.5rem 0 0 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0rem;
+        background: var(--morning-fog);
+        border-radius: 8px;
+        padding: 1rem;
+        img {
+          aspect-ratio: 1 / 1;
+          width: 8rem;
+          height: auto;
+          object-fit: contain;
+          border-right: 1px solid
+            color-mix(in srgb, var(--hazelwood) 30%, transparent);
+          padding: 0 1rem;
+        }
+        img:last-child {
+          border-right: none;
+        }
+      }
+      .headshot-wrapper {
+        margin-left: auto;
+        width: 50vw;
+        height: auto;
+        img.headshot {
+          width: 35vw;
+          height: 35vw;
+          border-radius: 0.5rem;
+          object-fit: cover;
+          border-radius: 0.5rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    .employee-profiles {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 2.5rem 2rem 2.5rem 2rem;
+      .profile-card {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        gap: 0;
+        margin: 0;
+        padding: 0 0 2.5rem 0;
+        border-bottom: 1px solid var(--hazelwood);
+        .info-section {
+          width: 100%;
+          h2 {
+            font-weight: 400;
+            margin: 0 0 1rem 0;
+            font-size: 1.25rem;
+          }
+          p {
+            font-weight: 300;
+            font-size: .875rem;
+          }
+          .position,
+          .pronouns,
+          .email,
+          .phone {
+            color: var(--hazelwood);
+            margin-top: 0;
+          }
+          p.pronouns {
+            margin: 0 0 1rem 0;
+          }
+          p.phone {
+            margin: 0 0 1rem 0;
+          }
+          .bio {
+            margin: 0 0 1rem 0;
+            font-size: 1rem;
+            font-weight: 300;
+          }
+          ul {
+            font-weight: 300;
+          }
+        }
+        .headshot-wrapper {
+          width: 100%;
+          height: auto;
+          margin: 0 0 1rem 0;
+          img.headshot {
+            aspect-ratio: 1 / 1;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            margin: 0;
+            padding: 0;
+          }
+        }
+        .accreditations {
+          min-width: fit-content;
+          max-width: 100%;
+          height: auto;
+          margin: 2.5rem 0 0 0;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 0rem;
+          background: var(--morning-fog);
+          border-radius: 8px;
+          padding: .5rem;
+          margin: 0;
+          img {
+            aspect-ratio: 1 / 1;
+            width: 6rem;
+            height: auto;
+            object-fit: contain;
+            border-right: none;
+            border-left: 1px solid
+              color-mix(in srgb, var(--hazelwood) 30%, transparent);
+            padding: 0 .5rem 0 .5rem;
+            margin: .25rem 0 .25rem 0;
+          }
+          img:first-child {
+            border-left: none;
+          }
+          img:nth-child(4),
+          img:nth-child(7),
+          img:nth-child(10) {
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+</style>

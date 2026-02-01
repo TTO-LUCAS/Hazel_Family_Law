@@ -1,0 +1,299 @@
+---
+import Placeholder from "../assets/more-shadows.webp";
+import { getCollection } from "astro:content";
+
+interface Props {
+  service: string;
+}
+
+const { service } = Astro.props as Props;
+const services = await getCollection("services");
+const currentService = services.find((s) => s.slug === service);
+const serviceData = currentService?.data;
+---
+
+<section class="service-post">
+  <div class="row">
+    <div class="text">
+      <h2>
+        {
+          serviceData && serviceData.title
+            ? serviceData.title
+            : "Service not found"
+        }
+      </h2>
+      <h3>
+        {
+          serviceData && serviceData["short-description"]
+            ? serviceData["short-description"]
+            : "Service not found"
+        }
+      </h3>
+      <div class="image">
+        <img
+          src={serviceData && serviceData.image
+            ? serviceData.image
+            : Placeholder.src}
+        />
+      </div>
+      <p class="paragraph-1">
+        {
+          serviceData && serviceData["long-description"]
+            ? serviceData["long-description"]
+            : "Service not found"
+        }
+      </p>
+    </div>
+    <div class="image">
+      <img src=`${Placeholder.src}` />
+    </div>
+  </div>
+  <div class="row">
+    <p class="paragraph-2">
+      {
+        serviceData && serviceData["extra-info-column-1"]
+          ? serviceData["extra-info-column-1"]
+          : "Service not found"
+      }
+    </p>
+    <p class="paragraph-3">
+      {
+        serviceData && serviceData["extra-info-column-2"]
+          ? serviceData["extra-info-column-2"]
+          : "Service not found"
+      }
+    </p>
+  </div>
+  {
+    serviceData && serviceData["list-statements"] && (
+      <div class="row">
+        <ul style="list-style-type: decimal; margin: 0 0 0 0;">
+          {serviceData["list-statements"].map((statement: any) => (
+            <li>{statement.statement}</li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+  {
+    serviceData && serviceData["accreditation-images"] && serviceData["accreditation-images"].length > 0 && (
+      <div class="logos">
+        {serviceData["accreditation-images"].map((image: string) => (
+          <img src={image} alt="Logo" />
+        ))}
+      </div>
+    )
+  }
+</section>
+
+<style lang="scss">
+  .service-post {
+    padding: 4rem 2rem 4rem 2rem;
+    width: 100%;
+    margin: 0;
+    background: var(--oat-husk);
+    color: var(--burnt-umber);
+    .row:first-of-type {
+      width: 100%;
+      height: max-content;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--hazelwood);
+      margin: 4rem 0 4rem 0;
+      padding: 0 0 4rem 0;
+      .text {
+        width: 40%;
+        min-height: 80vh;
+        max-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        h2 {
+          font-weight: 400;
+          font-size: 3rem;
+        }
+        h3 {
+          font-weight: 300;
+          font-size: 1.5rem;
+          color: var(--hazelwood);
+        }
+        p {
+          margin: auto 0 0 0;
+          font-size: 1rem;
+          font-weight: 300;
+        }
+        div.image {
+          width: 100%;
+          height: auto;
+          display: none;
+          img {
+            aspect-ratio: 1 /1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+          }
+        }
+      }
+      .image {
+        width: 40%;
+        height: 80vh;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+    }
+    .row:nth-child(2) {
+      width: 100%;
+      height: max-content;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      width: 80%;
+      p {
+        margin: 0 0 0 0;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+    .row:nth-child(3) {
+      width: 60%;
+      height: max-content;
+      margin: 4rem 0 0 0;
+      ul {
+        margin: 0 0 0 0;
+        li {
+          margin: 1rem 0 0 0;
+          font-size: 1.5rem;
+          font-weight: 300;
+          color: var(--autumn-blush);
+        }
+      }
+    }
+    .logos {
+      margin: 6rem 0 4rem 0;
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      img {
+        width: 33%;
+        margin: 0 2rem 0 0;
+        object-fit: contain;
+      }
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    .service-post {
+      padding: 6.25rem 2rem 2.5rem 2rem;
+      width: 100%;
+      margin: 0;
+      background: var(--oat-husk);
+      color: var(--burnt-umber);
+      .row:first-of-type {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--hazelwood);
+        margin: 0rem 0 0rem 0;
+        padding: 0 0 2.5rem 0;
+        .text {
+          width: 100%;
+          height: max-content;
+          display: flex;
+          flex-direction: column;
+          h2 {
+            font-weight: 400;
+            font-size: 2.25rem;
+            padding: 0;
+            margin: 0 0 2.5rem 0;
+          }
+          h3 {
+            font-weight: 300;
+            font-size: 1rem;
+            color: var(--hazelwood);
+            padding: 0;
+            margin: 0rem 0 1rem 0;
+          }
+          p {
+            margin: auto 0 0 0;
+            font-size: 1rem;
+            font-weight: 300;
+          }
+          div.image {
+            display: block;
+            margin: 0 0 6.25rem 0;
+            img {
+              aspect-ratio: 4 / 3;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 8px;
+            }
+          }
+        }
+        .image {
+          width: 100%;
+          height: auto;
+          display: none;
+          img {
+            aspect-ratio: 1 /1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+          }
+        }
+      }
+      .row:nth-child(2) {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2.5rem 0 0 0;
+        p {
+          margin: 0 0 0 0;
+          font-size: 1rem;
+          font-weight: 300;
+        }
+      }
+      .row:nth-child(3) {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 0;
+        padding: 2.5rem 0 0 0;
+        ul {
+          margin: 0 0 0 0;
+          padding: 0 2rem 0 2rem;
+          list-style-position: outside;
+          li {
+            margin: 0rem 0 0 0;
+            font-size: 1rem;
+            font-weight: 300;
+          }
+        }
+      }
+      .logos {
+        margin: 2.5rem 0rem 0rem 0;
+        padding-bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        img {
+          width: 100%;
+          margin: 1rem 0 0 0;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,116 @@
+---
+// QuickExit component - uses quick exit https://github.com/bboyle/quick-exit by bboyle
+---
+
+<link rel="stylesheet" href="/quickExit/quick-exit.min.css" />
+<script src="/quickExit/quick-exit.min.js" is:inline defer></script>
+<div id="quick-exit" class="">
+  <a target="_top" href="http://www.google.com/">QUICK EXIT</a>
+</div>
+
+<style is:global lang="scss">
+  #quick-exit {
+    width: max-content !important;
+    height: auto !important;
+    background: var(--morning-fog) !important;
+    color: var(--deep-coal) !important;
+    border: 1px solid var(--morning-fog) !important;
+    outline: none !important;
+    box-shadow: none !important;
+    font-family: var(--be-vietnam-pro);
+    font-size: 1.125rem !important;
+    top: 50% !important;
+    padding: 0.3rem 1.7rem 0.3rem 1.35rem !important;
+    a {
+      // margin: 0 1rem 0 1rem !important;
+    }
+  }
+
+  #quick-exit:hover,
+  #quick-exit:focus,
+  #quick-exit a:hover,
+  #quick-exit a:focus {
+    font-size: 1.125rem !important;
+    transform: none !important;
+    color: var(--deep-coal) !important;
+  }
+
+  #quick-exit.invert {
+    border-top: 1px solid var(--deep-coal) !important;
+    border-left: 1px solid var(--deep-coal) !important;
+    border-bottom: 1px solid var(--deep-coal) !important;
+    border-right: none !important;
+  }
+
+  #quick-exit.hidden {
+    display: none !important;
+  }
+
+  @media screen and (max-width: 920px) {
+    #quick-exit {
+      top: calc(9vh * 0.33) !important;
+      left: 2rem !important;
+      width: max-content !important;
+      border-radius: 1rem !important;
+      padding: 0.25rem 1.6rem .25rem 1.6rem !important;
+      // font-size: 1rem !important;
+    }
+    #quick-exit:hover,
+    #quick-exit:focus,
+    #quick-exit a:hover,
+    #quick-exit a:focus {
+      font-size: 1 !important;
+      transform: none !important;
+      color: var(--deep-coal) !important;
+    }
+  }
+</style>
+
+<script>
+  // if user is on mobile and either the #mobile-header-links or #header-contact elements have
+  // the open class, add the hidden class to the quick-exit button to hide it
+  // otherwise, remove the hidden class
+  document.addEventListener("DOMContentLoaded", () => {
+    const quickExit = document.getElementById("quick-exit");
+    const mobileHeaderLinks = document.getElementById("mobile-header-links");
+    const headerContact = document.getElementById("header-contact");
+
+    function isMobile() {
+      return window.innerWidth <= 920;
+    }
+
+    function updateQuickExitVisibility() {
+      if (!quickExit) return;
+
+      if (
+        isMobile() &&
+        ((mobileHeaderLinks && mobileHeaderLinks.classList.contains("open")) ||
+          (headerContact && headerContact.classList.contains("open")))
+      ) {
+        quickExit.classList.add("hidden");
+      } else {
+        quickExit.classList.remove("hidden");
+      }
+    }
+
+    if (mobileHeaderLinks) {
+      const mobileObserver = new MutationObserver(updateQuickExitVisibility);
+      mobileObserver.observe(mobileHeaderLinks, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+    }
+
+    if (headerContact) {
+      const contactObserver = new MutationObserver(updateQuickExitVisibility);
+      contactObserver.observe(headerContact, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+    }
+
+    window.addEventListener("resize", updateQuickExitVisibility);
+
+    updateQuickExitVisibility();
+  });
+</script>

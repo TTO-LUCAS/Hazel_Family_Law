@@ -1,0 +1,159 @@
+---
+import ImgPlaceholder from "../assets/tree-shadow.webp";
+---
+
+<section class="pricing-section">
+  <div class="pricing-content">
+    <h2>Pricing</h2>
+    <p class="lead-in">
+      Honest, transparent pricing designed to deliver cost-effective outcomes
+      and clarity from the outset.
+    </p>
+    <p class="post-lead-in">
+      We prioritise transparent, cost-effective pricing by providing upfront
+      cost information, clear advice, and practical pathways designed to
+      minimise uncertainty and manage legal costs responsibly.
+    </p>
+    <a href="/pricing">Learn more</a>
+  </div>
+  <div class="picture-placeholder">
+    <img src={ImgPlaceholder.src} alt="Pricing Plans Illustration" />
+  </div>
+</section>
+
+<style lang="scss">
+  .pricing-section {
+    height: 70vh;
+    background: var(--hazelwood);
+    color: var(--oat-husk);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    .pricing-content {
+      padding: 5rem 12rem 5rem 2rem;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      h2 {
+        padding: 0;
+        margin: 0;
+      }
+      p.lead-in {
+        font-size: 1.5rem;
+        font-weight: 300;
+        width: 60%;
+        margin-top: 2.5rem;
+      }
+      p.post-lead-in {
+        margin-top: 2.5rem;
+      }
+      p {
+        font-size: 1.125rem;
+        font-weight: 300;
+      }
+      a {
+        margin-top: auto;
+        width: max-content;
+        background: var(--oat-husk);
+        padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+        color: var(--hazelwood);
+        border-radius: 34px;
+        font-size: 18px;
+        transition:
+          background 0.2s ease-in-out,
+          border 0.2s ease-in-out,
+          color 0.2s ease-in-out;
+      }
+      a:hover {
+        background: var(--deep-coal);
+        color: var(--oat-husk);
+      }
+      a:active {
+        text-decoration: underline;
+      }
+    }
+    .picture-placeholder {
+      border: none;
+      margin: 0;
+      padding: 0;
+      width: 40%;
+      height: auto;
+      overflow: hidden;
+      img {
+        margin: 0;
+        padding: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    .pricing-section {
+      height: auto;
+      width: 100%;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      .pricing-content {
+        padding: 2.5rem 2rem 2.5rem 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h2 {
+          padding: 0;
+          margin: 0 0 2.5rem 0;
+          font-size: 1.25rem;
+        }
+        p.lead-in {
+          margin: 0 0 2.5rem 0;
+          font-size: 1rem;
+          font-weight: 300;
+          width: 100%;
+        }
+        p.post-lead-in {
+          margin: 0rem 0 2.5rem 0;
+          font-size: .875rem;
+        }
+        p {
+          font-size: 1rem;
+          font-weight: 300;
+        }
+        a {
+          margin-top: 0rem;
+          width: max-content;
+          background: var(--oat-husk);
+          padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+          color: var(--hazelwood);
+          border-radius: 2.125rem;
+          font-size: .875rem;
+          transition:
+            background 0.2s ease-in-out,
+            border 0.2s ease-in-out,
+            color 0.2s ease-in-out;
+        }
+        a:hover {
+          background: var(--deep-coal);
+          color: var(--oat-husk);
+        }
+        a:active {
+          text-decoration: underline;
+        }
+      }
+      .picture-placeholder {
+        width: 100%;
+        height: 30vh;
+        picture {
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+</style>

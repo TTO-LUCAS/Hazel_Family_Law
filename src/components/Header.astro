@@ -1,0 +1,937 @@
+---
+import CloseBtn from "../assets/svgs/close.svg";
+import Sandwich from "../assets/svgs/sandwich.svg";
+import Logo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_Wordmark_Oat.svg";
+---
+
+<header class="site-header desktop">
+  <h3><a class="header-link" href="/">Home</a></h3>
+  <h3><a class="header-link" href="/about">About Us</a></h3>
+  <h3><a class="header-link" href="/services">Services</a></h3>
+  <h3><a class="header-link" href="/pricing">Pricing</a></h3>
+  <h3><a class="header-link" href="/resources">Resources</a></h3>
+  <button
+    class="header-button"
+    onclick="document.getElementById('header-contact').classList.toggle('open'); document.getElementById('quick-exit').classList.toggle('invert');"
+  >
+    <h3 class="header-link">Contact</h3>
+  </button>
+</header>
+
+<div id="header-contact" style="">
+  <div id="col-1">
+    <h2 style="font-weight: 400;">Contact</h2>
+    <form name="header-contact" id="header-contact-form" method="POST" netlify>
+      <input
+        type="hidden"
+        name="subject"
+        value="Contact Form Inquiry from Hazel Website"
+        autocomplete="on"
+      />
+      <p>
+        We welcome the opportunity to discuss your situation confidentially—by
+        phone or via the form below.
+      </p>
+      <div class="contact-form" id="name-field">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          name="name-full"
+          id="name"
+          required
+          placeholder="Full Name"
+          autocomplete="on"
+        />
+      </div>
+      <div class="contact-form" id="email-field">
+        <label for="email">Email Address</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          required
+          placeholder="Email Address"
+          autocomplete="on"
+        />
+      </div>
+      <div class="contact-form" id="phone-field">
+        <label for="phone">Phone Number</label>
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="Phone Number"
+          autocomplete="on"
+        />
+      </div>
+      <div class="contact-form" id="preference-field">
+        <label for="time">Contact Preference (Time)</label>
+        <input
+          type="text"
+          name="time"
+          id="time"
+          placeholder="Contact Preference (Time)"
+          autocomplete="on"
+        />
+      </div>
+      <div class="contact-form" id="message-field">
+        <label for="message">Message</label>
+        <textarea
+          name="message"
+          id="message"
+          required
+          rows="4"
+          placeholder="Message"></textarea>
+      </div>
+      <div class="contact-form" id="submit-field">
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+    <div class="header-contact-links">
+      <ul>
+        <li><a href="/terms-of-use">Terms of Use</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/disclaimer">Disclaimer</a></li>
+      </ul>
+      <ul>
+        <li>
+          <a href="mailto:info@hazelfamilylaw.com.au"
+            >info@hazelfamilylaw.com.au</a
+          >
+        </li>
+        <li><a href="tel:0370206529">03 7020 6529</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="col-2">
+    <div id="close-btn-wrapper">
+      <button
+        id="close-header"
+        onclick="document.getElementById('header-contact').classList.toggle('open'); document.getElementById('quick-exit').classList.toggle('invert');"
+      >
+        <svg
+          width="23"
+          height="23"
+          viewBox="0 0 23 23"
+          fill="none"
+          version="1.1"
+          id="svg1"
+          sodipodi:docname="close.svg"
+          inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+          xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+          xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:svg="http://www.w3.org/2000/svg"
+        >
+          <defs id="defs1"></defs>
+          <sodipodi:namedview
+            id="namedview1"
+            pagecolor="#ffffff"
+            bordercolor="#000000"
+            borderopacity="0.25"
+            inkscape:showpageshadow="2"
+            inkscape:pageopacity="0.0"
+            inkscape:pagecheckerboard="0"
+            inkscape:deskcolor="#d1d1d1"
+            inkscape:zoom="10.26087"
+            inkscape:cx="11.451271"
+            inkscape:cy="11.5"
+            inkscape:window-width="1312"
+            inkscape:window-height="449"
+            inkscape:window-x="0"
+            inkscape:window-y="25"
+            inkscape:window-maximized="0"
+            inkscape:current-layer="svg1"></sodipodi:namedview>
+          <path
+            d="M22.2929 21.7071L1.29289 0.707107M0.707107 21.7071L21.7071 0.707107"
+            stroke="#A15834"
+            stroke-width="2"
+            id="path1"
+            style="stroke:#A15834;stroke-opacity:1"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="header-contact-links">
+      <ul>
+        <li>
+          <a
+            href="https://www.instagram.com/hazelfamilylaw"
+            target="_blank"
+            rel="noopener noreferrer">Instagram</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.au.linkedin.com/company/hazel-family-law-mediation"
+            target="_blank"
+            rel="noopener noreferrer">LinkedIn</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<header class="mobile-header">
+  <!-- Mobile header content can go here -->
+  <button class="header-sandwich">
+    <img
+      src=`${Sandwich.src}`
+      alt="Menu"
+      onclick="document.getElementById('mobile-header-links').classList.toggle('open');"
+    />
+  </button>
+  <div id="mobile-header-links">
+    <div id="col-1-m-header">
+      <div class="logo-wrapper">
+        <img src={Logo.src} />
+      </div>
+      <h3><a class="header-link" href="/">Home</a></h3>
+      <h3><a class="header-link" href="/about">About Us</a></h3>
+      <h3><a class="header-link" href="/services">Services</a></h3>
+      <h3><a class="header-link" href="/pricing">Pricing</a></h3>
+      <h3><a class="header-link" href="/resources">Resources</a></h3>
+      <button
+        class="header-button"
+        onclick="document.getElementById('header-contact').classList.toggle('open'); document.getElementById('quick-exit').classList.toggle('invert'); document.getElementById('mobile-header-links').classList.toggle('open');"
+      >
+        <h3 class="header-link" style="font-size: .875rem;">Contact</h3>
+      </button>
+    </div>
+    <div id="col-2-m-header">
+      <div class="close-btn-wrapper">
+        <button id="close-mobile-header">
+          <img
+            src={CloseBtn.src}
+            alt="Close Menu"
+            onclick="document.getElementById('mobile-header-links').classList.toggle('open');"
+          />
+        </button>
+      </div>
+    </div>
+    <div class="mobile-header-footer">
+      <ul>
+        <li><a href="/terms-of-use">Terms of Use</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/disclaimer">Disclaimer</a></li>
+      </ul>
+      <ul style="text-align: right;">
+        <li>
+          <a href="mailto:info@hazelfamilylaw.com.au"
+            >info@hazelfamilylaw.com.au</a
+          >
+        </li>
+        <li><a href="tel:0370206529">03 7020 6529</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<style lang="scss">
+  header.mobile-header {
+    display: none;
+  }
+  header.site-header {
+    position: absolute;
+    width: 100%;
+    height: 7vh;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 2rem;
+    gap: 5rem;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: var(--morning-fog);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    transition:
+        transform 0.3s ease-in-out,
+        background-color 0.3s ease-in-out;
+    &.can-animate {
+      transition:
+        transform 0.3s ease-in-out;
+    }
+    &.is-fixed {
+      position: fixed;
+      transform: translate3d(0, -100%, 0);
+    }
+    &.is-fixed.scroll-up {
+      transform: translate3d(0, 0, 0);
+    }
+    &.scroll-up {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .header-link {
+    margin: 0;
+    padding: 0;
+    color: var(--morning-fog);
+    text-decoration: none;
+  }
+  button.header-button {
+    padding: 0.25rem 1.25rem;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inline-block;
+    background-color: var(--hazelwood);
+    border-radius: 2.125rem;
+    border: 1px solid var(--hazelwood);
+    cursor: pointer;
+    color: var(--morning-fog);
+    text-decoration: none;
+    margin-left: auto;
+  }
+  div#header-contact {
+    background: var(--morning-fog);
+    color: var(--burnt-umber);
+    position: fixed;
+    z-index: 102;
+    top: 0;
+    right: -100%; /* give right: 0% to make it visible */
+    transition: right 0.5s ease-in-out;
+    width: 64vw;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    #col-1 {
+      width: 70%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h2 {
+        margin: 0 0 1rem 0;
+        padding: 0;
+      }
+      #header-contact-form {
+        display: grid;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(8, 1fr);
+        gap: 0.5rem;
+        height: 70%;
+        border: 2px none var(--burnt-umber);
+        font-weight: 300;
+        font-size: 1rem;
+        *:focus {
+          outline: none;
+        }
+        .contact-form {
+          position: relative;
+          border: 1px none var(--burnt-umber);
+          border-radius: 8px;
+          margin: 0;
+          font-weight: 300;
+          font-size: 1rem;
+          &:has(input[required], textarea[required])::after {
+            content: "*";
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            color: var(--hazelwood);
+            line-height: 1rem;
+            font-weight: 300;
+            z-index: 1;
+            pointer-events: none;
+          }
+          label {
+            position: absolute;
+            top: 8px;
+            left: 12px;
+            display: none;
+          }
+          input {
+            background: transparent;
+            border: 1px solid var(--burnt-umber);
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            padding: 0rem 1rem 0rem 1rem;
+            font-size: 1rem;
+            font-weight: 300;
+            &::placeholder {
+              color: var(--burnt-umber);
+              opacity: 1;
+            }
+          }
+          textarea {
+            padding: 1rem;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--burnt-umber);
+            border-radius: 8px;
+            background: transparent;
+            resize: none;
+            font-size: 1rem;
+            font-weight: 300;
+            &::placeholder {
+              color: var(--burnt-umber);
+              opacity: 1;
+            }
+          }
+        }
+        p {
+          grid-column: 1 / -1;
+          grid-row: 1 / span 1;
+          font-size: 1.5rem;
+          font-weight: 300;
+        }
+        #name-field {
+          grid-column: 1 / span 4;
+          grid-row: 3 / span 1;
+        }
+        #email-field {
+          grid-column: 5 / -1;
+          grid-row: 3 / span 1;
+        }
+        #phone-field {
+          grid-column: 1 / span 4;
+          grid-row: 4 / span 1;
+        }
+        #preference-field {
+          grid-column: 5 / -1;
+          grid-row: 4 / span 1;
+        }
+        #message-field {
+          grid-column: 1 / -1;
+          grid-row: 5 / span 3;
+        }
+        #submit-field {
+          grid-column: 1 / span 1;
+          grid-row: 8 / span 1;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          border: none;
+          input[type="submit"] {
+            grid-column: 1 / span 1;
+            height: 2rem;
+            background: var(--hazelwood);
+            padding: 0 1.25rem;
+            color: var(--oat-husk);
+            border-radius: 34px;
+            font-size: 1.125rem;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            line-height: 2rem;
+            transition:
+              background 0.2s ease-in-out,
+              border 0.2s ease-in-out,
+              color 0.2s ease-in-out;
+          }
+          input[type="submit"]:hover {
+            background: var(--burnt-umber);
+          }
+          input[type="submit"]:active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    #col-2 {
+      width: 15%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      #close-btn-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        button {
+          padding: 0;
+        }
+      }
+    }
+  }
+  div#header-contact.open {
+    right: 0% !important;
+  }
+  .header-contact-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: right;
+    :first-child {
+      text-align: left;
+    }
+    #middle-contact-links {
+      margin: 0 0 0 8rem;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      li {
+        margin-bottom: 1rem;
+        a {
+          color: var(--burnt-umber);
+          text-decoration: none;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    header.site-header.desktop {
+      display: none;
+    }
+    header.mobile-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: calc(100vw + 1px);
+      height: 9vh;
+      padding: 0 1rem 0 0;
+      z-index: 100;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      box-sizing: border-box;
+      background-color: rgba(0, 0, 0, 0.35);
+      color: var(--morning-fog);
+      backdrop-filter: blur(0.625rem);
+      -webkit-backdrop-filter: blur(5px);
+    }
+    #mobile-header-links {
+      display: grid;
+      grid-template-columns: repeat(20, 5%);
+      grid-template-rows: auto; /* Changed from repeat(20, 5%) */
+      gap: 0rem;
+      position: fixed; /* Changed from absolute */
+      z-index: 102;
+      width: 100%;
+      height: 100vh; /* Changed from max-content */
+      overflow-y: auto; /* Keep as auto */
+      scrollbar-width: none; /* For Firefox */
+      -ms-overflow-style: none; /* For Internet Explorer and Edge */
+      padding: 2rem 2rem 8rem 2rem; /* Added more bottom padding */
+      box-sizing: border-box;
+      top: 0;
+      right: -100%; /* give right: 0% to make it visible */
+      transition: right 0.5s ease-in-out;
+      background: var(--burnt-umber);
+      color: var(--oat-husk);
+      .header-link {
+        color: var(--oat-husk);
+      }
+      #col-1-m-header {
+        grid-column: 1 / span 15;
+        grid-row: auto; /* Changed from 1 / span 10 */
+        margin: 0rem 0 0 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        .logo-wrapper {
+          width: 90%;
+          height: auto;
+          margin-bottom: 50%;
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+          }
+        }
+        h3 {
+          margin: 0rem 0 2rem 0;
+          font-size: 1.3rem;
+          font-weight: 300;
+        }
+        button {
+          margin-left: 0;
+          margin-top: 10%;
+          h3 {
+            margin: 0 0 0 0;
+          }
+        }
+      }
+      #col-2-m-header {
+        grid-column: 18 / -1;
+        grid-row: 1 / span 2;
+        width: 2rem;
+        margin: 0 0 0 auto;
+        padding: 0;
+        div.close-btn-wrapper {
+          margin: 0rem 0 0rem 0;
+          display: flex;
+          justify-content: flex-start;
+        }
+      }
+      div.mobile-header-footer {
+        grid-column: 1 / -1;
+        grid-row: 18 / -1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 10rem 0 0 0;
+        ul {
+          list-style-type: none;
+          padding: 0rem 0 0 0;
+          margin: 0;
+          li {
+            margin-bottom: 5%;
+            a {
+              color: var(--oat-husk);
+              text-decoration: none;
+              font-weight: 300;
+              font-size: 0.875rem;
+            }
+          }
+        }
+      }
+    }
+    #mobile-header-links.open {
+      right: 0% !important;
+    }
+    div#header-contact {
+      width: 100vw;
+      min-height: max-content;
+      max-height: 100vh;
+      right: calc(-100% - 1px);
+      overflow-y: auto;
+      #col-1 {
+        width: 100%;
+        justify-content: flex-start;
+        h2 {
+          font-size: 1.425rem;
+          margin: 0 0 2rem 0;
+        }
+        #header-contact-form {
+          height: 90%;
+          grid-template-rows: repeat(16, 1fr);
+          grid-template-columns: repeat(8, 1fr);
+          p {
+            font-size: 1rem;
+            grid-column: 1 / -1;
+            grid-row: 2 / span 2;
+          }
+          #name-field {
+            grid-column: 1 / -1;
+            grid-row: 4 / span 1;
+          }
+          #email-field {
+            grid-column: 1 / -1;
+            grid-row: 5 / span 1;
+          }
+          #phone-field {
+            grid-column: 1 / -1;
+            grid-row: 6 / span 1;
+          }
+          #preference-field {
+            grid-column: 1 / -1;
+            grid-row: 7 / span 1;
+          }
+          #message-field {
+            grid-column: 1 / -1;
+            grid-row: 8 / span 8;
+          }
+          #submit-field {
+            grid-column: 1 / -1;
+            grid-row: 16 / span 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        div.header-contact-links {
+          margin: 16px 0 0 0;
+          ul {
+            margin: 0;
+            li {
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+      #col-2 {
+        width: 0;
+        position: relative;
+        margin-top: 8rem;
+        div#close-btn-wrapper {
+          button#close-header {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            margin-top: -8rem;
+            img {
+              width: 1.8em;
+              height: 1.8em;
+            }
+          }
+        }
+        .header-contact-links {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-height: 768px) {
+    div#header-contact {
+      width: 100vw;
+      height: 100vh;
+      right: calc(-100% - 1px);
+      overflow-y: scroll;
+      #col-1 {
+        width: 100%;
+        justify-content: flex-start;
+        h2 {
+          font-size: 1.425rem;
+          margin: 0 0 1rem 0;
+        }
+        #header-contact-form {
+          font-size: 14px;
+          height: 80%;
+          display: grid;
+          grid-template-rows: repeat(7, 1fr);
+          grid-template-columns: repeat(8, 1fr);
+          input#name,
+          input#email,
+          input#phone,
+          input#time,
+          textarea#message {
+            font-size: 0.875rem;
+          }
+          #submit-field {
+            input[type="submit"] {
+              font-size: 0.875rem;
+            }
+          }
+          p {
+            font-size: 0.875rem;
+            grid-column: 1 / -1;
+            grid-row: 1 / span 1;
+          }
+          #name-field {
+            grid-column: 1 / -1;
+            grid-row: 2 / span 1;
+          }
+          #email-field {
+            grid-column: 1 / -1;
+            grid-row: 3 / span 1;
+          }
+          #phone-field {
+            grid-column: 1 / -1;
+            grid-row: 4 / span 1;
+          }
+          #preference-field {
+            grid-column: 1 / -1;
+            grid-row: 5 / span 1;
+          }
+          #message-field {
+            grid-column: 1 / -1;
+            grid-row: 6 / span 1;
+          }
+          #submit-field {
+            grid-column: 1 / -1;
+            grid-row: 7 / span 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        div.header-contact-links {
+          margin: 16px 0 0 0;
+          ul {
+            margin: 0;
+            li {
+              margin-bottom: 0.5rem;
+              font-size: 0.875rem;
+            }
+          }
+        }
+      }
+      #col-2 {
+        width: 0;
+        position: relative;
+        div#close-btn-wrapper {
+          button#close-header {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            img {
+              aspect-ratio: 1 / 1;
+              width: 1.4375rem;
+              height: auto;
+            }
+          }
+        }
+        .header-contact-links {
+          display: none;
+        }
+      }
+    }
+  }
+</style>
+
+<script is:inline>
+  addEventListener("DOMContentLoaded", (event) => {
+    const container = document.querySelector("body");
+    const headers = document.querySelectorAll(
+      "header.site-header.desktop, header.mobile-header",
+    );
+
+    let lastScroll = 0;
+
+    const throttle = (func, time = 100) => {
+      let lastTime = 0;
+      return () => {
+        const now = new Date();
+        if (now - lastTime >= time) {
+          func();
+          lastTime = now;
+        }
+      };
+    };
+
+    const validateHeader = () => {
+      const windowY = container.scrollTop;
+      const windowH = window.innerHeight;
+
+      if (headers.length === 0) {
+        return;
+      }
+
+      if (windowY > windowH) {
+        headers.forEach((header) => {
+          header.classList.add("is-fixed");
+        });
+
+        if (windowY > windowH + 40) {
+          headers.forEach((header) => {
+            header.classList.add("can-animate");
+          });
+
+          if (windowY < lastScroll) {
+            headers.forEach((header) => {
+              header.classList.add("scroll-up");
+            });
+          } else {
+            headers.forEach((header) => {
+              header.classList.remove("scroll-up");
+            });
+          }
+        } else {
+          headers.forEach((header) => {
+            header.classList.remove("scroll-up");
+          });
+        }
+      } else {
+        headers.forEach((header) => {
+          header.classList.remove("is-fixed", "can-animate");
+        });
+      }
+
+      lastScroll = windowY;
+    };
+
+    validateHeader();
+    container.addEventListener("scroll", throttle(validateHeader, 100));
+
+    const normalizePath = (path) => {
+      if (path === "/") return path;
+      return path.replace(/\/$/, "");
+    };
+    const currentPath = normalizePath(window.location.pathname);
+    const navLinks = document.querySelectorAll(
+      "header.site-header.desktop h3 a, header.mobile-header h3 a",
+    );
+    
+    let lastClickedLink = sessionStorage.getItem("lastClickedLink");
+    
+    const getActiveHref = () => {
+      let activeHref = null;
+
+      navLinks.forEach((link) => {
+        const href = normalizePath(link.getAttribute("href"));
+        if (currentPath === href) {
+          activeHref = href;
+        }
+      });
+
+      if (!activeHref && lastClickedLink) {
+        activeHref = normalizePath(lastClickedLink);
+      }
+
+      return activeHref;
+    };
+
+    const updateUnderline = () => {
+      const activeHref = getActiveHref();
+
+      navLinks.forEach((link) => {
+        link.style.textDecoration = "none"; // Reset all links
+        const href = normalizePath(link.getAttribute("href"));
+        link.style.textDecoration = activeHref === href ? "underline" : "none";
+      });
+    };
+    
+    // Add click event listeners to each link
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        const href = normalizePath(link.getAttribute("href"));
+        sessionStorage.setItem("lastClickedLink", href);
+        lastClickedLink = href;
+        updateUnderline();
+      });
+    });
+    
+    // Initial underline update on page load
+    updateUnderline();
+
+    changeHeaderBackground();
+    container.addEventListener("scroll", throttle(changeHeaderBackground, 100));
+  });
+
+  function changeHeaderBackground() {
+    const header = document.querySelector("header.site-header.desktop, header.mobile-header");
+    if (!header) return;
+
+    const headerRect = header.getBoundingClientRect();
+    const headerTop = headerRect.top;
+    const headerBottom = headerRect.bottom;
+    const headerLeft = headerRect.left;
+    const headerRight = headerRect.right;
+
+    const images = document.querySelectorAll("img");
+    let hasOverlap = false;
+
+    images.forEach((img) => {
+      const imgRect = img.getBoundingClientRect();
+      
+      if (
+        imgRect.bottom > headerTop &&
+        imgRect.top < headerBottom &&
+        imgRect.right > headerLeft &&
+        imgRect.left < headerRight
+      ) {
+        hasOverlap = true;
+      }
+    });
+
+    if (hasOverlap) {
+      header.style.backgroundColor = "rgba(0, 0, 0, 0.35)";
+      header.style.backdropFilter = "blur(10px)";
+    } else {
+      header.style.backgroundColor = "var(--deep-coal)";
+      header.style.backdropFilter = "none";
+    }
+  }
+</script>

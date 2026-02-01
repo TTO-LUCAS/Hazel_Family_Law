@@ -1,0 +1,106 @@
+---
+import Waves from "../assets/waves.webp";
+import hazelLogoPartialOatHusk from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_Wordmark_Oat.svg";
+import Video480 from "../assets/videos/480waves.mp4";
+import Video576 from "../assets/videos/576waves.mp4";
+import Video720 from "../assets/videos/720waves.mp4";
+import Video1080 from "../assets/videos/1080waves.mp4";
+---
+
+<section class="hero">
+  <div class="vid-wrapper">
+    <video
+      autoplay
+      preload="metadata"
+      disablepictureinpicture
+      muted
+      loop
+      playsinline
+      poster={Waves.src}
+    >
+      <source src={Video480} type="video/mp4" />
+      <source src={Video576} type="video/mp4" />
+      <source src={Video720} type="video/mp4" />
+      <source src={Video1080} type="video/mp4" />
+    </video>
+  </div>
+  <div class="logo-wrapper">
+    <img src={hazelLogoPartialOatHusk.src} alt="Hazel Logo" />
+  </div>
+  <p>Clarity, Compassion & Resolution</p>
+</section>
+
+<style lang="scss">
+  section.hero {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/waves.webp");
+    background-size: cover;
+    background-position: center;
+    color: var(--oat-husk);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative; 
+    div.vid-wrapper {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+      video {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    div.logo-wrapper {
+      width: 55vw;
+      height: auto;
+      margin: 0 0 25vh 2rem;
+      padding: 0;
+      z-index: 3;
+      position: relative; 
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    p {
+      z-index: 3;
+      padding: 0 0 2rem 2rem;
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-top: 1rem;
+      position: relative; 
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    section.hero {
+      justify-content: space-between;
+      div.logo-wrapper {
+        margin: 0;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex: 1;
+      }
+      p {
+        font-size: 1.14rem;
+        padding: 0 0 2rem 2rem;
+        margin-top: auto;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,31 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import QuickExit from "../components/QuickExit.astro";
+import Content from "../components/site-legal/Content.astro";
+import Main from "../layouts/Main.astro";
+---
+
+<Main>
+  <Header />
+  <QuickExit />
+  <Content>
+    <span slot="title">Disclaimer</span>
+    <span slot="legal-content-txt">
+      <p>
+        All information on this site is of a general nature only and is not
+        intended to be relied upon as, nor to be a substitute for, specific
+        legal professional advice. No responsibility for the loss occasioned to
+        any person acting on or refraining from action as a result of any
+        material published can be accepted.
+      </p>
+    </span>
+    <style>
+      .blog-post {
+        padding: 6.25rem 2rem 9.375rem 2rem;
+      }
+    </style>
+    <Footer />
+  </Content>
+  <Footer />
+</Main>

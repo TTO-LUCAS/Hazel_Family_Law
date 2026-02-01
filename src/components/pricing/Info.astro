@@ -1,0 +1,241 @@
+---
+import Placeholder from "../../assets/more-shadows.webp";
+import JustFund from "../../assets/svgs/JustFundLogo.svg";
+---
+
+<section class="info-section">
+  <div class="row">
+    <div class="container">
+      <p>
+        During your first appointment we will work with you to:<br />
+      </p>
+      <ul>
+        <li>Understand your situation and desired outcome;</li>
+        <li>
+          Identify your key issues and provide you with clear and practical
+          advice; and
+        </li>
+        <li>Plan a pathway forward</li>
+      </ul>
+      <br />
+      <p>
+        Your appointment can take place in person at our Melbourne CBD office,
+        via Microsoft Teams or by telephone. 
+        <br /><br />
+        You may choose to end the interview after the complimentary 30 minutes or
+        continue to receive tailored advice. 
+        <br /><br />
+        A comprehensive initial appointment typically lasts around one hour. Any time
+        beyond the first 30 minutes is charged at Elisa’s regular hourly rate, payable
+        at the conclusion of your appointment. 
+        <br /><br />
+        We aim to provide you with the clarity and confidence to make well-informed
+        decisions and plan your next steps, guided by our practical and experienced
+        advice.
+        <br /><br />
+        If you choose to move forward with us by your side, then we can outline the
+        likely costs involved in helping you achieve a resolution.
+      </p>
+      <button
+        class="header-button desktop"
+        onclick="document.getElementById('header-contact').classList.toggle('open'); document.getElementById('quick-exit').classList.toggle('invert');"
+        >Contact Now</button
+      >
+    </div>
+    <img src=`${Placeholder.src}` />
+    <button
+      class="header-button mobile"
+      onclick="document.getElementById('header-contact').classList.toggle('open'); document.getElementById('quick-exit').classList.toggle('invert');"
+      >Contact Now</button
+    >
+  </div>
+  <div class="row" style="padding-bottom: 0;">
+    <div class="container">
+      <h2>Moving Forward</h2>
+      <p>
+        We understand that no one likes paying legal fees, and the longer a
+        matter remains unresolved, the more stressful and burdensome those
+        growing costs can feel.  
+        <br /><br />
+        Whenever possible, we will tailor our services to suit your budget and provide
+        clear, practical guidance on how to manage and contain your family law costs. 
+        <br /><br />
+        We also understand the financial strain many clients experience. Please speak
+        with us about the various funding options available. Do not let finances get
+        in the way of resolving your situation.
+        <br /><br />
+        Together, we can help you navigate your way to a successful outcome.
+      </p>
+      <h2 style="margin: 0;">Litigation Funding</h2>
+      <a
+        href="https://justfund.com.au/"
+        target="_blank"
+        rel="noopener noreferrer"><img src=`${JustFund.src}` /></a
+      ><!-- make this the JustFund svg logo -->
+      <p style="margin: 0 0 0 0;">
+        One option for meeting your legal costs is by way of a litigation
+        funder. We have partnered with JustFund - Australia’s only dedicated
+        provider of funding solutions for family law legal fees. Through our
+        partnership, eligible clients can access a flexible line of credit to
+        help manage legal fees and expenses, with nothing to repay until after a
+        settlement is reached. Unlike traditional lenders, JustFund does not
+        look at income or credit scores to approve funding support for family
+        law matters.
+        <br /><br />
+        Contact us for more information about JustFund, or feel free to contact them
+        directly.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .info-section {
+    width: 100%;
+    margin: 0;
+    padding: 0rem 2rem 5rem 2rem;
+    background: var(--hazelwood);
+    color: var(--oat-husk);
+    display: flex;
+    flex-direction: column;
+    .row:first-of-type {
+      border-bottom: 1px solid var(--oat-husk);
+      padding-bottom: 4rem;
+    }
+    .row {
+      display: flex;
+      flex-direction: row;
+      padding: 5rem 0 5rem 0;
+      .container {
+        width: 44%;
+        h2 {
+          margin: 0rem 0 2.5rem 0;
+        }
+        ul {
+          margin: 0 0 0 1rem;
+          padding: 0;
+          list-style-position: outside;
+          li {
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+            font-weight: 300;
+          }
+        }
+        p:first-of-type {
+          margin: 0 0 0rem 0;
+        }
+        p {
+          margin: 0 0 1em 0;
+          font-size: 1rem;
+          font-weight: 300;
+        }
+        a {
+          img {
+            margin: 2.5rem 0 2.5rem 0;
+            max-width: 150px;
+            border-radius: 0;
+          }
+        }
+      }
+      img {
+        aspect-ratio: 1 / 1;
+        width: 30%;
+        height: auto;
+        margin-left: auto;
+        border-radius: 8px;
+      }
+    }
+  }
+  button.header-button {
+    margin: 0rem 0 0 0;
+    padding: 0.25rem 1.25rem;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    background-color: var(--morning-fog);
+    border-radius: 34px;
+    border: 1px solid var(--hazelwood);
+    cursor: pointer;
+    color: var(--hazelwood);
+    text-decoration: none;
+    margin-left: auto;
+  }
+  button.header-button.desktop {
+    display: inline-block;
+  }
+  button.header-button.mobile {
+    display: none !important;
+  }
+
+  @media screen and (max-width: 920px) {
+    .info-section {
+      width: 100%;
+      margin: 0;
+      padding: 0rem 2rem 2.5rem 2rem;
+      background: var(--hazelwood);
+      color: var(--oat-husk);
+      display: flex;
+      flex-direction: column;
+      .row:first-of-type {
+        border-bottom: 1px solid var(--oat-husk);
+        padding-bottom: 2.5rem;
+      }
+      .row {
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem 0 0rem 0;
+        .container:last-of-type {
+          margin-bottom: 0;
+        }
+        .container {
+          width: 100%;
+          margin-bottom: 2.5rem;
+          h2:nth-of-type(2) {
+            padding-top: 2.5rem;
+          }
+          h2 {
+            margin: 0rem 0 2.5rem 0;
+            padding: 0;
+            font-size: 1.25rem;
+          }
+          p {
+            margin: 0 0 0rem 0;
+            font-size: 0.875rem;
+            font-weight: 300;
+          }
+          a {
+            img {
+              margin: 2.5rem 0 2.5rem 0;
+              max-width: 125px;
+              border-radius: 0;
+            }
+          }
+          ul {
+            margin: 0 0 0 1rem;
+            padding: 0;
+            list-style-position: outside;
+            li {
+              font-size: 0.875rem;
+              font-weight: 300;
+            }
+          }
+          button.header-button.desktop {
+            display: none;
+          }
+        }
+        img {
+          aspect-ratio: 4 / 3;
+          width: 100%;
+          height: auto;
+          margin: 2.5rem 0 2.5rem auto;
+          border-radius: 8px;
+        }
+      }
+    }
+    button.header-button.mobile {
+      display: inline-block !important;
+      margin: 0 auto 0rem 0 !important;
+    }
+  }
+</style>
