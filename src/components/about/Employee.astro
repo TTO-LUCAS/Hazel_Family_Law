@@ -1,14 +1,4 @@
 ---
-import Elisa from "../../assets/headshots/Elisa.webp";
-import Daria from "../../assets/headshots/Daria.webp";
-import Gia from "../../assets/headshots/Gia.webp";
-import Hazel from "../../assets/headshots/Hazel.webp";
-import LawCouncil from "../../assets/accreditations/law-council-of-aus.png";
-import LIV from "../../assets/accreditations/LIV-accreditation-specialisation.png";
-import Pacifica from "../../assets/accreditations/pacifica-congress.png";
-import Reframing from "../../assets/accreditations/reframing-autism.png";
-import Resolution from "../../assets/accreditations/resolution-institute.png";
-import Phoenix from "../../assets/accreditations/phoenix-aus.png";
 
 import { getCollection } from "astro:content";
 
@@ -16,7 +6,6 @@ interface Props {
   employee: string;
 }
 
-const { employee } = Astro.props as Props;
 const employees = await getCollection("employees");
 ---
 <section class="employee-profiles">
