@@ -23,4 +23,4 @@ Some of the areas we can assist with include:
 
 Maintenance can be structured as a one-off lump sum or as ongoing periodic payments, depending on your circumstances. We focus on practical, tailored solutions that consider your financial position and future needs.
 
-Early advice is essential. By seeking guidance at the right time, you can make decisions with confidence and ensure your financial security is protected throughout the separation process**.**
+Early advice is essential. By seeking guidance at the right time, you can make decisions with confidence and ensure your financial security is protected throughout the separation process.

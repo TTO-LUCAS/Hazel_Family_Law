@@ -37,20 +37,24 @@ const { Content } = await currentService!.render();
             : "No description available."
         }
       </p>
-       <Content class="body-text" />
+      <div class="service-content">
+        <Content />
+      </div>
     </div>
     <div class="image">
       <img src=`${Placeholder.src}` />
     </div>
   </div>
   {
-    serviceData && serviceData["accreditation-images"] && serviceData["accreditation-images"].length > 0 && (
-      <div class="logos">
-        {serviceData["accreditation-images"].map((image: string) => (
-          <img src={image} alt="Logo" />
-        ))}
-      </div>
-    )
+    serviceData &&
+      serviceData["accreditation-images"] &&
+      serviceData["accreditation-images"].length > 0 && (
+        <div class="logos">
+          {serviceData["accreditation-images"].map((image: string) => (
+            <img src={image} alt="Logo" />
+          ))}
+        </div>
+      )
   }
 </section>
 
@@ -61,7 +65,7 @@ const { Content } = await currentService!.render();
     margin: 0;
     background: var(--oat-husk);
     color: var(--burnt-umber);
-    .row:first-of-type {
+    .row {
       width: 100%;
       height: max-content;
       display: flex;
@@ -91,6 +95,13 @@ const { Content } = await currentService!.render();
           font-weight: 300;
           color: var(--hazelwood);
         }
+        .service-content {
+          :global(p) {
+            margin: 0 0 2rem 0 !important;
+            font-size: 1rem;
+            font-weight: 300;
+          }
+        }
         div.image {
           width: 100%;
           height: auto;
@@ -115,33 +126,6 @@ const { Content } = await currentService!.render();
         }
       }
     }
-    .row:nth-child(2) {
-      width: 100%;
-      height: max-content;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      width: 80%;
-      p {
-        margin: 0 0 0 0;
-        font-size: 1rem;
-        font-weight: 300;
-      }
-    }
-    .row:nth-child(3) {
-      width: 60%;
-      height: max-content;
-      margin: 4rem 0 0 0;
-      ul {
-        margin: 0 0 0 0;
-        li {
-          margin: 1rem 0 0 0;
-          font-size: 1.5rem;
-          font-weight: 300;
-          color: var(--autumn-blush);
-        }
-      }
-    }
     .logos {
       margin: 6rem 0 4rem 0;
       width: 80%;
@@ -162,7 +146,7 @@ const { Content } = await currentService!.render();
       margin: 0;
       background: var(--oat-husk);
       color: var(--burnt-umber);
-      .row:first-of-type {
+      .row {
         width: 100%;
         height: max-content;
         display: flex;
@@ -189,10 +173,12 @@ const { Content } = await currentService!.render();
             padding: 0;
             margin: 0rem 0 1rem 0;
           }
-          p {
-            margin: auto 0 0 0;
-            font-size: 1rem;
-            font-weight: 300;
+          .service-content {
+            :global(p) {
+              margin: 0 0 1rem 0 !important;
+              font-size: 1rem;
+              font-weight: 300;
+            }
           }
           div.image {
             display: block;
@@ -216,38 +202,6 @@ const { Content } = await currentService!.render();
             height: 100%;
             object-fit: cover;
             border-radius: 8px;
-          }
-        }
-      }
-      .row:nth-child(2) {
-        width: 100%;
-        height: max-content;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        padding: 2.5rem 0 0 0;
-        p {
-          margin: 0 0 0 0;
-          font-size: 1rem;
-          font-weight: 300;
-        }
-      }
-      .row:nth-child(3) {
-        width: 100%;
-        height: max-content;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        margin: 0;
-        padding: 2.5rem 0 0 0;
-        ul {
-          margin: 0 0 0 0;
-          padding: 0 2rem 0 2rem;
-          list-style-position: outside;
-          li {
-            margin: 0rem 0 0 0;
-            font-size: 1rem;
-            font-weight: 300;
           }
         }
       }
