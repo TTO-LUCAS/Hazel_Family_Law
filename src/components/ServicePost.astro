@@ -37,7 +37,7 @@ const { Content } = await currentService!.render();
             : "No description available."
         }
       </p>
-       <Content />
+       <Content class="body-text" />
     </div>
     <div class="image">
       <img src=`${Placeholder.src}` />
@@ -86,7 +86,7 @@ const { Content } = await currentService!.render();
           color: var(--hazelwood);
         }
         p.short-description {
-          margin: 2.5rem 0 0 0;
+          margin: 2.5rem 0 auto 0;
           font-size: 1.5rem;
           font-weight: 300;
           color: var(--hazelwood);
