@@ -9,7 +9,7 @@ extra-info-column-1: Optional info in column 1 here.
 extra-info-column-2: Optional info in column 2 here.
 list-statements:
   - statement: A pull quote or key statement goes here
-image: /uploads/hero-placeholder.webp
+image: /uploads/HFL01_Service_3.webp
 accreditation-images:
   - /uploads/minds-count.png
 ---
