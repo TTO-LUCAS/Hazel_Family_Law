@@ -2,10 +2,6 @@
 
 import { getCollection } from "astro:content";
 
-interface Props {
-  employee: string;
-}
-
 const employees = await getCollection("employees");
 ---
 <section class="employee-profiles">
