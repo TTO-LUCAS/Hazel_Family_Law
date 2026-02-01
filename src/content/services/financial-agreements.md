@@ -7,7 +7,7 @@ short-description: We prepare, review and negotiate Financial Agreements that
 long-description: Long description here.
 extra-info-column-1: Optional info in column 1 here.
 extra-info-column-2: Optional info in column 2 here.
-image: /uploads/hero-placeholder.webp
+image: /uploads/HFL01_Service_5.webp
 accreditation-images:
   - /uploads/minds-count.png
 ---
