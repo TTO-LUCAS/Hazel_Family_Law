@@ -2,8 +2,8 @@
 title: Understanding trauma-informed care in family law
 date: 2026-02-01T17:21:00.000+11:00
 author: Elisa Turco
-hero-image: /uploads/hero-placeholder.webp
-thumbnail: /uploads/hero-placeholder.webp
+hero-image: /uploads/HFL01_Shutters_Photo.webp
+thumbnail: /uploads/HFL01_Shutters_Photo.webp
 ---
 Navigating family change can be one of life’s most challenging experiences. For many, the process of separation or parenting disputes can bring up memories of distress, fear, or loss; and for some, these experiences may involve trauma. At Hazel Family Law & Mediation, we recognise that legal guidance is most effective when it is delivered with understanding, patience and awareness. This is the foundation of what is known as trauma-informed care.
 
