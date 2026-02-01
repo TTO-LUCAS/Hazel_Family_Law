@@ -1,3 +1,3 @@
 ---
-featured-post: how-the-court-decides-property-settlements
+featured-post: how-to-achieve-the-best-possible-outcome-in-your-family-law-matter
 ---
