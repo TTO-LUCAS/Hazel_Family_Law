@@ -38,7 +38,7 @@ console.log("Hero image path:", blog.data["hero-image"]);
     {blog.data["accreditation-images"] && blog.data["accreditation-images"].length > 0 && (
       <div class="logos">
         {blog.data["accreditation-images"].map((image: string) => (
-          <img src={image} alt="Accreditation Logo" />
+          <img src={image} alt="Accreditation Logo" loading="lazy"/>
         ))}
       </div>
     )}

@@ -56,7 +56,7 @@ console.log("Image path:", serviceData?.image);
       serviceData["accreditation-images"].length > 0 && (
         <div class="logos">
           {serviceData["accreditation-images"].map((image: string) => (
-            <img src={image} alt="Logo" />
+            <img src={image} alt="Logo" loading="lazy"/>
           ))}
         </div>
       )

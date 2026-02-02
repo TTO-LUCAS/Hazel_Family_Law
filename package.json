@@ -9,7 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.16.7",
+    "astro": "^5.17.1",
+    "astro-compressor": "^1.2.0",
     "autoprefixer": "^10.4.23",
     "cssnano": "^7.1.2",
     "decap-cms-app": "^3.10.0",
