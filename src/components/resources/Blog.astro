@@ -219,10 +219,11 @@ const ammendedBlogs = blogs.map((blog: any) => ({
           gap: 1rem;
           a {
             width: 100%;
-            height: 12.5rem;
+            height: fit-content;
             display: inline-block;
             margin: 0;
             padding: 0;
+            background-image: none;
             img {
               aspect-ratio: 9/6;
               width: 100%;
@@ -252,6 +253,7 @@ const ammendedBlogs = blogs.map((blog: any) => ({
             flex-direction: row;
             align-items: baseline;
             font-weight: 300;
+            background-image: linear-gradient(currentColor, currentColor);
             img {
               margin: 0 0 0 2rem;
               max-width: 1.1rem;
@@ -280,6 +282,7 @@ const ammendedBlogs = blogs.map((blog: any) => ({
             width: 100%;
             height: fit-content;
             display: inline-block;
+            background-image: none;
             img.mobile {
               display: inline-block;
               aspect-ratio: 9/6;
