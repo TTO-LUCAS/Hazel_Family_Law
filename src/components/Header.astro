@@ -801,6 +801,9 @@ import Logo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_W
       }
     }
   }
+  .no-bg-img {
+    background-image: none;
+  }
 </style>
 
 <script is:inline>
@@ -902,6 +905,7 @@ import Logo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_W
         link.style.textDecoration = "none"; // Reset all links
         const href = normalizePath(link.getAttribute("href"));
         link.style.textDecoration = activeHref === href ? "underline" : "none";
+        link.style.backgroundImage = activeHref === href ? "none" : "linear-gradient(currentColor, currentColor);";
       });
     };
 
