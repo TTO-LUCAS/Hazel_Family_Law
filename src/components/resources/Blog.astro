@@ -59,11 +59,13 @@ const ammendedBlogs = blogs.map((blog: any) => ({
       <p>{featuredDate}</p>
       {
         featuredPost && (
-          <img
-            class="mobile"
-            src={featuredPost.data["hero-image"]}
-            alt={featuredPost.data.title}
-          />
+          <a href={`/blogs/${featuredPost.slug}`}>
+            <img
+              class="mobile"
+              src={featuredPost.data["hero-image"]}
+              alt={featuredPost.data.title}
+            />
+          </a>
         )
       }
       <p>
@@ -75,11 +77,13 @@ const ammendedBlogs = blogs.map((blog: any) => ({
     </div>
     {
       featuredPost && (
-        <img
-          class="desktop"
-          src={featuredPost.data["hero-image"]}
-          alt={featuredPost.data.title}
-        />
+        <a href={`/blogs/${featuredPost.slug}`}>
+          <img
+            class="desktop"
+            src={featuredPost.data["hero-image"]}
+            alt={featuredPost.data.title}
+          />
+        </a>
       )
     }
   </div>
@@ -125,8 +129,24 @@ const ammendedBlogs = blogs.map((blog: any) => ({
       padding-bottom: 5rem;
       padding-top: 0;
       .container {
-        img.mobile {
-          display: none;
+        a {
+          width: 100%;
+          height: fit-content;
+          img.mobile {
+            display: none;
+            aspect-ratio: 9/6;
+            width: 100%;
+            max-height: fit-content;
+            height: auto;
+            border-radius: 8px;
+          }
+        }
+      }
+      a {
+        background-image: none;
+        grid-column: 3 / -1;
+        img {
+          object-fit: cover;
         }
       }
     }
@@ -257,12 +277,19 @@ const ammendedBlogs = blogs.map((blog: any) => ({
         padding-bottom: 2.5rem;
         padding-top: 0;
         .container {
-          img.mobile {
-            display: block;
+          a {
             width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 0 0 1rem 0;
+            height: fit-content;
+            display: inline-block;
+            img.mobile {
+              display: inline-block;
+              aspect-ratio: 9/6;
+              width: 100%;
+              max-width: fit-content;
+              height: auto;
+              border-radius: 8px;
+              margin: 0;
+            }
           }
         }
       }
