@@ -3,7 +3,9 @@ import { getCollection } from "astro:content";
 
 const employees = await getCollection("employees");
 
-const staffOrder = ["Elisa", "Daria", "Gia", "Hazel"].map((n) => n.toLowerCase());
+const staffOrder = ["Elisa", "Daria", "Gia", "Hazel"].map((n) =>
+  n.toLowerCase(),
+);
 
 const getFirstName = (fullName = "") =>
   fullName.trim().split(/\s+/)[0].toLowerCase();
@@ -17,40 +19,54 @@ const orderedEmployees = employees.slice().sort((a, b) => {
   const bRank = bIndex === -1 ? Number.MAX_SAFE_INTEGER : bIndex;
   return aRank - bRank;
 });
+
+const employeesWithContent = await Promise.all(
+  orderedEmployees.map(async (emp) => {
+    const { Content } = await emp.render();
+    return { ...emp, Content };
+  }),
+);
 ---
+
 <section class="employee-profiles">
-  {orderedEmployees.map((emp) => (
-    <div class="profile-card">
-      <div class="info-section">
-        <h2>{emp.data.name}</h2>
-        <p class="position">{emp.data.position}</p>
-        {emp.data.pronouns && <p class="pronouns">{emp.data.pronouns}</p>}
-        {emp.data.email && (
-          <p class="email">
-            <a href={`mailto:${emp.data.email}`}>{emp.data.email}</a>
-          </p>
-        )}
-        {emp.data.phone && (
-          <p class="phone">
-            <a href={`tel:${emp.data.phone}`}>{emp.data.phone}</a>
-          </p>
-        )}
-        <div class="bio">
-          {emp.body && <p>{emp.body}</p>}
-        </div>
-        {emp.data["accreditation-images"] && emp.data["accreditation-images"].length > 0 && (
-          <div class="accreditations">
-            {emp.data["accreditation-images"].map((img: string) => (
-              <img src={img} alt="Accreditation" />
-            ))}
+  {
+    employeesWithContent.map((emp) => {
+      const Content = emp.Content;
+      return (
+        <div class="profile-card">
+          <div class="info-section">
+            <h2>{emp.data.name}</h2>
+            <p class="position">{emp.data.position}</p>
+            {emp.data.pronouns && <p class="pronouns">{emp.data.pronouns}</p>}
+            {emp.data.email && (
+              <p class="email">
+                <a href={`mailto:${emp.data.email}`}>{emp.data.email}</a>
+              </p>
+            )}
+            {emp.data.phone && (
+              <p class="phone">
+                <a href={`tel:${emp.data.phone}`}>{emp.data.phone}</a>
+              </p>
+            )}
+            <div class="bio">
+              <Content />
+            </div>
+            {emp.data["accreditation-images"] &&
+              emp.data["accreditation-images"].length > 0 && (
+                <div class="accreditations">
+                  {emp.data["accreditation-images"].map((img: string) => (
+                    <img src={img} alt="Accreditation" />
+                  ))}
+                </div>
+              )}
           </div>
-        )}
-      </div>
-      <div class="headshot-wrapper">
-        <img class="headshot" src={emp.data.photo} alt={emp.data.name} />
-      </div>
-    </div>
-  ))}
+          <div class="headshot-wrapper">
+            <img class="headshot" src={emp.data.photo} alt={emp.data.name} />
+          </div>
+        </div>
+      );
+    })
+  }
 </section>
 
 <style lang="scss">
@@ -89,6 +105,11 @@ const orderedEmployees = employees.slice().sort((a, b) => {
           margin-top: 5rem;
           font-size: 1rem;
           font-weight: 300;
+          :global(p) {
+            margin: 0 0 1rem 0;
+            font-size: 1rem;
+            font-weight: 300;
+          }
         }
         ul {
           font-weight: 300;
@@ -158,7 +179,7 @@ const orderedEmployees = employees.slice().sort((a, b) => {
           }
           p {
             font-weight: 300;
-            font-size: .875rem;
+            font-size: 0.875rem;
           }
           .position,
           .pronouns,
@@ -175,8 +196,13 @@ const orderedEmployees = employees.slice().sort((a, b) => {
           }
           .bio {
             margin: 0 0 1rem 0;
-            font-size: 1rem;
+            font-size: .875rem;
             font-weight: 300;
+            :global(p) {
+              margin: 0 0 1rem 0 !important;
+              font-size: .875rem;
+              font-weight: 300;
+            }
           }
           ul {
             font-weight: 300;
@@ -207,7 +233,7 @@ const orderedEmployees = employees.slice().sort((a, b) => {
           gap: 0rem;
           background: var(--morning-fog);
           border-radius: 8px;
-          padding: .5rem;
+          padding: 0.5rem;
           margin: 0;
           img {
             aspect-ratio: 1 / 1;
@@ -217,8 +243,8 @@ const orderedEmployees = employees.slice().sort((a, b) => {
             border-right: none;
             border-left: 1px solid
               color-mix(in srgb, var(--hazelwood) 30%, transparent);
-            padding: 0 .5rem 0 .5rem;
-            margin: .25rem 0 .25rem 0;
+            padding: 0 0.5rem 0 0.5rem;
+            margin: 0.25rem 0 0.25rem 0;
           }
           img:first-child {
             border-left: none;
