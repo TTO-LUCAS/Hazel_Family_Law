@@ -11,6 +11,9 @@ const services = await getCollection("services");
 const currentService = services.find((s) => s.slug === service);
 const serviceData = currentService?.data;
 const { Content } = await currentService!.render();
+console.log("Service slug:", service);
+console.log("Service data:", serviceData);
+console.log("Image path:", serviceData?.image);
 ---
 
 <section class="service-post">
@@ -25,9 +28,8 @@ const { Content } = await currentService!.render();
       </h2>
       <div class="image">
         <img
-          src={serviceData && serviceData.image
-            ? serviceData.image
-            : Placeholder.src}
+          src={serviceData?.image ?? Placeholder.src}
+          alt={serviceData?.title ?? "Service image"}
         />
       </div>
       <p class="short-description">
@@ -42,7 +44,10 @@ const { Content } = await currentService!.render();
       </div>
     </div>
     <div class="image">
-      <img src=`${Placeholder.src}` />
+      <img
+        src={serviceData?.image ?? Placeholder.src}
+        alt={serviceData?.title ?? "Service image"}
+      />
     </div>
   </div>
   {
