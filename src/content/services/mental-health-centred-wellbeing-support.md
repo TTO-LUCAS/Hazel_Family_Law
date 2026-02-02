@@ -5,7 +5,8 @@ short-description: We prioritise wellbeing for clients and our team by fostering
   professionals, ensuring a compassionate, balanced legal experience throughout
   your family law journey.
 image: /uploads/HFL01_Service_14.webp
-accreditation-images: []
+accreditation-images:
+  - /uploads/minds-count.png
 ---
 At Hazel Family Law & Mediation, we believe that genuine care extends beyond legal outcomes, it encompasses the wellbeing of both our clients and our team. Family law matters are often deeply personal and emotionally complex, and supporting the people involved is central to how we work.
 
