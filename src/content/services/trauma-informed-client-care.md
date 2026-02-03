@@ -6,7 +6,7 @@ short-description: We deliver trauma-informed legal support focused on emotional
   clients navigating complex family law matters.
 image: /uploads/HFL01_Service_13.webp
 accreditation-images:
-  - /uploads/minds-count.png
+  - /uploads/phoenix-aus.png
 ---
 We understand that family law matters often arise in the context of deep emotional stress and, at times, trauma. Whether it stems from family violence, high-conflict relationships, or the lasting effects of past experiences, we recognise that these situations can make legal processes feel overwhelming.
 

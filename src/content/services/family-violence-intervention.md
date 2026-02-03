@@ -5,8 +5,7 @@ short-description: We support individuals affected by family violence, assisting
   prioritising safety, clear advice and strong representation to help protect
   your wellbeing and legal interests.
 image: /uploads/HFL01_Service_11.webp
-accreditation-images:
-  - /uploads/liv-accreditation-specialisation.png
+accreditation-images: []
 ---
 We understand that issues involving family violence are deeply distressing and can have far-reaching impacts on you, your family and your future. Whether you need protection from violence or have been accused of family violence, we are here to guide you with care, discretion and understanding.
 
