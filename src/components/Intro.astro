@@ -22,7 +22,8 @@
       <p>
         If you haven’t worked with a family lawyer before, not knowing what to
         expect can make things feel even harder. <span
-          style="color: var(--deep-coal); font-weight: 400;">We take the time to guide you</span
+          style="color: var(--deep-coal); font-weight: 400;"
+          >We take the time to guide you</span
         >
         through the process, so you know what comes next and <span
           style="color: var(--deep-coal); font-weight: 400;"
@@ -69,7 +70,6 @@
     padding: 2rem 2rem 2rem 2rem;
     background: transparent;
     div#intro-about {
-      // margin-bottom: 12rem;
       margin-bottom: 6.25rem;
       :last-child {
         color: var(--hazelwood);
@@ -182,6 +182,15 @@
           details::details-content {
             width: 100%;
             margin: 1rem 0 1rem 0;
+            transition:
+              block-size 0.6s ease-in-out,
+              content-visibility 0.6s ease-in-out;
+
+            transition-behavior: allow-discrete;
+            overflow: hidden;
+          }
+          details[open]::details-content {
+            block-size: auto;
           }
         }
       }
