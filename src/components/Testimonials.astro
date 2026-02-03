@@ -4,20 +4,20 @@ const TestimonialsContent = await getCollection("testimonials");
 ---
 
 <!-- <pre>{JSON.stringify(TestimonialsContent, null, 2)}</pre> -->
-
 <section class="testimonials">
   <div class="scroller" data-speed="slow">
     <ul class="tag-list scroller__inner">
       <!-- for each object in testimonialsContent create a li element
       first p has the client name and second p has the testimonial -->
-      {TestimonialsContent.map((TestimonialsContent: any) => (
-        ) => (
-        <li>
-          <p>{TestimonialsContent.data['client-name']}</p>
-          <br />
-          <p>{TestimonialsContent.data.testimonial}</p>
-        </li>
-      ))}
+      {
+        TestimonialsContent.map((TestimonialsContent: any) => () => (
+          <li>
+            <p>{TestimonialsContent.data["client-name"]}</p>
+            <br />
+            <p>{TestimonialsContent.data.testimonial}</p>
+          </li>
+        ))
+      }
     </ul>
   </div>
 </section>
@@ -103,6 +103,18 @@ const TestimonialsContent = await getCollection("testimonials");
   /* for testing purposed to ensure the animation lined up correctly */
   .test {
     background: red !important;
+  }
+
+  @media screen and (max-width: 968px) {
+    section.testimonials {
+      padding: 1.5rem 0rem;
+    }
+    .tag-list li {
+      width: 250px;
+      p {
+        font-size: 0.9rem;
+      }
+    }
   }
 </style>
 
