@@ -2,8 +2,8 @@
 title: How to achieve the best possible outcome in your family law matter
 date: 2026-02-01T17:15:00.000+11:00
 author: Elisa Turco
-hero-image: /uploads/hero-placeholder.webp
-thumbnail: /uploads/hero-placeholder.webp
+hero-image: /uploads/HFL01_Service_4.webp
+thumbnail: /uploads/HFL01_Service_4.webp
 ---
 Family law issues often come at times of significant personal change. While the process can feel daunting, taking a considered and informed approach can help you reach a fair and lasting resolution. Below are some key steps to help you move forward with clarity and confidence.
 

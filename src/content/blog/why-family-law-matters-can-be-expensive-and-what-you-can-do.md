@@ -2,8 +2,8 @@
 title: Why family law matters can be expensive, and what you can do
 date: 2026-02-01T17:16:00.000+11:00
 author: Elisa Turco
-hero-image: /uploads/hero-placeholder.webp
-thumbnail: /uploads/hero-placeholder.webp
+hero-image: /uploads/HFL01_Service_7.webp
+thumbnail: /uploads/HFL01_Service_7.webp
 ---
 Navigating family change is never easy. When lawyers become involved, emotional stress is often compounded by financial strain. At Hazel Family Law & Mediation, we believe it’s important to be open and honest about why costs can escalate, so that you can make informed, confident decisions with clarity.
 
