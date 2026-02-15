@@ -1,6 +1,7 @@
 ---
 import Arrow from "../../assets/svgs/pointer-arrow-dark.svg";
 import { getCollection } from "astro:content";
+import OptimizedImage from "../OptimizedImage.astro";
 
 const blogs = await getCollection("blog");
 const featuredBlog = await getCollection("featured-blog");
@@ -77,7 +78,7 @@ const ammendedBlogs = blogs.map((blog: any) => ({
     {
       featuredPost && (
         <a href={`/blogs/${featuredPost.slug}`}>
-          <img
+          <OptimizedImage
             class="desktop"
             src={featuredPost.data["hero-image"]}
             alt={featuredPost.data.title}

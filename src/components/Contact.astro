@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import ImgPlaceholder from "../assets/more-shadows.webp";
 ---
 
@@ -72,7 +73,7 @@ import ImgPlaceholder from "../assets/more-shadows.webp";
     </form>
   </div>
   <div class="picture-placeholder">
-    <img src={ImgPlaceholder.src} alt="contact Plans Illustration" loading="lazy"/>
+    <Image src={ImgPlaceholder} alt="A photo of shadows against a warm background." loading="lazy" width="1920" height="1080"/>
   </div>
 </section>
 
