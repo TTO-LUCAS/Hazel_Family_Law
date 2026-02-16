@@ -31,6 +31,7 @@ logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 # Add site links in Decap CMS (optional)
 site_url: https://hazelfamilylaw.com.au
 
+publish_mode: editorial_workflow # Enable editorial workflow for content review and approval
 media_folder: "public/uploads" # Location where files will be stored in the repo
 public_folder: "/uploads" # The src attribute for uploaded media
 
