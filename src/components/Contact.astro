@@ -251,13 +251,14 @@ import ImgPlaceholder from "../assets/more-shadows.webp";
 
   @media screen and (max-width: 920px) {
     .contact-section {
+      margin: 0;
       height: auto;
       width: 100%;
       background: var(--oat-husk);
       color: var(--burnt-umber);
       display: flex;
       flex-direction: column-reverse;
-      justify-content: flex-start;
+      justify-content: flex-end;
       .contact-content {
         padding: 2.5rem 2rem 2.5rem 2rem;
         width: 100%;
@@ -280,24 +281,21 @@ import ImgPlaceholder from "../assets/more-shadows.webp";
         }
         form {
           margin: 0 0 0 0;
-          display: grid;
-          grid-template-rows: repeat(8, 1fr);
-          grid-template-columns: repeat(8, 1fr);
-          height: 60%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          height: auto;
           border: 2px none var(--burnt-umber);
           font-weight: 300;
           *:focus {
             outline: none;
-            // box-shadow: 0 0 0 1px var(--burnt-umber);
-          }
-          *:focus-visible {
-            // outline: 1px solid var(--burnt-umber);
           }
           .contact-form {
             position: relative;
             border: 1px none var(--burnt-umber);
             border-radius: 8px;
             margin: 0rem 0rem 0rem 0rem;
+            height: 2rem;
             &:has(input[required], textarea[required])::after {
               content: "*";
               position: absolute;
@@ -308,6 +306,10 @@ import ImgPlaceholder from "../assets/more-shadows.webp";
               line-height: 1rem;
               z-index: 1;
               pointer-events: none;
+            }
+            &:has(textarea) {
+              height: auto;
+              min-height: 8rem;
             }
             label {
               position: absolute;
@@ -351,32 +353,14 @@ import ImgPlaceholder from "../assets/more-shadows.webp";
               }
             }
           }
-          #name-field {
-            grid-column: 1 / -1;
-            grid-row: 1 / span 1;
-          }
-          #email-field {
-            grid-column: 1 / -1;
-            grid-row: 2 / span 1;
-          }
-          #phone-field {
-            grid-column: 1 / -1;
-            grid-row: 3 / span 1;
-          }
-          #preference-field {
-            grid-column: 1 / -1;
-            grid-row: 4 / span 1;
-          }
+          #message,
           #message-field {
-            grid-column: 1 / -1;
-            grid-row: 5 / span 3;
+            min-height: 18rem;
+            flex-grow: 1;
           }
           #submit-field {
-            grid-column: 1 / -1;
-            grid-row: 8 / span 1;
-            padding: 2.3rem 0 0 0;
+            padding: 0rem 0 0 0;
             input[type="submit"] {
-              grid-column: 1 / span 1;
               height: 2rem;
               background: var(--hazelwood);
               padding: 0 1.25rem;
