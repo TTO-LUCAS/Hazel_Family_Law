@@ -8,6 +8,7 @@ backend:
   auth_endpoint: /sites/446a773f-2775-4295-87de-2e66e363b9d1/pkce
   auth_token_endpoint: /sites/446a773f-2775-4295-87de-2e66e363b9d1/token
   gateway_url: https://gateway.decapbridge.com
+  squash_merges: true
 
   # See who did what (optional)
   commit_messages:
