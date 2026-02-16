@@ -337,7 +337,7 @@ import Arrow from "../../assets/pointer-arrow.svg";
           li {
             span {
               display: flex;
-              flex-wrap: wrap;
+              flex-wrap: nowrap;
               padding: 1rem 0 1rem 0;
               width: 100%;
               justify-content: flex-start;
@@ -346,16 +346,16 @@ import Arrow from "../../assets/pointer-arrow.svg";
               font-size: 1rem;
               a {
                 text-decoration: underline;
-                white-space: normal;
-                overflow: visible;
-                text-overflow: clip;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
               }
               .link-text {
                 flex: 1;
                 margin-right: 2rem;
                 display: flex;
                 align-items: center;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
                 min-width: 0;
               }
             }
