@@ -53,6 +53,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Useful Links", name: "useful-links", widget: "list", allow_add: true, required: false, field: { label: "Link", name: "link", widget: "object", fields: [ { label: "Link Text", name: "link-text", widget: "string" }, { label: "URL", name: "url", widget: "string" } ] } }
       - { label: "Accreditation", name: "accreditation-images", widget: "list", allow_add: true, required: false, field: { label: "Accreditation Image", name: "accreditation-image", widget: "image" } }
+      - { label: "Draft", name: "draft", widget: "boolean", required: false, default: false }
   - name: "featured blog"
     label: "Featured Blog Post"
     files:
@@ -80,6 +81,7 @@ collections:
       - { label: "Photo", name: "photo", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Accreditation", name: "accreditation-images", widget: "list", allow_add: true, required: false, field: { label: "Accreditation Image", name: "accreditation-image", widget: "image" } }
+      - { label: "Draft", name: "draft", widget: "boolean", required: false, default: false }
   - name: "services"
     label: "Services"
     folder: "src/content/services"

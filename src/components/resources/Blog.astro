@@ -3,7 +3,7 @@ import Arrow from "../../assets/svgs/pointer-arrow-dark.svg";
 import { getCollection } from "astro:content";
 import OptimizedPicture from "../OptimizedPicture.astro";
 
-const blogs = await getCollection("blog");
+const blogs = await getCollection("blog", ({ data }) => data.draft !== true);
 const featuredBlog = await getCollection("featured-blog");
 const featuredSlug = featuredBlog[0]?.data?.["featured-post"];
 const featuredPost = blogs.find((b: any) => b.slug === featuredSlug);

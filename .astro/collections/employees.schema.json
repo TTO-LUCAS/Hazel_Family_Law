@@ -29,6 +29,9 @@
             "type": "string"
           }
         },
+        "draft": {
+          "type": "boolean"
+        },
         "$schema": {
           "type": "string"
         }

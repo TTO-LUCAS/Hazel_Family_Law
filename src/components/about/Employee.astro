@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
-const employees = await getCollection("employees");
+const employees = await getCollection("employees", ({ data }) => data.draft !== true);
 
 const staffOrder = ["Elisa", "Daria", "Gia", "Hazel"].map((n) =>
   n.toLowerCase(),

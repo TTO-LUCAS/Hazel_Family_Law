@@ -19,6 +19,7 @@ const blog = defineCollection({
         })
       )
       .optional(),
+    draft: z.boolean().optional(),
   }),
 });
 
@@ -39,6 +40,7 @@ const employees = defineCollection({
     phone: z.string().optional(),
     photo: z.string(),
     "accreditation-images": z.array(z.string()).optional(),
+    draft: z.boolean().optional(),
   }),
 });
 

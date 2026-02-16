@@ -67,6 +67,9 @@
             "additionalProperties": false
           }
         },
+        "draft": {
+          "type": "boolean"
+        },
         "$schema": {
           "type": "string"
         }
