@@ -41,7 +41,7 @@
         call to understand your situation, discuss what’s important to you, and explain
         how we can help. We will also send a short form for you to provide some background
         information, ensuring your first meeting is productive and tailored to your
-        needs.
+        needs.<br /><br />
       </details>
       <details>
         <summary>Your first appointment</summary>
@@ -51,14 +51,14 @@
         answer your questions and explore the options available to you. We encourage
         you to bring us any questions or concerns; we want you to leave with clear
         guidance and a sense of direction. If you choose to continue with our services,
-        we will provide a transparent cost agreement to ensure there are no surprises.
+        we will provide a transparent cost agreement to ensure there are no surprises.<br /><br />
       </details>
       <details>
         <summary>Moving forward</summary>
         Once you’ve engaged us, we will work with you to develop a practical, strategic
         plan that reflects your priorities and helps you move forward with confidence.
         From start to finish, we provide clarity, compassion and support, helping
-        you achieve resolutions that work for you and your family.
+        you achieve resolutions that work for you and your family.<br /><br />
       </details>
     </div>
   </div>
@@ -94,7 +94,7 @@
         details {
           font-size: 1rem;
           border-bottom: 1px solid var(--hazelwood);
-          padding: 0 0 1rem 0;
+          padding: 0 0 0rem 0;
           margin: 0 0 2rem 0;
           summary {
             list-style: none;
@@ -171,24 +171,27 @@
           }
         }
         div#accordian-wrapper {
+          margin: 2.5rem 0 2.5rem 0;
           details {
             font-size: 1rem;
+            margin: 0;
             padding: 0rem 0 0 0;
+            border: none;
             summary {
-              font-size: 1.25rem;
-              margin: 0 0 0rem 0;
+              font-size: 1rem;
+              margin: 1rem 0 0rem 0;
             }
             summary:after {
-              transition: transform 0.1s ease-in-out;
+              scale: 0.6;
             }
           }
           details::details-content {
             width: 100%;
-            margin: 1rem 0 1rem 0;
+            padding: 1rem 0 0rem 0;
+            border-bottom: 1px solid var(--hazelwood);
             transition:
-              block-size 0.8s ease-in-out,
-              content-visibility 0.8s ease-in-out;
-
+              block-size 0.6s ease-in-out,
+              content-visibility 0.6s ease-in-out;
             transition-behavior: allow-discrete;
             overflow: hidden;
           }
