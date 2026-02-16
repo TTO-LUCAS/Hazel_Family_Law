@@ -1,7 +1,7 @@
 ---
 import Arrow from "../../assets/svgs/pointer-arrow-dark.svg";
 import { getCollection } from "astro:content";
-import OptimizedImage from "../OptimizedImage.astro";
+import OptimizedPicture from "../OptimizedPicture.astro";
 
 const blogs = await getCollection("blog");
 const featuredBlog = await getCollection("featured-blog");
@@ -60,7 +60,7 @@ const ammendedBlogs = blogs.map((blog: any) => ({
       {
         featuredPost && (
           <a href={`/blogs/${featuredPost.slug}`}>
-            <img
+            <OptimizedPicture
               class="mobile"
               src={featuredPost.data["hero-image"]}
               alt={featuredPost.data.title}
@@ -78,7 +78,7 @@ const ammendedBlogs = blogs.map((blog: any) => ({
     {
       featuredPost && (
         <a href={`/blogs/${featuredPost.slug}`}>
-          <OptimizedImage
+          <OptimizedPicture
             class="desktop"
             src={featuredPost.data["hero-image"]}
             alt={featuredPost.data.title}
@@ -96,10 +96,11 @@ const ammendedBlogs = blogs.map((blog: any) => ({
         <div class="container">
           <div>
             <a href={`/blogs/${blog.slug}`} style="text-decoration: none;">
-              <img
+              <OptimizedPicture
                 src={blog.data["hero-image"]}
                 alt={blog.data.title}
-                style=""
+                loading="lazy"
+                style="object-fit: cover; aspect-ratio: 9/6; width: 100%; height: auto; border-radius: 8px; margin: 0 0 0 0; width: 100%; max-width: max-content; border-radius: 8px;"
               />
             </a>
             <h3 style="padding-top: 1rem;">{blog.data.title}</h3>
@@ -128,26 +129,15 @@ const ammendedBlogs = blogs.map((blog: any) => ({
       border-bottom: 1px solid var(--morning-fog);
       padding-bottom: 5rem;
       padding-top: 0;
-      .container {
-        a {
-          width: 100%;
-          height: fit-content;
-          img.mobile {
-            display: none;
-            aspect-ratio: 9/6;
-            width: 100%;
-            max-height: fit-content;
-            height: auto;
-            border-radius: 8px;
-          }
-        }
+      picture img.mobile {
+        display: none;
       }
-      a {
+      a:last-of-type {
         background-image: none;
         grid-column: 3 / -1;
-        img {
-          object-fit: cover;
-        }
+      }
+      a:last-of-type picture img.desktop {
+        object-fit: cover;
       }
     }
     .row {
@@ -190,13 +180,18 @@ const ammendedBlogs = blogs.map((blog: any) => ({
           }
         }
       }
-      img.desktop {
+      a:last-of-type picture {
         display: block;
         width: 100%;
         height: auto;
         border-radius: 8px;
         grid-column: 3 / -1;
         margin: 6rem 0 0 0;
+      }
+      a:last-of-type picture img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
       }
     }
     .row.grid-posts {
@@ -287,22 +282,17 @@ const ammendedBlogs = blogs.map((blog: any) => ({
       .row:first-of-type {
         padding-bottom: 2.5rem;
         padding-top: 0;
-        .container {
-          a {
-            width: 100%;
-            height: fit-content;
-            display: inline-block;
-            background-image: none;
-            img.mobile {
-              display: inline-block;
-              aspect-ratio: 9/6;
-              width: 100%;
-              max-width: fit-content;
-              height: auto;
-              border-radius: 8px;
-              margin: 0;
-            }
-          }
+        picture img.mobile {
+          display: inline-block;
+          aspect-ratio: 9/6;
+          width: 100%;
+          max-width: fit-content;
+          height: auto;
+          border-radius: 8px;
+          margin: 0;
+        }
+        a:last-of-type {
+          display: none;
         }
       }
       .row {
@@ -349,9 +339,10 @@ const ammendedBlogs = blogs.map((blog: any) => ({
             }
           }
         }
-        img.desktop {
-          display: none;
-        }
+      a:last-of-type picture,
+      a:last-of-type picture img {
+        display: none;
+      }
       }
       .row.grid-posts {
         margin: 0rem 0 0 0;
@@ -378,15 +369,14 @@ const ammendedBlogs = blogs.map((blog: any) => ({
               display: inline-block;
               margin: 0;
               padding: 0;
-              img {
+
+              picture img {
                 aspect-ratio: 9/6;
                 width: 100%;
                 height: auto;
                 border-radius: 8px;
                 margin: 0 0 0 0;
-                width: 100%;
                 max-width: max-content;
-                border-radius: 8px;
               }
             }
             p {

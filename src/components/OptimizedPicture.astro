@@ -1,0 +1,58 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+  loading?: "lazy" | "eager";
+  style?: string;
+}
+
+const { src, alt, class: className = "", loading = "lazy", style: styles = "" } = Astro.props;
+
+const filename = src.split('/').pop()?.split('.')[0] || src;
+
+const desktopSrc = `/uploads/.optimized/${filename}-desktop.webp`;
+const tabletSrc = `/uploads/.optimized/${filename}-tablet.webp`;
+const mobileSrc = `/uploads/.optimized/${filename}-mobile.webp`;
+---
+
+<picture class={className}>
+  <source media="(min-width: 920px)" srcset={desktopSrc} type="image/webp" />
+  <source media="(min-width: 600px) and (max-width: 919px)" srcset={tabletSrc} type="image/webp" />
+  <source media="(max-width: 599px)" srcset={mobileSrc} type="image/webp" />
+  
+  <img
+    src={desktopSrc}
+    alt={alt}
+    loading={loading}
+    style={styles}
+  />
+</picture>
+
+<style>
+  picture {
+    display: block;
+  }
+  
+  picture img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  picture.desktop {
+    display: block;
+  }
+  picture.mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 920px) {
+    picture.desktop {
+      display: none;
+    }
+    picture.mobile {
+      display: block;
+    }
+  }
+</style>
