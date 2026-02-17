@@ -85,7 +85,7 @@ collections:
   - name: "services"
     label: "Services"
     folder: "src/content/services"
-    create: true
+    create: false
     media_library:
     config:
       max_file_size: 2621440 # 2.5 MB limit

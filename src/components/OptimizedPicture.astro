@@ -11,9 +11,9 @@ const { src, alt, class: className = "", loading = "lazy", style: styles = "" } 
 
 const filename = src.split('/').pop()?.split('.')[0] || src;
 
-const desktopSrc = `/uploads/.optimized/${filename}-desktop.webp`;
-const tabletSrc = `/uploads/.optimized/${filename}-tablet.webp`;
-const mobileSrc = `/uploads/.optimized/${filename}-mobile.webp`;
+const desktopSrc = `/uploads/optimized/${filename}-desktop.webp`;
+const tabletSrc = `/uploads/optimized/${filename}-tablet.webp`;
+const mobileSrc = `/uploads/optimized/${filename}-mobile.webp`;
 ---
 
 <picture class={className}>
