@@ -384,7 +384,7 @@ const ammendedBlogs = blogs.map((blog: any) => ({
             padding: 0 0rem 0 0;
             // Picture link (first a element)
             a:first-of-type {
-              order: 2;
+              order: 1;
               width: 100%;
               height: fit-content;
               display: inline-block;
@@ -401,27 +401,27 @@ const ammendedBlogs = blogs.map((blog: any) => ({
             }
             // Title
             h3 {
-              order: 1;
+              order: 0;
               font-size: 1rem;
               font-weight: 300;
               margin: 0 0 1rem 0;
             }
             // Excerpt paragraph
             p {
-              order: 3;
+              order: 2;
               margin: 0 0 1rem 0;
               font-weight: 300;
               font-size: .875rem;
             }
             // Div containing "Read More" link and arrow
             div {
-              order: 4;
+              order: 3;
               display: flex;
               flex-direction: row;
               align-items: baseline;
               margin: 0 0 2.5rem 0;
               a {
-                order: 1;
+                order: 0;
                 text-decoration: underline!important;
                 background-image: none;
                 font-weight: 300;
@@ -429,7 +429,7 @@ const ammendedBlogs = blogs.map((blog: any) => ({
                 font-size: .875rem;
               }
               img {
-                order: 2;
+                order: 1;
                 margin: 0 0 0 2rem;
                 max-width: 1.1rem;
                 border-radius: 0;
