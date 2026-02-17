@@ -4,7 +4,7 @@ import { join, extname, basename } from 'path';
 import { existsSync } from 'fs';
 
 const PUBLIC_UPLOADS = 'public/uploads';
-const OPTIMIZED_DIR = 'public/uploads/.optimized';
+const OPTIMIZED_DIR = 'public/uploads/optimized';
 
 // Breakpoint definitions
 const BREAKPOINTS = {
