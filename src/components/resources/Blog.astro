@@ -382,20 +382,14 @@ const ammendedBlogs = blogs.map((blog: any) => ({
             flex-direction: column;
             width: 100%;
             padding: 0 0rem 0 0;
-            h3 {
-              order: 1;
-              font-size: 1rem;
-              font-weight: 300;
-              margin: 0 0 1rem 0;
-            }
-            a {
+            // Picture link (first a element)
+            a:first-of-type {
               order: 2;
               width: 100%;
               height: fit-content;
               display: inline-block;
               margin: 0;
               padding: 0;
-
               picture img {
                 aspect-ratio: 9/6;
                 width: 100%;
@@ -405,22 +399,37 @@ const ammendedBlogs = blogs.map((blog: any) => ({
                 max-width: max-content;
               }
             }
+            // Title
+            h3 {
+              order: 1;
+              font-size: 1rem;
+              font-weight: 300;
+              margin: 0 0 1rem 0;
+            }
+            // Excerpt paragraph
             p {
               order: 3;
               margin: 0 0 1rem 0;
               font-weight: 300;
-              font-size: 1rem;
+              font-size: .875rem;
             }
-            a:last-of-type {
+            // Div containing "Read More" link and arrow
+            div {
               order: 4;
-              margin: 0 0 2.5rem 0;
-              text-decoration: underline;
-              background-image: none;
-              display: inline-flex;
+              display: flex;
               flex-direction: row;
               align-items: baseline;
-              font-weight: 300;
+              margin: 0 0 2.5rem 0;
+              a {
+                order: 1;
+                text-decoration: underline!important;
+                background-image: none;
+                font-weight: 300;
+                margin: 0;
+                font-size: .875rem;
+              }
               img {
+                order: 2;
                 margin: 0 0 0 2rem;
                 max-width: 1.1rem;
                 border-radius: 0;
