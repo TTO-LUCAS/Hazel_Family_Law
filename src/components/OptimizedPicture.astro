@@ -9,11 +9,15 @@ interface Props {
 
 const { src, alt, class: className = "", loading = "lazy", style: styles = "" } = Astro.props;
 
-const filename = src.split('/').pop()?.split('.')[0] || src;
+const fullFilename = src.split('/').pop() || src;
+const filenameParts = fullFilename.split('.');
+const filename = filenameParts.length > 1 ? filenameParts.slice(0, -1).join('.') : fullFilename;
+const fileExtension = filenameParts.length > 1 ? filenameParts[filenameParts.length - 1] : 'webp';
 
 const desktopSrc = `/uploads/optimized/${filename}-desktop.webp`;
 const tabletSrc = `/uploads/optimized/${filename}-tablet.webp`;
 const mobileSrc = `/uploads/optimized/${filename}-mobile.webp`;
+const fallbackSrc = `/uploads/${filename}.${fileExtension}`;
 ---
 
 <picture class={className}>
@@ -22,7 +26,7 @@ const mobileSrc = `/uploads/optimized/${filename}-mobile.webp`;
   <source media="(max-width: 599px)" srcset={mobileSrc} type="image/webp" />
   
   <img
-    src={desktopSrc}
+    src={fallbackSrc}
     alt={alt}
     loading={loading}
     style={styles}
