@@ -14,7 +14,7 @@ const BREAKPOINTS = {
 };
 
 async function optimizeImages() {
-  console.log('🖼️  Starting image optimization...');
+  console.log('Starting image optimization...');
   
   // Create optimized directory if it doesn't exist
   if (existsSync(OPTIMIZED_DIR)) {
