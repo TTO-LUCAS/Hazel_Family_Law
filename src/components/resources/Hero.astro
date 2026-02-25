@@ -6,13 +6,16 @@ import Video from "../../assets/videos/Resources_Video.mp4";
 
 <section class="hero">
   <div class="vid-wrapper">
-    <video
+    <video id="hero-vid"
       autoplay
       preload="metadata"
       disablepictureinpicture
       muted
       loop
       playsinline
+      webkit-playsinline
+      disableRemotePlayback
+      controlslist="noremoteplayback nodownload"
       poster={Grass.src}
     >
       <source src={Video} type="video/mp4" />
@@ -49,6 +52,7 @@ import Video from "../../assets/videos/Resources_Video.mp4";
         width: 100%;
         height: 100%;
         object-fit: cover;
+        pointer-events: none;
       }
     }
     h1 {
@@ -73,3 +77,25 @@ import Video from "../../assets/videos/Resources_Video.mp4";
     }
   }
 </style>
+
+<script is:inline>
+  const video = document.getElementById("hero-vid");
+  if (video) {
+    const tryPlay = () => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      const p = video.play();
+      if (p && typeof p.catch === "function") p.catch(() => {});
+    };
+
+    tryPlay();
+    ["loadedmetadata", "canplay", "canplaythrough"].forEach((evt) =>
+      video.addEventListener(evt, tryPlay, { once: true })
+    );
+    window.addEventListener("pageshow", tryPlay);
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) tryPlay();
+    });
+  }
+</script>

@@ -34,7 +34,7 @@ async function optimizeImages() {
       return;
     }
 
-    console.log(`📦 Found ${imageFiles.length} images to optimize`);
+    console.log(`Found ${imageFiles.length} images to optimize`);
 
     for (const file of imageFiles) {
       const inputPath = join(PUBLIC_UPLOADS, file);
