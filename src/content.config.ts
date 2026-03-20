@@ -54,7 +54,13 @@ const services = defineCollection({
   }),
 });
 
-const testimonials = defineCollection({ type: "content" });
+const testimonials = defineCollection({
+  type: "content",
+  schema: z.object({
+    "client-name": z.string(),
+    testimonial: z.string(),
+  }),
+});
 
 export const collections = {
   blog,

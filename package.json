@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "optimize-images": "node scripts/optimize-public-images.mjs",
-    "prebuild": "pnpm optimize-images",
+    "validate-decap": "node scripts/validate-decap-config.mjs",
+    "prebuild": "pnpm validate-decap && pnpm optimize-images",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",

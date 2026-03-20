@@ -208,7 +208,7 @@ declare module 'astro:content' {
   slug: string;
   body: string;
   collection: "testimonials";
-  data: any;
+  data: InferEntrySchema<"testimonials">;
   rendered?: RenderedContent;
   filePath?: string;
 }>;
