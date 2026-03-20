@@ -9,7 +9,7 @@ accreditation-images:
   - /uploads/phoenix-aus.png
   - /uploads/reframing-autism.png
 ---
-With over 13 years of experience in family law across Melbourne and London, Daria brings a wealth of legal knowledge, exceptional organisational skill, and a calm, reassuring presence to her role. She is the primary point of contact for clients, ensuring their experience is seamless, supportive and as stress-free as possible during challenging times.
+With over 14 years of experience in family law across Melbourne and London, Daria brings a wealth of legal knowledge, exceptional organisational skill, and a calm, reassuring presence to her role. She is the primary point of contact for clients, ensuring their experience is seamless, supportive and as stress-free as possible during challenging times.
 
 Daria’s extensive background in family law gives her a deep understanding of the pressures and complexities clients face during periods of personal change. She is passionate about helping people navigate the family law process with clarity and confidence, making sure they feel heard, supported and informed at every stage.
 
