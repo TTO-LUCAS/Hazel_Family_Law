@@ -4,7 +4,7 @@ position: Practice Manager & Client Experience
 pronouns: she/her
 email: daria@hazelfamilylaw.com.au
 phone: 03 7020 6529
-photo: /uploads/daria.webp
+photo: /uploads/20260402p_hazelfamilylaw_dariacataldo_002_web-2.jpg
 accreditation-images:
   - /uploads/phoenix-aus.png
   - /uploads/reframing-autism.png
