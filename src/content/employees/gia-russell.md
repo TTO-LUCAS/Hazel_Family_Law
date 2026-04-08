@@ -2,9 +2,9 @@
 name: Gia Russell
 position: Paralegal & Client Experience
 pronouns: she/her
-email: gia@hazelfamilylaw.com.au
+email: info@hazelfamilylaw.com.au
 phone: 03 7020 6529
-photo: /uploads/gia.webp
+photo: /uploads/20260402p_hazelfamilylaw_giarussell_001_web-2.jpg
 accreditation-images:
   - /uploads/phoenix-aus.png
   - /uploads/reframing-autism.png
