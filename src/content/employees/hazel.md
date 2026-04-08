@@ -1,7 +1,7 @@
 ---
 name: Hazel
 position: Resident Moral Support
-photo: /uploads/hazel.webp
+photo: /uploads/20260402p_hazelfamilylaw_hazel_001_web-2.jpg
 ---
 Hazel is a small but spirited chihuahua who has lived a big life. A rescue dog with a history of trauma, she arrived in our world fragile, anxious and missing more than a few teeth but with undeniable determination and an instinct for survival.
 
