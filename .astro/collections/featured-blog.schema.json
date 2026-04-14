@@ -1,21 +1,15 @@
 {
-  "$ref": "#/definitions/featured-blog",
-  "definitions": {
-    "featured-blog": {
-      "type": "object",
-      "properties": {
-        "featured-post": {
-          "type": "string"
-        },
-        "$schema": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "featured-post"
-      ],
-      "additionalProperties": false
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "featured-post": {
+      "type": "string"
+    },
+    "$schema": {
+      "type": "string"
     }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": [
+    "featured-post"
+  ]
 }

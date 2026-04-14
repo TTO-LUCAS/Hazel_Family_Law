@@ -1,48 +1,43 @@
 {
-  "$ref": "#/definitions/employees",
-  "definitions": {
-    "employees": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "position": {
-          "type": "string"
-        },
-        "pronouns": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string",
-          "format": "email"
-        },
-        "phone": {
-          "type": "string"
-        },
-        "photo": {
-          "type": "string"
-        },
-        "accreditation-images": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "draft": {
-          "type": "boolean"
-        },
-        "$schema": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "name",
-        "position",
-        "photo"
-      ],
-      "additionalProperties": false
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "pronouns": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_'+\\-\\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "string"
+    },
+    "accreditation-images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "draft": {
+      "type": "boolean"
+    },
+    "$schema": {
+      "type": "string"
     }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": [
+    "name",
+    "position",
+    "photo"
+  ]
 }

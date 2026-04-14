@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 
 const employees = await getCollection("employees", ({ data }) => data.draft !== true);
 
@@ -22,7 +22,7 @@ const orderedEmployees = employees.slice().sort((a, b) => {
 
 const employeesWithContent = await Promise.all(
   orderedEmployees.map(async (emp) => {
-    const { Content } = await emp.render();
+    const { Content } = await render(emp);
     return { ...emp, Content };
   }),
 );
@@ -187,6 +187,9 @@ const employeesWithContent = await Promise.all(
           .phone {
             color: var(--hazelwood);
             margin-top: 0;
+          }
+          p.position {
+            margin: 0 0 1rem 0;
           }
           p.pronouns {
             margin: 0 0 1rem 0;

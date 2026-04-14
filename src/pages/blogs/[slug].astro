@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import QuickExit from "../../components/QuickExit.astro";
@@ -10,13 +10,13 @@ import Main from "../../layouts/Main.astro";
 export async function getStaticPaths() {
   const blogs = await getCollection('blog', ({ data }) => data.draft !== true);
   return blogs.map((blog) => ({
-    params: { slug: blog.slug },
+    params: { slug: blog.id },
     props: { blog },
   }));
 }
 
 const { blog } = Astro.props;
-const { Content } = await blog.render();
+const { Content } = await render(blog);
 ---
 
 <Main>

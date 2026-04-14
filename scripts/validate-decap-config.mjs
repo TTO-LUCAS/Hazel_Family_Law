@@ -45,16 +45,16 @@ const MUTABLE_COLLECTION_TYPES = ['blog', 'employees', 'testimonials'];
 let exitCode = 0;
 
 function fail(msg) {
-  console.error('  ❌', msg);
+  console.error(' ╳', msg);
   exitCode = 1;
 }
 
 function warn(msg) {
-  console.warn('  ⚠️ ', msg);
+  console.warn(' ⚠', msg);
 }
 
 function ok(msg) {
-  console.log('  ✅', msg);
+  console.log(' ✓', msg);
 }
 
 // ---------------------------------------------------------------------------
@@ -150,5 +150,5 @@ for (const col of collectionChecks) {
 // Summary
 // ---------------------------------------------------------------------------
 
-console.log('\n' + (exitCode === 0 ? '✅ All checks passed.' : '❌ Validation failed – fix the issues above before building.') + '\n');
+console.log('\n' + (exitCode === 0 ? 'All checks passed.' : '╳ Validation failed – fix the issues above before building.') + '\n');
 process.exit(exitCode);

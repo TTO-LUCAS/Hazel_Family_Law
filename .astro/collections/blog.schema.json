@@ -1,88 +1,68 @@
 {
-  "$ref": "#/definitions/blog",
-  "definitions": {
-    "blog": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "date": {
-          "anyOf": [
-            {
-              "type": "string",
-              "format": "date-time"
-            },
-            {
-              "type": "string",
-              "format": "date"
-            },
-            {
-              "type": "integer",
-              "format": "unix-time"
-            }
-          ]
-        },
-        "author": {
-          "type": "string"
-        },
-        "hero-image": {
-          "type": "string"
-        },
-        "thumbnail": {
-          "type": "string"
-        },
-        "accreditation-images": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "useful-links": {
-          "type": "array",
-          "items": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "author": {
+      "type": "string"
+    },
+    "hero-image": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "string"
+    },
+    "accreditation-images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "useful-links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "link": {
             "type": "object",
             "properties": {
-              "link": {
-                "type": "object",
-                "properties": {
-                  "link-text": {
-                    "type": "string"
-                  },
-                  "url": {
-                    "type": "string",
-                    "format": "uri"
-                  }
-                },
-                "required": [
-                  "link-text",
-                  "url"
-                ],
-                "additionalProperties": false
+              "link-text": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
               }
             },
             "required": [
-              "link"
-            ],
-            "additionalProperties": false
+              "link-text",
+              "url"
+            ]
           }
         },
-        "draft": {
-          "type": "boolean"
-        },
-        "$schema": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "title",
-        "date",
-        "author",
-        "hero-image",
-        "thumbnail"
-      ],
-      "additionalProperties": false
+        "required": [
+          "link"
+        ]
+      }
+    },
+    "draft": {
+      "type": "boolean"
+    },
+    "$schema": {
+      "type": "string"
     }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": [
+    "title",
+    "date",
+    "author",
+    "hero-image",
+    "thumbnail"
+  ]
 }

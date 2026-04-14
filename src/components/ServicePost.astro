@@ -1,6 +1,6 @@
 ---
 import Placeholder from "../assets/more-shadows.webp";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 
 interface Props {
   service: string;
@@ -8,12 +8,10 @@ interface Props {
 
 const { service } = Astro.props as Props;
 const services = await getCollection("services");
-const currentService = services.find((s) => s.slug === service);
+const currentService = services.find((s) => s.id === service);
 const serviceData = currentService?.data;
-const { Content } = await currentService!.render();
-console.log("Service slug:", service);
-console.log("Service data:", serviceData);
-console.log("Image path:", serviceData?.image);
+const renderedService = currentService ? await render(currentService) : null;
+const Content = renderedService?.Content;
 ---
 
 <section class="service-post">
@@ -40,7 +38,7 @@ console.log("Image path:", serviceData?.image);
         }
       </p>
       <div class="service-content">
-        <Content />
+        {Content ? <Content /> : <p>Service details are currently unavailable.</p>}
       </div>
     </div>
     <div class="image">

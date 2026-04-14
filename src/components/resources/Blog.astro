@@ -6,7 +6,7 @@ import OptimizedPicture from "../OptimizedPicture.astro";
 const blogs = await getCollection("blog", ({ data }) => data.draft !== true);
 const featuredBlog = await getCollection("featured-blog");
 const featuredSlug = featuredBlog[0]?.data?.["featured-post"];
-const featuredPost = blogs.find((b: any) => b.slug === featuredSlug);
+const featuredPost = blogs.find((b: any) => b.id === featuredSlug);
 
 const featuredDate = featuredPost
   ? formatDate(featuredPost.data.date.toString())
@@ -59,7 +59,7 @@ const ammendedBlogs = blogs.map((blog: any) => ({
       <p>{featuredDate}</p>
       {
         featuredPost && (
-          <a href={`/blogs/${featuredPost.slug}`}>
+          <a href={`/blogs/${featuredPost.id}`}>
             <OptimizedPicture
               class="mobile"
               src={featuredPost.data["hero-image"]}
@@ -72,13 +72,13 @@ const ammendedBlogs = blogs.map((blog: any) => ({
         {featuredExcerpt}
       </p>
       <div>
-        <a href={`/blogs/${featuredPost?.slug}`} class="">Read More</a>
+        <a href={`/blogs/${featuredPost?.id}`} class="">Read More</a>
         <img src={Arrow.src} />
       </div>
     </div>
     {
       featuredPost && (
-        <a href={`/blogs/${featuredPost.slug}`}>
+        <a href={`/blogs/${featuredPost.id}`}>
           <OptimizedPicture
             class="desktop"
             src={featuredPost.data["hero-image"]}
@@ -96,7 +96,7 @@ const ammendedBlogs = blogs.map((blog: any) => ({
       ammendedBlogs.map((blog: any) => (
         <div class="container">
           <div>
-            <a href={`/blogs/${blog.slug}`} style="text-decoration: none;">
+            <a href={`/blogs/${blog.id}`} style="text-decoration: none;">
               <OptimizedPicture
                 src={blog.data["hero-image"]}
                 alt={blog.data.title}
@@ -107,7 +107,7 @@ const ammendedBlogs = blogs.map((blog: any) => ({
             <h3 style="padding-top: 1rem;">{blog.data.title}</h3>
             <p>{blog.excerpt}</p>
             <div>
-              <a href={`/blogs/${blog.slug}`} class="">
+              <a href={`/blogs/${blog.id}`} class="">
                 Read More
               </a>
               <img src={Arrow.src} loading="lazy" />
