@@ -2,6 +2,7 @@
 import Arrow from "../../assets/svgs/pointer-arrow-dark.svg";
 import { getCollection } from "astro:content";
 import OptimizedPicture from "../OptimizedPicture.astro";
+import { getImageFilenameAlt } from "../../utils/getImageFilenameAlt";
 
 const blogs = await getCollection("blog", ({ data }) => data.draft !== true);
 const featuredBlog = await getCollection("featured-blog");
@@ -73,7 +74,7 @@ const ammendedBlogs = blogs.map((blog: any) => ({
       </p>
       <div>
         <a href={`/blogs/${featuredPost?.id}`} class="">Read More</a>
-        <img src={Arrow.src} />
+        <img src={Arrow.src} alt={getImageFilenameAlt(Arrow.src)} />
       </div>
     </div>
     {
@@ -110,7 +111,7 @@ const ammendedBlogs = blogs.map((blog: any) => ({
               <a href={`/blogs/${blog.id}`} class="">
                 Read More
               </a>
-              <img src={Arrow.src} loading="lazy" />
+              <img src={Arrow.src} alt={getImageFilenameAlt(Arrow.src)} loading="lazy" />
             </div>
           </div>
         </div>

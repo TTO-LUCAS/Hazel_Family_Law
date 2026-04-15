@@ -1,9 +1,10 @@
 ---
 import HazelLogo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_Wordmark_Oat.svg";
+import { getImageFilenameAlt } from "../utils/getImageFilenameAlt";
 ---
 
 <section class="launching-soon">
-  <img src={HazelLogo.src} alt="Launching Soon" />
+  <img src={HazelLogo.src} alt={getImageFilenameAlt(HazelLogo.src)} />
   <h2>Launching soon...</h2>
 </section>
 <style lang="scss">

@@ -1,13 +1,15 @@
 ---
+import { getImageFilenameAlt } from "../utils/getImageFilenameAlt";
+
 interface Props {
   src: string;
-  alt: string;
+  alt?: string;
   class?: string;
   loading?: "lazy" | "eager";
   style?: string;
 }
 
-const { src, alt, class: className = "", loading = "lazy", style: styles = "" } = Astro.props;
+const { src, class: className = "", loading = "lazy", style: styles = "" } = Astro.props;
 
 const fullFilename = src.split('/').pop() || src;
 const filenameParts = fullFilename.split('.');
@@ -18,6 +20,7 @@ const desktopSrc = `/uploads/optimized/${filename}-desktop.webp`;
 const tabletSrc = `/uploads/optimized/${filename}-tablet.webp`;
 const mobileSrc = `/uploads/optimized/${filename}-mobile.webp`;
 const fallbackSrc = `/uploads/${filename}.${fileExtension}`;
+const dynamicAlt = getImageFilenameAlt(src);
 ---
 
 <picture class={className}>
@@ -27,7 +30,7 @@ const fallbackSrc = `/uploads/${filename}.${fileExtension}`;
   
   <img
     src={fallbackSrc}
-    alt={alt}
+    alt={dynamicAlt}
     loading={loading}
     style={styles}
   />

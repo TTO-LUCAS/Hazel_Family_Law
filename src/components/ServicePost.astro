@@ -1,6 +1,7 @@
 ---
 import Placeholder from "../assets/more-shadows.webp";
 import { getCollection, render } from "astro:content";
+import { getImageFilenameAlt } from "../utils/getImageFilenameAlt";
 
 interface Props {
   service: string;
@@ -27,7 +28,7 @@ const Content = renderedService?.Content;
       <div class="image">
         <img
           src={serviceData?.image ?? Placeholder.src}
-          alt={serviceData?.title ?? "Service image"}
+          alt={getImageFilenameAlt(serviceData?.image ?? Placeholder.src)}
         />
       </div>
       <p class="short-description">
@@ -44,7 +45,7 @@ const Content = renderedService?.Content;
     <div class="image">
       <img
         src={serviceData?.image ?? Placeholder.src}
-        alt={serviceData?.title ?? "Service image"}
+        alt={getImageFilenameAlt(serviceData?.image ?? Placeholder.src)}
       />
     </div>
   </div>
@@ -54,7 +55,7 @@ const Content = renderedService?.Content;
       serviceData["accreditation-images"].length > 0 && (
         <div class="logos">
           {serviceData["accreditation-images"].map((image: string) => (
-            <img src={image} alt="Logo" loading="lazy"/>
+            <img src={image} alt={getImageFilenameAlt(image)} loading="lazy"/>
           ))}
         </div>
       )

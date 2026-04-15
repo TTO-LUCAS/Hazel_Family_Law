@@ -5,6 +5,7 @@ import Video480 from "../assets/videos/480waves.mp4";
 import Video576 from "../assets/videos/576waves.mp4";
 import Video720 from "../assets/videos/720waves.mp4";
 import Video1080 from "../assets/videos/1080waves.mp4";
+import { getImageFilenameAlt } from "../utils/getImageFilenameAlt";
 ---
 
 <section class="hero">
@@ -28,7 +29,7 @@ import Video1080 from "../assets/videos/1080waves.mp4";
     </video>
   </div>
   <div class="logo-wrapper">
-    <img src={hazelLogoPartialOatHusk.src} alt="Hazel Logo" />
+    <img src={hazelLogoPartialOatHusk.src} alt={getImageFilenameAlt(hazelLogoPartialOatHusk.src)} />
   </div>
   <p>Clarity, Compassion & Resolution</p>
 </section>

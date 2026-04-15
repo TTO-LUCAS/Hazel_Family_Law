@@ -1,5 +1,6 @@
 ---
 import Placeholder from "../../assets/hero-placeholder.webp";
+import { getImageFilenameAlt } from "../../utils/getImageFilenameAlt";
 ---
 
 <section class="hero-section">
@@ -11,7 +12,7 @@ import Placeholder from "../../assets/hero-placeholder.webp";
         expect can make things feel even harder.
       </p>
       <div class="hero-image mobile">
-        <img src={Placeholder.src} alt="About Hazel" />
+        <img src={Placeholder.src} alt={getImageFilenameAlt(Placeholder.src)} />
       </div>
       <p id="follow-up">
         At Hazel Family Law & Mediation, our team brings extensive family law
@@ -22,7 +23,7 @@ import Placeholder from "../../assets/hero-placeholder.webp";
       </p>
     </div>
     <div class="hero-image">
-      <img src={Placeholder.src} alt="About Hazel" />
+      <img src={Placeholder.src} alt={getImageFilenameAlt(Placeholder.src)} />
     </div>
   </div>
 </section>

@@ -1,6 +1,7 @@
 ---
 import Placeholder from "../../assets/tree-shadow.webp";
 import JustFund from "../../assets/svgs/JustFundLogo.svg";
+import { getImageFilenameAlt } from "../../utils/getImageFilenameAlt";
 ---
 
 <section class="info-section">
@@ -42,7 +43,7 @@ import JustFund from "../../assets/svgs/JustFundLogo.svg";
         >Contact Now</button
       >
     </div>
-    <img src=`${Placeholder.src}` />
+    <img src=`${Placeholder.src}` alt={getImageFilenameAlt(Placeholder.src)} />
     <button
       class="header-button mobile"
       onclick="document.getElementById('header-contact').classList.toggle('open'); document.getElementById('quick-exit').classList.toggle('invert');"
@@ -71,7 +72,7 @@ import JustFund from "../../assets/svgs/JustFundLogo.svg";
         style="background-image: none;"
         href="https://justfund.com.au/"
         target="_blank"
-        rel="noopener noreferrer"><img src=`${JustFund.src}` /></a
+        rel="noopener noreferrer"><img src=`${JustFund.src}` alt={getImageFilenameAlt(JustFund.src)} /></a
       ><!-- make this the JustFund svg logo -->
       <p style="margin: 0 0 0 0;">
         One option for meeting your legal costs is by way of a litigation

@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
+import { getImageFilenameAlt } from "../../utils/getImageFilenameAlt";
 
 const employees = await getCollection("employees", ({ data }) => data.draft !== true);
 
@@ -55,13 +56,13 @@ const employeesWithContent = await Promise.all(
               emp.data["accreditation-images"].length > 0 && (
                 <div class="accreditations">
                   {emp.data["accreditation-images"].map((img: string) => (
-                    <img src={img} alt="Accreditation" />
+                    <img src={img} alt={getImageFilenameAlt(img)} />
                   ))}
                 </div>
               )}
           </div>
           <div class="headshot-wrapper">
-            <img class="headshot" src={emp.data.photo} alt={emp.data.name} />
+            <img class="headshot" src={emp.data.photo} alt={getImageFilenameAlt(emp.data.photo)} />
           </div>
         </div>
       );

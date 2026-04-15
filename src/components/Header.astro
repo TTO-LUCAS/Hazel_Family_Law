@@ -2,6 +2,7 @@
 import CloseBtn from "../assets/svgs/close.svg";
 import Sandwich from "../assets/svgs/sandwich.svg";
 import Logo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_Wordmark_Oat.svg";
+import { getImageFilenameAlt } from "../utils/getImageFilenameAlt";
 ---
 
 <header class="site-header desktop">
@@ -178,14 +179,14 @@ import Logo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_W
   <button class="header-sandwich">
     <img
       src=`${Sandwich.src}`
-      alt="Menu"
+      alt={getImageFilenameAlt(Sandwich.src)}
       onclick="document.getElementById('mobile-header-links').classList.toggle('open');"
     />
   </button>
   <div id="mobile-header-links">
     <div id="col-1-m-header">
       <div class="logo-wrapper">
-        <img src={Logo.src} />
+        <img src={Logo.src} alt={getImageFilenameAlt(Logo.src)} />
       </div>
       <h3><a class="header-link" href="/">Home</a></h3>
       <h3><a class="header-link" href="/about">About Us</a></h3>
@@ -204,7 +205,7 @@ import Logo from "../assets/LogoPartial/HFL01_Logo_Setup_Wordmark_R0a copy_HFL_W
         <button id="close-mobile-header">
           <img
             src={CloseBtn.src}
-            alt="Close Menu"
+            alt={getImageFilenameAlt(CloseBtn.src)}
             onclick="document.getElementById('mobile-header-links').classList.toggle('open');"
           />
         </button>
