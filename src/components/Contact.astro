@@ -397,7 +397,13 @@ import ImgPlaceholder from "../assets/more-shadows.webp";
 
 <script lang="js" is:inline>
   document.addEventListener("DOMContentLoaded", () => {
-    const currentPg = window.location.pathname;
+    const normalizePath = (pathname) => {
+      if (!pathname) return "/";
+      const trimmed = pathname.replace(/\/+$/, "");
+      return trimmed || "/";
+    };
+
+    const currentPg = normalizePath(window.location.pathname);
     const picContainer = document.querySelector(".picture-placeholder");
 
     if (!picContainer) return;

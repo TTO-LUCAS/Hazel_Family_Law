@@ -192,7 +192,13 @@ We welcome the opportunity to discuss your situation confidentially—by
       phone, in person or via the form below.
 </p> <form name="contact" method="POST" netlify data-astro-cid-xmivup5a> <input type="hidden" name="subject" value="Contact Form Inquiry from Hazel Website" data-astro-cid-xmivup5a> <div class="contact-form" id="name-field" data-astro-cid-xmivup5a> <label for="name" data-astro-cid-xmivup5a>Full Name</label> <input type="text" name="name-full" id="name" required placeholder="Full Name" autocomplete="on" data-astro-cid-xmivup5a> </div> <div class="contact-form" id="email-field" data-astro-cid-xmivup5a> <label for="email" data-astro-cid-xmivup5a>Email Address</label> <input type="text" name="email" id="email" required placeholder="Email Address" autocomplete="on" data-astro-cid-xmivup5a> </div> <div class="contact-form" id="phone-field" data-astro-cid-xmivup5a> <label for="phone" data-astro-cid-xmivup5a>Phone Number</label> <input type="text" name="phone" id="phone" placeholder="Phone Number" autocomplete="on" data-astro-cid-xmivup5a> </div> <div class="contact-form" id="preference-field" data-astro-cid-xmivup5a> <label for="time" data-astro-cid-xmivup5a>Contact Preference (Time)</label> <input type="text" name="time" id="time" placeholder="Contact Preference (Time)" autocomplete="on" data-astro-cid-xmivup5a> </div> <div class="contact-form" id="message-field" data-astro-cid-xmivup5a> <label for="message" data-astro-cid-xmivup5a>Message</label> <textarea name="message" id="message" required rows="4" placeholder="Message" data-astro-cid-xmivup5a></textarea> </div> <div class="contact-form" id="submit-field" data-astro-cid-xmivup5a> <input type="submit" value="Submit" data-astro-cid-xmivup5a> </div> </form> </div> <div class="picture-placeholder" data-astro-cid-xmivup5a> <img src="/_astro/more-shadows.ra7uk6wR_15s81C.webp" alt="A photo of shadows against a warm background." loading="lazy" data-astro-cid-xmivup5a="true" decoding="async" width="1920" height="1080"> </div> </section>  <script lang="js">
   document.addEventListener("DOMContentLoaded", () => {
-    const currentPg = window.location.pathname;
+    const normalizePath = (pathname) => {
+      if (!pathname) return "/";
+      const trimmed = pathname.replace(/\/+$/, "");
+      return trimmed || "/";
+    };
+
+    const currentPg = normalizePath(window.location.pathname);
     const picContainer = document.querySelector(".picture-placeholder");
 
     if (!picContainer) return;
