@@ -4,7 +4,7 @@ position: Principal Lawyer
 pronouns: she/her
 email: elisa@hazelfamilylaw.com.au
 phone: 03 7020 6529
-photo: /uploads/20260402p_hazelfamilylaw_elisaturco_001_web-2.jpg
+photo: /uploads/20260402P_HazelFamilyLaw_ElisaTurco_002_WEB-2.jpg
 accreditation-images:
   - /uploads/liv-accreditation-specialisation.png
   - /uploads/law-council-of-aus.png

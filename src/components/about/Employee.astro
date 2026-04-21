@@ -1,6 +1,30 @@
 ---
 import { getCollection, render } from "astro:content";
+import sharp from "sharp";
+import { fileURLToPath } from "node:url";
 import { getImageFilenameAlt } from "../../utils/getImageFilenameAlt";
+
+const getImageDimensions = async (photoPath: string) => {
+  if (!photoPath?.startsWith("/uploads/")) {
+    return { width: undefined, height: undefined };
+  }
+
+  try {
+    const absolutePath = fileURLToPath(
+      new URL(`../../../public${photoPath}`, import.meta.url),
+    );
+    const { width, height } = await sharp(absolutePath).metadata();
+    return { width, height };
+  } catch {
+    return { width: undefined, height: undefined };
+  }
+};
+
+const getOptimizedImageBaseName = (imagePath: string) => {
+  const sanitizedPath = imagePath.split("?")[0].split("#")[0];
+  const filenameWithExt = sanitizedPath.split("/").pop() || sanitizedPath;
+  return filenameWithExt.replace(/\.[^.]+$/, "");
+};
 
 const employees = await getCollection("employees", ({ data }) => data.draft !== true);
 
@@ -24,7 +48,23 @@ const orderedEmployees = employees.slice().sort((a, b) => {
 const employeesWithContent = await Promise.all(
   orderedEmployees.map(async (emp) => {
     const { Content } = await render(emp);
-    return { ...emp, Content };
+    const { width, height } = await getImageDimensions(emp.data.photo);
+    const accreditationImageDimensions = Object.fromEntries(
+      await Promise.all(
+        (emp.data["accreditation-images"] ?? []).map(async (imgPath) => {
+          const dimensions = await getImageDimensions(imgPath);
+          return [imgPath, dimensions] as const;
+        }),
+      ),
+    );
+
+    return {
+      ...emp,
+      Content,
+      imageWidth: width,
+      imageHeight: height,
+      accreditationImageDimensions,
+    };
   }),
 );
 ---
@@ -33,6 +73,10 @@ const employeesWithContent = await Promise.all(
   {
     employeesWithContent.map((emp) => {
       const Content = emp.Content;
+      const optimizedBaseName = getOptimizedImageBaseName(emp.data.photo);
+      const mobileURL = `/uploads/optimized/${optimizedBaseName}-mobile.webp`;
+      const tabletURL = `/uploads/optimized/${optimizedBaseName}-tablet.webp`;
+      const desktopURL = `/uploads/optimized/${optimizedBaseName}-desktop.webp`;
       return (
         <div class="profile-card">
           <div class="info-section">
@@ -55,14 +99,34 @@ const employeesWithContent = await Promise.all(
             {emp.data["accreditation-images"] &&
               emp.data["accreditation-images"].length > 0 && (
                 <div class="accreditations">
-                  {emp.data["accreditation-images"].map((img: string) => (
-                    <img src={img} alt={getImageFilenameAlt(img)} />
-                  ))}
+                  {emp.data["accreditation-images"].map((img: string) => {
+                    const dimensions = emp.accreditationImageDimensions[img];
+                    return (
+                      <img
+                        src={img}
+                        alt={getImageFilenameAlt(img)}
+                        width={dimensions?.width}
+                        height={dimensions?.height}
+                      />
+                    );
+                  })}
                 </div>
               )}
           </div>
           <div class="headshot-wrapper">
-            <img class="headshot" src={emp.data.photo} alt={getImageFilenameAlt(emp.data.photo)} />
+            <picture>
+              <source
+                srcset={`${mobileURL} 480w, ${tabletURL} 920w, ${desktopURL} 1440w`}
+                sizes="(max-width: 920px) 100vw, 35vw"
+                 />
+              <img
+                class="headshot"
+                src={emp.data.photo}
+                alt={getImageFilenameAlt(emp.data.photo)}
+                width={emp.imageWidth}
+                height={emp.imageHeight}
+              />
+            </picture>
           </div>
         </div>
       );
