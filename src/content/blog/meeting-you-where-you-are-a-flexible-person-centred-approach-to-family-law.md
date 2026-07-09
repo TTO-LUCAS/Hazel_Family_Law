@@ -2,8 +2,8 @@
 title: "Meeting you where you are: a flexible, person-centred approach to family law"
 date: 2026-07-27T09:44:00.000+10:00
 author: Elisa Turco
-hero-image: /uploads/470b5743f10bb8cd27c8f482ae4dd74b.jpg
-thumbnail: /uploads/470b5743f10bb8cd27c8f482ae4dd74b.jpg
+hero-image: /uploads/pexels-allecgomes-10939199.jpg
+thumbnail: /uploads/pexels-allecgomes-10939199.jpg
 draft: false
 ---
 At Hazel Family Law & Mediation, we know that no two families, and no two people, are the same. Every client brings their own experiences, strengths and challenges. For some, the family law process itself can feel overwhelming, especially when managing mental health conditions, neurodivergence such as autism or ADHD or sensory sensitivities.
