@@ -2,8 +2,8 @@
 title: Relocating with children after separation
 date: 2026-08-10T15:11:00.000+10:00
 author: Elisa Turco
-hero-image: /uploads/pexels-jameshausley-3328344.jpg
-thumbnail: /uploads/pexels-jameshausley-3328344.jpg
+hero-image: /uploads/HFL01_Service_12.webp
+thumbnail: /uploads/HFL01_Service_12.webp
 draft: false
 ---
 At **Hazel Family Law & Mediation**, we understand that thinking about moving whether to be closer to family, to take up a new job, or to start fresh after separation can bring both hope and uncertainty. When children are involved, relocation decisions become even more complex.
