@@ -3,8 +3,8 @@ title: "Coercive Control in Victoria: What It Is, What It Is Not and What the
   Proposed New Law Means"
 date: 2026-08-25T11:44:00.000+10:00
 author: Elisa Turco
-hero-image: /uploads/470b5743f10bb8cd27c8f482ae4dd74b.jpg
-thumbnail: /uploads/470b5743f10bb8cd27c8f482ae4dd74b.jpg
+hero-image: /uploads/a87674a7ca8a4f148e3481ad4fe4e23c.jpg
+thumbnail: /uploads/a87674a7ca8a4f148e3481ad4fe4e23c.jpg
 draft: false
 ---
 Coercive control is a term we now hear regularly in conversations about family violence, separation and parenting disputes.
