@@ -2,8 +2,8 @@
 title: Navigating the emotional and practical challenges of separation under one roof
 date: 2026-07-13T11:05:00.000+10:00
 author: Elisa Turco
-hero-image: /uploads/46c4b470e566591316fa67af18f9d8c5.jpg
-thumbnail: /uploads/46c4b470e566591316fa67af18f9d8c5.jpg
+hero-image: /uploads/9ce0cd09f0b370b9f69668bce59cefcb-1-.jpg
+thumbnail: /uploads/9ce0cd09f0b370b9f69668bce59cefcb-1-.jpg
 draft: false
 ---
 Separation is emotionally challenging; living under the same roof with your ex-partner can intensify stress. However, for some couples, this arrangement offers financial, emotional and practical benefits. Our aim is to empower you with practical strategies, emotional support and clear steps, to help you navigate the transition safely and confidently while prioritising wellbeing and children’s stability.
