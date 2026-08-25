@@ -2,8 +2,8 @@
 title: "Divorce and Superannuation: What You Need to Know About Splitting Super"
 date: 2026-08-03T14:37:00.000+10:00
 author: Elisa Turco
-hero-image: /uploads/72f3b3f7a96fd5b925a3f6f2b00b19be.jpg
-thumbnail: /uploads/72f3b3f7a96fd5b925a3f6f2b00b19be.jpg
+hero-image: /uploads/pexels-aryankohli2002-4266689.jpg
+thumbnail: /uploads/pexels-aryankohli2002-4266689.jpg
 draft: false
 ---
 Dividing property after separation or divorce can be one of the most challenging aspects of family law. In Australia, superannuation is considered a financial asset and is included in property settlements, meaning it must be considered when determining a fair division of assets.
