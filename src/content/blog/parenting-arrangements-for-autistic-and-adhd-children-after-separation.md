@@ -2,8 +2,8 @@
 title: Parenting arrangements for autistic and ADHD children after separation
 date: 2026-08-27T10:28:00.000+10:00
 author: Elisa Turco
-hero-image: /uploads/470b5743f10bb8cd27c8f482ae4dd74b.jpg
-thumbnail: /uploads/470b5743f10bb8cd27c8f482ae4dd74b.jpg
+hero-image: /uploads/232b032ce37377a06a9c2663566710cb.jpg
+thumbnail: /uploads/232b032ce37377a06a9c2663566710cb.jpg
 draft: false
 ---
 When parents separate, it is natural to want a parenting arrangement that feels fair.
