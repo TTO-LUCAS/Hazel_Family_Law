@@ -21,7 +21,7 @@ There may never have been physical violence. There may be no single incident tha
 
 The concern may only become clear when the behaviour is considered together and over time.
 
-### What is coercive control?
+# What is coercive control?
 
 Coercive control can involve physical or non-physical behaviour.
 
@@ -40,19 +40,13 @@ It may include:
 * making repeated complaints or threats involving police, courts, employers or professionals as part of a wider attempt to intimidate the person; or
 * creating rules about ordinary daily life and enforcing those rules through fear, punishment or pressure.
 
-
-
 No single behaviour automatically establishes coercive control.
 
 The nature of the relationship, the surrounding circumstances, the frequency of the behaviour and its effect on the other person all matter.
 
 The Australian Government describes coercive control as a pattern of abusive behaviour which creates fear and denies a person liberty and autonomy. The conduct may be subtle, individually tailored and difficult for people outside the relationship to recognise. 
 
-
-
-### Why one incident may not tell the whole story
-
-
+# Why one incident may not tell the whole story
 
 Coercive control is often difficult to recognise because the concern may not lie in one particular event.
 
@@ -68,11 +62,7 @@ It may raise different concerns where the requests are constant, go well beyond 
 
 The law does not determine these issues by simply counting incidents. It considers whether the behaviour has affected the person’s ability to make ordinary decisions freely and without fear.
 
-
-
-### Is there a difference between coercion and control?
-
-The terms are often used together, but they describe slightly different ways in which family violence may occur.
+# Is there a difference between coercion and control? The terms are often used together, but they describe slightly different ways in which family violence may occur
 
 Control generally involves one person limiting another person’s choices or independence.
 
@@ -88,9 +78,7 @@ Behaviour may be controlling, coercive or both.
 
 In practical terms, the central concern is not the label attached to the behaviour. It is whether one person has been able to use the conduct to reduce the other person’s freedom, create fear or make compliance feel like the only realistic option.
 
-
-
-### Conflict and coercive control are not the same thing
+# Conflict and coercive control are not the same thing
 
 Separating couples often disagree.
 
@@ -116,11 +104,7 @@ It is important not to minimise concerning behaviour by dismissing it as “just
 
 It is equally important not to assume that every difficult interaction during separation is coercive control.
 
-
-
-### Can coercive control continue after separation?
-
-
+# Can coercive control continue after separation?
 
 Yes. Ending a relationship does not always end the behaviour.
 
@@ -144,9 +128,7 @@ A person is entitled to report a genuine concern, obtain legal advice and ask a 
 
 The relevant question is whether those steps are being taken for a proper purpose or are being deployed as part of wider conduct designed to wear the other person down, frighten them or prevent them acting independently.
 
-
-
-### What can coercive control mean for children?
+# What can coercive control mean for children?
 
 Children can be affected by coercive control even where no one alleges that they have been physically harmed.
 
@@ -164,9 +146,7 @@ This does not reflect a failure by that parent. It may demonstrate how the behav
 
 When parenting arrangements are being considered, the Court may need to understand not only what the children have directly seen or heard, but also how the conduct has affected their day-to-day security and the capacity of each parent to meet their needs.
 
-
-
-### Is coercive control already recognised by the law?
+# Is coercive control already recognised by the law?
 
 Yes, although the position is sometimes misunderstood.
 
@@ -180,11 +160,7 @@ A Family Violence Intervention Order is a civil protective order. However, breac
 
 Whether particular conduct constitutes family violence, coercive control or another criminal offence depends on the facts and should be assessed individually.
 
-
-
-### What is the proposed new Victorian law?
-
-
+# What is the proposed new Victorian law?
 
 On 11 August 2026, the Victorian Government introduced the Justice Legislation Amendment (Family Violence, Coercive Control, Good Character, Risk Assessment and Other Matters) Bill 2026.
 
@@ -202,11 +178,7 @@ These issues do not change the practical position for families now.
 
 Coercive and controlling behaviour may already be relevant to intervention-order proceedings, parenting proceedings and, depending on the conduct involved, existing criminal offences.
 
-
-
-### What information may help explain coercive control?
-
-
+# What information may help explain coercive control?
 
 Using the words “coercive control” does not, by itself, explain what happened.
 
@@ -241,9 +213,7 @@ The purpose is not to use dramatic language.
 
 It is to give a clear and accurate account of how the relationship operated in practice.
 
-
-
-### What should I do if I am experiencing coercive control?
+# What should I do if I am experiencing coercive control?
 
 If you believe you may be experiencing coercive control, consider your immediate safety first.
 
@@ -260,9 +230,7 @@ If you are in immediate danger, contact emergency services.
 
 If you believe your internet use may be monitored, use a safer device where possible and take care when saving records or contacting services.
 
-
-
-### What should I do if I have been accused?
+# What should I do if I have been accused?
 
 An allegation of coercive control is serious, but an allegation is not itself a finding.
 
@@ -279,9 +247,7 @@ If you have been accused:
 
 The legal assessment will depend on the evidence and the circumstances of the particular family.
 
-
-
-### Moving forward with clarity
+# Moving forward with clarity
 
 Coercive control is not always obvious.
 
