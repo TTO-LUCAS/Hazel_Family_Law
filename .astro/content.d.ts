@@ -131,6 +131,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"blog">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "employees": Record<string, {
   id: string;
@@ -139,6 +140,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"employees">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "featured-blog": Record<string, {
   id: string;
@@ -147,6 +149,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"featured-blog">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "services": Record<string, {
   id: string;
@@ -155,6 +158,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"services">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "testimonials": Record<string, {
   id: string;
@@ -163,6 +167,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"testimonials">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 
 	};
