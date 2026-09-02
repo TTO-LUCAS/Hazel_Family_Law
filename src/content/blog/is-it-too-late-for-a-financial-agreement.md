@@ -16,7 +16,7 @@ Under Australian family law, a financial agreement can be made before, during or
 
 The more useful question is not simply whether an agreement is still possible. It is whether a financial agreement is appropriate for your present circumstances, what you want it to achieve and whether there is enough time and space for both people to approach the process fairly and carefully. 
 
-### We already live together
+# We already live together
 
 Moving in together does not always happen on one clearly identifiable date. One person may gradually begin spending more time at the other’s home. Belongings move across. Expenses become shared. A relationship that initially felt informal may, over time, begin to carry legal and financial consequences.
 
@@ -28,7 +28,7 @@ The agreement might address a home one person already owns, savings accumulated 
 
 What matters is that the agreement reflects the life you are actually living. It should not be based on an outdated picture of two people whose finances remain entirely separate if that is no longer the reality. 
 
-### We are already married
+# We are already married
 
 Financial agreements are not limited to the period before marriage. A married couple may enter into a financial agreement during the marriage; that is sometimes described as a postnuptial agreement.
 
@@ -38,7 +38,7 @@ A financial agreement should not be used to avoid addressing broader problems in
 
 However, financial uncertainty can create its own strain. Where both people are genuinely willing to participate, a carefully negotiated agreement may provide clarity and allow each person to understand where they stand.
 
-### We have already bought a home
+# We have already bought a home
 
 Ideally, advice about ownership and financial protection should be obtained before a significant purchase. Life does not always happen that way.
 
@@ -50,7 +50,7 @@ Depending on what you are hoping to achieve, another document may also be requir
 
 The right solution begins with understanding the arrangement, not choosing the document first.
 
-### We are close to the wedding
+# We are close to the wedding
 
 This is where timing becomes particularly important. There is no universal period before a wedding that guarantees a financial agreement will be safe from challenge. However, presenting a completed agreement shortly before the wedding and making the marriage conditional upon immediate signature creates an obvious risk. Each person needs enough time to understand the proposal, obtain independent advice and consider whether changes should be negotiated.
 
@@ -60,7 +60,7 @@ If there is not enough time for a proper process, the better approach may be to 
 
 A carefully prepared agreement after the wedding may provide far greater certainty than one signed hurriedly in the days beforehand.
 
-### We have separated
+# We have separated
 
 A financial agreement can also be made after separation. However, once a relationship has ended, a financial agreement is not the only way to formalise a property settlement and may not always be the most suitable option.
 
@@ -72,7 +72,7 @@ The appropriate option will depend on the terms of the settlement, the assets in
 
 Reaching an agreement is an important step. Documenting it in a way that actually achieves the intended outcome is just as important.
 
-### Possible does not always mean appropriate
+# Possible does not always mean appropriate
 
 A financial agreement can be made at various stages but that does not mean it will always be the right document. Before recommending one, we need to understand the whole financial picture. That includes what each person owns and owes, how the couple currently manages money and what the agreement is intended to protect.
 
@@ -84,7 +84,7 @@ Sometimes the honest advice will be that a financial agreement is not necessary.
 
 Our role is not to sell a particular document. It is to identify the legal arrangement that best responds to your circumstances.
 
-### Starting the conversation
+# Starting the conversation
 
 Raising the subject of a financial agreement can feel uncomfortable. It can be difficult to talk about what may happen if a relationship ends while you are making plans to live together, marry or buy a home.
 
@@ -92,7 +92,7 @@ The conversation does not need to begin with a statement about protecting yourse
 
 Planning does not mean expecting the relationship to fail. It can simply mean ensuring that both people understand the financial foundations upon which they are building their life. 
 
-### Moving forward with clarity
+# Moving forward with clarity
 
 It may not be too late for a financial agreement. However, timing can affect the process, the risks and the options available.
 
