@@ -9,8 +9,6 @@ draft: false
 ---
 Coercive control is a term we now hear regularly in conversations about family violence, separation and parenting disputes.
 
-
-
 However, it is not always well understood.
 
 Coercive control is not simply one argument, an unkind comment or one person being difficult. It generally involves behaviour that, over time, is used to dominate another person, restrict their independence or cause them to act out of fear, pressure or dependency.
