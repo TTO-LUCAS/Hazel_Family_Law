@@ -27,18 +27,18 @@ Coercive control can involve physical or non-physical behaviour.
 
 It may include:
 
-* monitoring where a person goes, who they speak to or how they spend their time;
-* requiring access to phones, email accounts, passwords or location information;
-* restricting access to money or requiring a person to account for ordinary spending; 
-* isolating a person from family, friends, work or support services;
-* repeatedly humiliating, belittling or undermining them;
-* threatening consequences if the person does not comply;
-* controlling medical care, medication, transport or access to important documents;
-* using children or parenting arrangements to create pressure;
-* interfering with a person’s employment, study or financial independence;
-* damaging property or threatening harm to pets;
-* making repeated complaints or threats involving police, courts, employers or professionals as part of a wider attempt to intimidate the person; or
-* creating rules about ordinary daily life and enforcing those rules through fear, punishment or pressure.
+1. monitoring where a person goes, who they speak to or how they spend their time;
+2. requiring access to phones, email accounts, passwords or location information;
+3. restricting access to money or requiring a person to account for ordinary spending; 
+4. isolating a person from family, friends, work or support services;
+5. repeatedly humiliating, belittling or undermining them;
+6. threatening consequences if the person does not comply;
+7. controlling medical care, medication, transport or access to important documents;
+8. using children or parenting arrangements to create pressure;
+9. interfering with a person’s employment, study or financial independence;
+10. damaging property or threatening harm to pets;
+11. making repeated complaints or threats involving police, courts, employers or professionals as part of a wider attempt to intimidate the person; or
+12. creating rules about ordinary daily life and enforcing those rules through fear, punishment or pressure.
 
 No single behaviour automatically establishes coercive control.
 
