@@ -130,9 +130,13 @@ const formattedDate = `${dateObj.getDate().toString().padStart(2, "0")}.${(dateO
             ol:not(.links) {
                 margin: 2rem 0 2rem 0;
                 li {
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                     font-weight: 300;
-                    color: var(--hazelwood);
+                    color: var(--burnt-umber);
+                    margin-bottom: 1rem;
+                }
+                li:last-of-type {
+                    margin-bottom: 0;
                 }
             }
             ul.links {
