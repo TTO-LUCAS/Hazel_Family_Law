@@ -1,6 +1,6 @@
 ---
 title: What happens at mediation? A step-by-step guide
-date: 2026-09-11T13:34:00.000+10:00
+date: 2026-09-22T11:29:00.000+10:00
 author: Elisa Turco
 hero-image: /uploads/9e4e947760f49201d8e37488a20e3c7f.jpg
 thumbnail: /uploads/9e4e947760f49201d8e37488a20e3c7f.jpg
