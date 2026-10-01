@@ -1,6 +1,6 @@
 ---
-title: "De Facto Relationships: When Your Relationship Is Legally “Marriage
-  Like” (whether You Realise It or Not)"
+title: "De Facto Relationships: When your relationship is legally “marriage
+  like” (whether you realise it or not)"
 date: 2026-05-19T10:44:00.000+10:00
 author: Elisa Turco
 hero-image: /uploads/HFL01_Service_11.webp
