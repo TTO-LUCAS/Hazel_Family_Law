@@ -1,5 +1,5 @@
 ---
-title: Polyamory, Multi-Adult Families and Australian Family Law
+title: Polyamory, multi-adult families and Australian Family Law
 date: 2026-10-01T13:22:00.000+10:00
 author: Elisa Turco
 hero-image: /uploads/background-1.png
