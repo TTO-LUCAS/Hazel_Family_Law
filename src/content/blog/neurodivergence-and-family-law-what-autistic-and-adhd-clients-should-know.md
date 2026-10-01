@@ -1,5 +1,5 @@
 ---
-title: "Neurodivergence and Family Law: What Autistic and ADHD Clients should know"
+title: "Neurodivergence and Family Law: What autistic and ADHD clients should know"
 date: 2026-09-08T14:56:00.000+10:00
 author: Elisa Turco
 hero-image: /uploads/0c311fd7c4828822f5e71cd582897c9c.jpg
