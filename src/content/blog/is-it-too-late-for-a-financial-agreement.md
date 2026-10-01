@@ -1,5 +1,5 @@
 ---
-title: Is It Too Late for a Financial Agreement?
+title: Is it too late for a Financial Agreement?
 date: 2026-09-01T11:45:00.000+10:00
 author: Elisa Turco
 hero-image: /uploads/da4c490a06b7c665a1fa711dc87f32de.jpg
