@@ -1,6 +1,6 @@
 ---
-title: "Understanding the Court Process Through a Child’s Eyes: A Helpful
-  Resource for Families"
+title: "Understanding the Court process through a child’s eyes: A helpful
+  resource for families"
 date: 2026-05-31T10:05:00.000+10:00
 author: Elisa Turco
 hero-image: /uploads/HFL01_Service_3.webp
