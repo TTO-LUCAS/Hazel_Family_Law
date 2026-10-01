@@ -1,5 +1,5 @@
 ---
-title: "Child Support Reform: What Is Changing and What Parents Need to Know"
+title: "Child Support Reform: What is changing and what parents need to know"
 date: 2026-09-22T10:59:00.000+10:00
 author: Elisa Turco
 hero-image: /uploads/bd0708ae53a6d247811b1e03eb33d6c3.jpg
