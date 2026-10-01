@@ -1,6 +1,6 @@
 ---
-title: "Coercive Control in Victoria: What It Is, What It Is Not and What the
-  Proposed New Law Means"
+title: "Coercive Control in Victoria: What it is, what it is not and what the
+  proposed new law means"
 date: 2026-08-25T11:44:00.000+10:00
 author: Elisa Turco
 hero-image: /uploads/a87674a7ca8a4f148e3481ad4fe4e23c.jpg
