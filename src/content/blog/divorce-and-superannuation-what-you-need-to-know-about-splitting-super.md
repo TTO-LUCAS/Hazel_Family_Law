@@ -1,5 +1,5 @@
 ---
-title: "Divorce and Superannuation: What You Need to Know About Splitting Super"
+title: "Divorce and Superannuation: What you need to know about splitting super"
 date: 2026-08-03T14:37:00.000+10:00
 author: Elisa Turco
 hero-image: /uploads/pexels-aryankohli2002-4266689.jpg
